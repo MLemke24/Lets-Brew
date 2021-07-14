@@ -21,4 +21,4 @@ const ChemexSchema = new Schema(
 )
 
 const CHEMEX = mongoose.model('Chemex', ChemexSchema, 'Chemex');
-module.exports = Chemex;
+module.exports = CHEMEX;
