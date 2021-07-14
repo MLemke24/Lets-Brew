@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
-const ChemexSchema = new Schema(
+const BeeHouseSchema = new Schema(
     {
         id: {
             type: Number,
@@ -20,5 +20,5 @@ const ChemexSchema = new Schema(
     }
 )
 
-const CHEMEX = mongoose.model('Chemex', ChemexSchema, 'Chemex');
-module.exports = CHEMEX;
+const BeeHouse = mongoose.model('BeeHouse', BeeHouseSchema, 'BeeHouse');
+module.exports = BeeHouse;

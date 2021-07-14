@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
-const ChemexSchema = new Schema(
+const FrenchPressSchema = new Schema(
     {
         id: {
             type: Number,
@@ -20,5 +20,5 @@ const ChemexSchema = new Schema(
     }
 )
 
-const CHEMEX = mongoose.model('Chemex', ChemexSchema, 'Chemex');
-module.exports = CHEMEX;
+const FrenchPress = mongoose.model('FrenchPress', FrenchPressSchema, 'FrenchPress');
+module.exports = FrenchPress;

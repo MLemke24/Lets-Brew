@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
-const ChemexSchema = new Schema(
+const MokaPotSchema = new Schema(
     {
         id: {
             type: Number,
@@ -20,5 +20,5 @@ const ChemexSchema = new Schema(
     }
 )
 
-const CHEMEX = mongoose.model('Chemex', ChemexSchema, 'Chemex');
-module.exports = CHEMEX;
+const MokaPot = mongoose.model('MokaPot', MokaPotSchema, 'MokaPot');
+module.exports = MokaPot;
