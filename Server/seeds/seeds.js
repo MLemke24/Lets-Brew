@@ -1,21 +1,22 @@
-import seeder from 'mongoose-seed';
-
-const db = 'mongodb://localhost:3001/lets-brew'
-
-seeder.connect(db, function () {
-    seeder.loadModels([
-        './Chemex.model'
-    ]);
-    seeder.clearModels(['Chemex']);
-    seeder.populateModels(data, function (err, done) {
-        if (err) {
-            return console.log('seed err', err)
-        }
-        if (done) {
-            return console.log('seed done', done)
-        }
-        seeder.disconnect()
-    })
+var seeder = require('mongoose-seed');
+ 
+// Connect to MongoDB via Mongoose
+seeder.connect('mongodb://localhost/lets-brew', function() {
+ 
+  // Load Mongoose models
+  seeder.loadModels([
+    './Models/Chemex.js',
+  ]);
+ 
+  // Clear specified collections
+  seeder.clearModels(['Chemex'], function() {
+ 
+    // Callback to populate DB once collections have been cleared
+    seeder.populateModels(data, function() {
+      seeder.disconnect();
+    });
+ 
+  });
 });
 
 const data = [
@@ -67,3 +68,26 @@ const data = [
     ]
 }
 ]
+
+
+
+
+// import seeder from 'mongoose-seed';
+
+// const db = 'mongodb://localhost:3001/lets-brew'
+
+// seeder.connect(db, function () {
+//     seeder.loadModels([
+//         './Chemex.js'
+//     ]);
+//     seeder.clearModels(['Chemex']);
+//     seeder.populateModels(data, function (err, done) {
+//         if (err) {
+//             return console.log('seed err', err)
+//         }
+//         if (done) {
+//             return console.log('seed done', done)
+//         }
+//         seeder.disconnect()
+//     })
+// });
