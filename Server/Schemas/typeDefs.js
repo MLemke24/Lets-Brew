@@ -11,7 +11,7 @@ const typeDefs = gql `
   }
 
   type Query {
-    key: CHEMEX
+    findBrew(cupSize: Int!, grindSize: String!, coffeeAmount: Int!, water: Int!): CHEMEX
   }
 `;
 
