@@ -4,14 +4,10 @@ const { CHEMEX } = require('../Models')
 
 const resolvers = {
   Query: {
-    key: async(parent, args, context) => {
-      if (context.object) {
-        const brewData = await CHEMEX.findOne({ _id: context.object.id})
-        .select('-__v')
+    findBrew: async(parent, args) => {
+      const findBrew = await CHEMEX.findOne(args)
 
-        return brewData
-      }
-      throw new Error('No data found')
+      return findBrew
     },
   }
 }
