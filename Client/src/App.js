@@ -1,7 +1,6 @@
 import React from "react";
 
-import Home from "./pages/Home";
-import Header from "../src/components/Header";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import {
   ApolloProvider,
@@ -10,16 +9,12 @@ import {
   createHttpLink,
 } from "@apollo/client";
 
-
-
 import { setContext } from '@apollo/client/link/context';
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
-
-
+import Header from './components/header'
+import Brews from './components/brewing-methods'
 const httpLink = createHttpLink({
-  uri: "/graphql",
+  uri: "/graphql"
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -47,9 +42,7 @@ function App() {
           <Header />
           <div className="container">
             <Switch>
-            <Route exact path="/" component={Home} />
-
-            
+              <Brews/>
             </Switch>
           </div>
 
