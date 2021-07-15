@@ -9,6 +9,7 @@ html {
   background-color: black;
   font-family: 'Roboto', sans-serif;
 }
+/* ------NAV START---------*/
 
 .nav-wrapper {
   background-color: black;
@@ -16,7 +17,11 @@ html {
 }
 
 .beans {
-  width: 100%;
+  width: 200%;
+}
+
+.titlemargin {
+  padding-left: 40px;
 }
 
 .navbar {
@@ -36,7 +41,7 @@ html {
 .dot {
   height: 40px;
   width: 40px;
-  background-color: white;
+  background-color: ;
   border-radius: 50%;
   display: inline-block;
 }
@@ -55,4 +60,131 @@ html {
 }
 .content-box {
   box-sizing: content-box;
+}
+
+/*---HOME START---*/
+
+.home {
+  margin-top: 140px;
+  display: flex;
+  justify-content: space-between;
+}
+
+[class^="l-column"] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dial-wrapper {
+  font-size: 1rem;
+  border: 0.5em solid white;
+  border-radius: 100%;
+  width: 31.2em;
+  height: 31.2em;
+  position: relative;
+}
+.dial-arrow {
+  transform: rotate(45deg);
+  border-radius: 20% 100% 100% 100%;
+  background-color: #ff6f27;
+  width: 3em;
+  height: 3em;
+  transition: all 150ms cubic-bezier(0, 0, 0.3, 1);
+  position: absolute;
+}
+.dial-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+[class^='item-'] {
+  position: absolute;
+  padding-left: 1em;
+}
+.item-1 {
+  position: absolute;
+  display: block;
+  transform: rotate(0.2turn) translate(-12em);
+}
+.item-1:hover ~ .dial-arrow {
+  transform: rotate(-44.8turn) !important;
+}
+.item-1 > a {
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  transform: rotate(-0.2turn);
+}
+.item-1 > a:hover {
+  color: #ff6f27;
+}
+.item-2 {
+  position: absolute;
+  display: block;
+  transform: rotate(0.4turn) translate(-12em);
+}
+.item-2:hover ~ .dial-arrow {
+  transform: rotate(-44.6turn) !important;
+}
+.item-2 > a {
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  transform: rotate(-0.4turn);
+}
+.item-2 > a:hover {
+  color: #ff6f27;
+}
+.item-3 {
+  position: absolute;
+  display: block;
+  transform: rotate(0.6turn) translate(-12em);
+}
+.item-3:hover ~ .dial-arrow {
+  transform: rotate(-44.4turn) !important;
+}
+.item-3 > a {
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  transform: rotate(-0.6turn);
+}
+.item-3 > a:hover {
+  color: #ff6f27;
+}
+.item-4 {
+  position: absolute;
+  display: block;
+  transform: rotate(0.8turn) translate(-12em);
+}
+.item-4:hover ~ .dial-arrow {
+  transform: rotate(-44.2turn) !important;
+}
+.item-4 > a {
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  transform: rotate(-0.8turn);
+}
+.item-4 > a:hover {
+  color: #ff6f27;
+}
+.item-5 {
+  position: absolute;
+  display: block;
+  transform: rotate(1turn) translate(-12em);
+}
+.item-5:hover ~ .dial-arrow {
+  transform: rotate(-44turn) !important;
+}
+.item-5 > a {
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  transform: rotate(-1turn);
+}
+.item-5 > a:hover {
+  color: #ff6f27;
 }

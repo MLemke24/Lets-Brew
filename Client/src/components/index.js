@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import 'materialize-css/dist/css/materialize.min.css'
-import logo from "../images/noun_coffee beans_306161.png"
+import logo from "../images/icons/Logo/SVG/Logo.svg"
 
 const Header = () => {
   return (
@@ -18,7 +18,7 @@ const Header = () => {
                   alt=""
                 />
               </span>
-              <b> Brew</b>
+              <b className="titlemargin"> Brew</b>
             </h1>
           </a>
         </Link>
