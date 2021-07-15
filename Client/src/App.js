@@ -12,7 +12,7 @@ import {
 import { setContext } from '@apollo/client/link/context';
 
 import Header from './components/header'
-import Brews from './components/brewing-methods'
+import Brews from './components/brewing-methods/routes'
 const httpLink = createHttpLink({
   uri: "/graphql"
 });
