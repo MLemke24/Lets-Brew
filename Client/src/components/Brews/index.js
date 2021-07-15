@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Link, Route, useParams } from 'react-router-do
 //require css
 
 const brews = [
-    ///provisional use database instead
+    ///provisional use database instead//fetch from  db
     {
         id: 1,
         name: "french press",
@@ -27,13 +27,14 @@ const Instructions = () => {
         <div>
             <h1> {method} </h1>
             <p>timer</p>
+        
         </div>
+        // get a 1 cup,
     )
 }
 const Brews = () => {
     return (
         <Router>
-
             <div>
                 <ul>{brews.map(brew => {
                     //each brew consist of a card with the info form the prop + a link with a path to their server
