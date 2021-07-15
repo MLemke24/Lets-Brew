@@ -1,24 +1,24 @@
-const { Schema, model, Types } = require('mongoose');
-
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema;
 const ChemexSchema = new Schema(
     {
         id: {
-            type: INTEGER,
+            type: Number,
         },
         cupSize: {
-            type: INTEGER,
+            type: Number,
         },
         grindSize: {
-            type: STRING,
+            type: String,
         },
         coffeeAmount: {
-            type: INTEGER
+            type: Number,
         },
         water: {
-            type: INTEGER
+            type: Number
         }
     }
 )
 
 const CHEMEX = mongoose.model('Chemex', ChemexSchema, 'Chemex');
-module.exports = Chemex;
+module.exports = CHEMEX;
