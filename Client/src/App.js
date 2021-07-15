@@ -1,6 +1,6 @@
 import React from "react";
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
 
 import {
   ApolloProvider,
@@ -12,7 +12,7 @@ import {
 import { setContext } from '@apollo/client/link/context';
 
 import Header from './components/header'
-import Brews from './components/brewing-methods/routes'
+import Brews from './components/Brews'
 const httpLink = createHttpLink({
   uri: "/graphql"
 });
