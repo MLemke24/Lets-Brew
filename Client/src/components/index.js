@@ -1,26 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import 'materialize-css/dist/css/materialize.min.css'
+import logo from "../images/noun_coffee beans_306161.png"
 
 const Header = () => {
   return (
     <nav>
-      <div class="nav-wrapper">
-        <Link to="/profile">
-          <a href="/" class="brand-logo center">
-            <h4>
-              Lets
-              <span class="dot">
+      <div className="nav-wrapper">
+        <Link to="/">
+          <a href="/" className="brand-logo center">
+            <h1>
+              <b>Lets </b>
+              <span className="dot">
                 <img
-                  class="beans"
-                  src="Client\src\images\noun_coffee beans_306161.png"
+                  className="beans"
+                  src={logo}
                   alt=""
                 />
               </span>
-              Brew
-            </h4>
+              <b> Brew</b>
+            </h1>
           </a>
         </Link>
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <ul id="nav-mobile" className="left">
           <li>
             <a href="sass.html">Sign-In</a>
           </li>
@@ -28,7 +30,7 @@ const Header = () => {
             <a href="badges.html">Sign-Up</a>
           </li>
         </ul>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <ul id="nav-mobile" className="right">
           <li>
             <a href="sass.html">Get-Started</a>
           </li>
