@@ -15,7 +15,7 @@ import Header from "./components";
 import Home from "./pages/Home";
 
 const httpLink = createHttpLink({
-  uri: "/graphql",
+  uri: "/graphql"
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -41,7 +41,7 @@ function App() {
           <Header />
           <div className="container">
             <Switch>
-            <Route exact path="/" component={Home} />
+              <Home/>
             </Switch>
           </div>
         </div>
