@@ -4,7 +4,7 @@ const { CHEMEX } = require('../Models')
 
 const resolvers = {
   Query: {
-    findBrew: async(parent, args) => {
+    chemex: async(parent, args) => {
       const findBrew = await CHEMEX.findOne(args)
 
       return findBrew
