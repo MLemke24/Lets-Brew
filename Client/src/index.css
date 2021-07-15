@@ -111,13 +111,13 @@ html {
 .item-1:hover ~ .dial-arrow {
   transform: rotate(-44.8turn) !important;
 }
-.item-1 > a {
+.item-1 > span {
   color: white;
   font-weight: bold;
   display: inline-block;
   transform: rotate(-0.2turn);
 }
-.item-1 > a:hover {
+.item-1 > span:hover {
   color: #ff6f27;
 }
 .item-2 {
@@ -128,13 +128,13 @@ html {
 .item-2:hover ~ .dial-arrow {
   transform: rotate(-44.6turn) !important;
 }
-.item-2 > a {
+.item-2 > span {
   color: white;
   font-weight: bold;
   display: inline-block;
   transform: rotate(-0.4turn);
 }
-.item-2 > a:hover {
+.item-2 > span:hover {
   color: #ff6f27;
 }
 .item-3 {
@@ -145,13 +145,13 @@ html {
 .item-3:hover ~ .dial-arrow {
   transform: rotate(-44.4turn) !important;
 }
-.item-3 > a {
+.item-3 > span {
   color: white;
   font-weight: bold;
   display: inline-block;
   transform: rotate(-0.6turn);
 }
-.item-3 > a:hover {
+.item-3 > span:hover {
   color: #ff6f27;
 }
 .item-4 {
@@ -162,13 +162,13 @@ html {
 .item-4:hover ~ .dial-arrow {
   transform: rotate(-44.2turn) !important;
 }
-.item-4 > a {
+.item-4 > span {
   color: white;
   font-weight: bold;
   display: inline-block;
   transform: rotate(-0.8turn);
 }
-.item-4 > a:hover {
+.item-4 > span:hover {
   color: #ff6f27;
 }
 .item-5 {
@@ -179,12 +179,12 @@ html {
 .item-5:hover ~ .dial-arrow {
   transform: rotate(-44turn) !important;
 }
-.item-5 > a {
+.item-5 > span {
   color: white;
   font-weight: bold;
   display: inline-block;
   transform: rotate(-1turn);
 }
-.item-5 > a:hover {
+.item-5 > span:hover {
   color: #ff6f27;
 }

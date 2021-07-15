@@ -41,7 +41,7 @@ function App() {
           <Header />
           <div className="container">
             <Switch>
-              <Home/>
+            <Route exact path="/" component={Home} />
             </Switch>
           </div>
         </div>
