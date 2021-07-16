@@ -7,7 +7,7 @@
 
 html {
   background-color: black;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 /* ------NAV START---------*/
 
@@ -32,7 +32,7 @@ html {
 }
 
 .left {
-  margin-left:25px;
+  margin-left: 25px;
 }
 .right {
   margin-right: 25px;
@@ -47,7 +47,7 @@ html {
 }
 
 .boxes {
-  min-height: 50vh; 
+  min-height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,126 +65,208 @@ html {
 /*---HOME START---*/
 
 .home {
-  margin-top: 140px;
+  margin-top: 190px;
   display: flex;
   justify-content: space-between;
 }
 
-[class^="l-column"] {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+a {
+  text-decoration: none;
 }
-.dial-wrapper {
-  font-size: 1rem;
-  border: 0.5em solid white;
-  border-radius: 100%;
-  width: 31.2em;
-  height: 31.2em;
+
+.menu {
   position: relative;
+  margin-top: 6%;
+  left: 50%;
+  width: 0px;
+  transform: translate(-50%, 55%);
 }
-.dial-arrow {
-  transform: rotate(45deg);
-  border-radius: 20% 100% 100% 100%;
-  background-color: #ff6f27;
-  width: 3em;
-  height: 3em;
-  transition: all 150ms cubic-bezier(0, 0, 0.3, 1);
+
+.toggle {
+  display: none;
+}
+
+.wheelicon {
   position: absolute;
+  left: 40px;
+  top: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
 }
-.dial-items {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}
-[class^='item-'] {
+
+.kettle {
   position: absolute;
-  padding-left: 1em;
+  top: 20px;
 }
-.item-1 {
+
+.wheelselect {
   position: absolute;
-  display: block;
-  transform: rotate(0.2turn) translate(-12em);
+  
 }
-.item-1:hover ~ .dial-arrow {
-  transform: rotate(-44.8turn) !important;
+
+.wheelselect:hover {
+  opacity: 0;
+  transition:opacity 2s;
 }
-.item-1 > span {
-  color: white;
-  font-weight: bold;
+
+.icontext {
+  z-index: -1;
+  width: 420px;
+  line-height: 20px;
+  color: black;
   display: inline-block;
-  transform: rotate(-0.2turn);
-}
-.item-1 > span:hover {
-  color: #ff6f27;
-}
-.item-2 {
-  position: absolute;
-  display: block;
-  transform: rotate(0.4turn) translate(-12em);
-}
-.item-2:hover ~ .dial-arrow {
-  transform: rotate(-44.6turn) !important;
-}
-.item-2 > span {
-  color: white;
+  padding: 200px 0px;
+  vertical-align: middle;
+  font-family: "Trebuchet MS";
+  height: 450px;
+  max-width: 85px;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 20px;
+  padding-top: 50px;
   font-weight: bold;
-  display: inline-block;
-  transform: rotate(-0.4turn);
+  font-size: 23px;
+  text-align: center;
+  padding-left: 6px;
 }
-.item-2 > span:hover {
-  color: #ff6f27;
-}
-.item-3 {
-  position: absolute;
+
+
+
+.toggle + .style {
+  border: 10px solid #ebb694f6;
+  width: 325px;
+  height: 325px;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translate(-50%, -50%) scale(1.3);
+  z-index: 5;
   display: block;
-  transform: rotate(0.6turn) translate(-12em);
+  max-width: 400px;
+  margin-bottom: 0;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  font-size: 2.5em;
+  padding-top: 75px;
+  text-align: center;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  transition: all 0.8s;
 }
-.item-3:hover ~ .dial-arrow {
-  transform: rotate(-44.4turn) !important;
+
+
+.toggle + .style:hover {
+  -webkit-box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.7);
+  -ms-box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.7);
+  -o-box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.7);
 }
-.item-3 > span {
-  color: white;
-  font-weight: bold;
-  display: inline-block;
-  transform: rotate(-0.6turn);
+
+.toggle:checked + .style {
+  transform: translate(-50%, -50%) scale(0.35);
 }
-.item-3 > span:hover {
-  color: #ff6f27;
-}
-.item-4 {
+
+.menu input[type="checkbox"] + label:before {
+  content: "";
   position: absolute;
-  display: block;
-  transform: rotate(0.8turn) translate(-12em);
+  
 }
-.item-4:hover ~ .dial-arrow {
-  transform: rotate(-44.2turn) !important;
-}
-.item-4 > span {
-  color: white;
-  font-weight: bold;
-  display: inline-block;
-  transform: rotate(-0.8turn);
-}
-.item-4 > span:hover {
-  color: #ff6f27;
-}
-.item-5 {
+
+.toggle + .style:before,
+.toggle + .style:after {
+  content: "";
   position: absolute;
-  display: block;
-  transform: rotate(1turn) translate(-12em);
+  margin: -3px;
+  border-radius: 5px;
+  transition: all 0.3s;
 }
-.item-5:hover ~ .dial-arrow {
-  transform: rotate(-44turn) !important;
+
+.toggle + .style:before {
+  width: 30px;
+  height: 0px;
+  left: 10px;
+  top: 25px;
 }
-.item-5 > span {
-  color: white;
-  font-weight: bold;
-  display: inline-block;
-  transform: rotate(-1turn);
+
+.toggle + .style:after {
+  width: 0px;
+  height: 30px;
+  left: 25px;
+  top: 10px;
 }
-.item-5 > span:hover {
-  color: #ff6f27;
+
+.toggle:checked + .style:before,
+.toggle:checked + .style:after {
+  transform: rotate(135deg);
+}
+
+.toggle ~ .tab {
+  position: absolute;
+  background: #ffffff;
+  color: black;
+  width: 125px;
+  height: 125px;
+  left: 0px;
+  top: 0px;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.3s;
+  opacity: 0;
+  border-radius: 50%;
+  border: 4px solid #ebb694f6;
+}
+
+.toggle:checked ~ .tab {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.menu > .toggle:checked ~ .tab:nth-of-type(1) {
+  top: -122px;
+  left: 0px;
+  transition-delay: 0s;
+  
+}
+
+.menu > .toggle:checked ~ .tab:nth-of-type(2) {
+  top: -74px;
+  left: 120px;
+  transition-delay: 0.125s;
+}
+
+.menu > .toggle:checked ~ .tab:nth-of-type(3) {
+  top: 56px;
+  left: 115px;
+  transition-delay: 0.25s;
+}
+
+.menu > .toggle:checked ~ .tab:nth-of-type(4) {
+  top: 122px;
+  left: 0px;
+  transition-delay: 0.375s;
+}
+
+.menu > .toggle:checked ~ .tab:nth-of-type(5) {
+  top: 56px;
+  left: -115px;
+  transition-delay: 0.5s;
+}
+
+.menu > .toggle:checked ~ .tab:nth-of-type(6) {
+  top: -74px;
+  left: -120px;
+  transition-delay: 0.625s;
+}
+
+.menu > .toggle:checked ~ .tab:nth-of-type(7) {
+  top: 0px;
+  left: -230.33333px;
+  transition-delay: 0.75s;
+}
+
+.menu > .toggle:checked ~ .tab:nth-of-type(8) {
+  top: 0px;
+  left: 230.333333px;
+  transition-delay: 0.875s;
 }

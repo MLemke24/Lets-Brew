@@ -1,30 +1,79 @@
 import React from "react";
-import 'materialize-css/dist/css/materialize.min.css'
+import "materialize-css/dist/css/materialize.min.css";
+import mug from "../images/mug.svg"
+import aeropress from "../images/icons/AeroPress/SVG/AeroPress.svg"
+import bialetti from "../images/icons/Bialetti/SVG/Bialetti.svg"
+import chemex from "../images/icons/Chemex/SVG/Chemex.svg"
+import frenchpress from "../images/icons/French Press/SVG/French Press.svg"
+import hairo from "../images/icons/Hairo Vaccum/SVG/Hairo Vaccum .svg"
+import kettle from "../images/icons/Kettle/SVG/Kettle.svg"
+import neldrip from "../images/icons/Nel-Drip/SVG/Nel Drip.svg"
+import v60 from "../images/icons/V60/SVG/V60.svg"
+
 
 const Home = () => {
-  
-
   return (
     <main className="home">
-        <div>
-            <h1>GET STARTED</h1>
-            <h3>CHOOSE YOUR METHOD</h3>
-        </div>
-
-        <div class="dial-wrapper">
-      <div class="dial-items">
-        <span class="item-1">French Press</span>
-        <span class="item-2">Chemex</span>
-        <span class="item-3">Aeropress</span>
-        <span class="item-4">Bialetti</span>
-        <span class="item-5">Hairo Vaccum</span>
-        <div class="dial-arrow"></div>
+      <div>
+        <h1>GET STARTED</h1>
+        <h3>CHOOSE YOUR METHOD</h3>
       </div>
-    </div>
-  
 
       
-    </main>
+      <div class="container">
+			<div className='menu'>
+			  <input className='toggle' id='menu' type='checkbox'>
+                </input>
+			  <label className='style' for='menu'>
+			  	<img className="wheelicon" src={mug}></img>
+			  </label>
+               
+			  <a class='tab' href='#'>
+              <img className="wheelselect"  src={aeropress}></img>
+              <p className="icontext">Aeropress</p>
+			  </a>
+              
+			  <a class='tab' href='#'>
+              <img className="wheelselect"  src={bialetti}></img>
+			  	<p className="icontext">Bialetti</p>
+			  </a>
+              
+			  <a class='tab' href='#'>
+              <img className="wheelselect"  src={chemex}></img>
+			  	<p className="icontext">Chemex</p>
+			  </a>
+
+              <a class='tab' href='#'>
+              <img className="wheelselect"  src={frenchpress}></img>
+			  	<p className="icontext">French Press</p>
+			  </a>
+              
+			  <a class='tab' href='#'>
+              <img className="wheelselect"  src={hairo}></img>
+			  	<p className="icontext">Hairo Vaccum</p>
+			  </a>
+
+			  <a class='tab' href='#'>
+              <img className="wheelselect"  src={kettle}></img>
+			  	<p className="icontext">Kettle</p>
+			  </a>
+
+			  <a class='tab' href='#'>
+              <img className="wheelselect"  src={neldrip}></img>
+			  	<p className="icontext">Nel-Drip</p>
+			  </a>
+
+              <a class='tab' href='#'>
+              <img className="wheelselect"  src={v60}></img>
+			  	<p className="icontext">V-60</p>
+			  </a>
+              
+              
+			</div>
+		</div>
+
+
+</main>
   );
 };
 
