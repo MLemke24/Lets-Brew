@@ -1,10 +1,14 @@
 import React from 'react'
+import Brew from '../components/Brew'
+import { useMutation, useQuery } from '@apollo/client'
+//import queries here for data fetching 
 
 //here is the page for each method
 
 const Instructions = () =>{
     return (
         <div>
+            <Brew />
             <h2>timer</h2>
             <div>Timer icon</div>
             <button>start</button>

@@ -1,15 +1,8 @@
-import React, { useState, useEffect } from 'react';
-// import the correct query for retrieving data from the database
+import React from 'react';
 
 const BrewPage = () => {
-  const [cupButton, setCupButton] = useState(1)
-
-  const [cupSize, setCupSize] = useState=('')
-  const [grindSize, setGrindSize] = useState=('')
-  const [coffeeAmount, setCoffeeAmount] = useState=('')
-  const [water, setWater] = useState=('')
   return (
-    query.map(data => { 
+    query.map(data => {
       <div>
         <p>{data.cupSize}</p>
         <p>{data.grindSize}</p>
@@ -18,6 +11,6 @@ const BrewPage = () => {
       </div>
     })
   )
-} 
+}
 
 export default BrewPage;
