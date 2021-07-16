@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Link, Route, useParams } from 'react-router-dom'
-
 //require css
 
 const brews = [
@@ -27,9 +26,7 @@ const Instructions = () => {
         <div>
             <h1> {method} </h1>
             <p>timer</p>
-        
         </div>
-        // get a 1 cup,
     )
 }
 const Brews = () => {
@@ -37,15 +34,11 @@ const Brews = () => {
         <Router>
             <div>
                 <ul>{brews.map(brew => {
-                    //each brew consist of a card with the info form the prop + a link with a path to their server
                     return (
-                        // have a widh with white background and round border so translucid img looks
                         <li className='Icon'>
                             <Link to={brew.url}>{brew.name}</Link>
                         </li>
-                    )
-                })
-                }
+                    )})}
                 </ul>
             </div>
             <Route path='/:method'>

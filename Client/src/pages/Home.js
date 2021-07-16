@@ -1,6 +1,6 @@
 import React from "react";
 import 'materialize-css/dist/css/materialize.min.css'
-
+import Brews from "../components/Brews";
 const Home = () => {
   
 
@@ -20,6 +20,9 @@ const Home = () => {
         <span class="item-5">Hairo Vaccum</span>
         <div class="dial-arrow"></div>
       </div>
+          <div>
+            <Brews/>
+          </div>
     </div>
   
 

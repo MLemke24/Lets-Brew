@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import 'materialize-css/dist/css/materialize.min.css'
-import logo from "../images/icons/Logo/SVG/Logo.svg"
+// import logo from "../images/icons/Logo/SVG/Logo.svg"
 
 const Header = () => {
   return (
@@ -14,7 +14,7 @@ const Header = () => {
               <span className="dot">
                 <img
                   className="beans"
-                  src={logo}
+                  src=""
                   alt=""
                 />
               </span>
