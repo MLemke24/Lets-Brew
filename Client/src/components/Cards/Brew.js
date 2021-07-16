@@ -26,7 +26,7 @@ const BrewSpecs = ({ data }) => {
         <p>{grindSize}</p>
         <p>{coffeeAmount}</p>
         <p>{water}</p>
-        <cupButton />
+        <cupButton onChange={renderData()}/>
         <button type="submit" onSubmit={renderData()}></button>
       </div>
   )
