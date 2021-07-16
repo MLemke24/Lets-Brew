@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import cupButton from '../cupButton'
 
 const BrewSpecs = ({ data }) => {
     const [cupSize, setCupSize] = useState('')
@@ -25,6 +26,7 @@ const BrewSpecs = ({ data }) => {
         <p>{grindSize}</p>
         <p>{coffeeAmount}</p>
         <p>{water}</p>
+        <cupButton />
         <button type="submit" onSubmit={renderData()}></button>
       </div>
   )
