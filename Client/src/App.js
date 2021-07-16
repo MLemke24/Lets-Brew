@@ -43,11 +43,13 @@ function App() {
           <div className="container">
             <Switch>
               <Route exact path="/" component={Home} />
+              <Route exact path="/cups/:number"/>
               <Route exact path="/instructions/:brewId" component={Instructions}/>
               <Route exact path="/brews"/>
-              <Route exact path="/cups"/>
               <Route exact path="/login" />
               <Route exact path="/signup"/>
+              <Route exact path="/shop"/>
+              <Route exact path="/social"/>
             </Switch>
           </div>
         </div>
