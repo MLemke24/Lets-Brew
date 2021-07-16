@@ -1,13 +1,16 @@
-import React from 'react';
-import index from '../../../Server/Models/index';
+import React, { useState } from 'react';
 
 const BrewPage = () => {
+  const [cupSize, setCupSize] = useState('')
+  const [grindSize, setGrindSize] = useState(1)
+  const [coffeeAmount, setCoffeeAmount] = useState(1)
+  const [water, setWater] = useState(1)
   return (
       <div>
-        <p>{index.cupSize}</p>
-        <p>{index.grindSize}</p>
-        <p>{index.coffeeAmount}</p>
-        <p>{index.water}</p>
+        <p>{cupSize}</p>
+        <p>{grindSize}</p>
+        <p>{coffeeAmount}</p>
+        <p>{water}</p>
       </div>
   )
 }
