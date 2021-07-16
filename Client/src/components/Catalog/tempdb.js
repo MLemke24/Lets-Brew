@@ -51,10 +51,10 @@ const brews = [
         water: "2 mililiters",
         weight: "1 terabite",
         strength: "heavy metal coffee",
-        step1:"boil the coffee",
-        step2:"take a walk outside",
-        step3:"put down the fire",
-        step4:"fraud the insurance company"
+        step1:"pour some sugar on it",
+        step2:"remove the charder sugar from coffee ",
+        step3:"toss against the wall",
+        step4:"repeat until satisfied"
     }
     ,
     {
@@ -66,10 +66,10 @@ const brews = [
         water: "2 mililiters",
         weight: "1 terabite",
         strength: "boldness is my second name",
-        step1:"boil the coffee",
-        step2:"take a walk outside",
-        step3:"put down the fire",
-        step4:"fraud the insurance company"
+        step1:"put water to boil",
+        step2:"drink water from the pot",
+        step3:"call 911",
+        step4:"survive"
     }
     ,
     {
@@ -81,10 +81,10 @@ const brews = [
         water: "2 mililiters",
         weight: "1 terabite",
         strength: "a very bold brew",
-        step1:"boil the coffee",
-        step2:"take a walk outside",
-        step3:"put down the fire",
-        step4:"fraud the insurance company"
+        step1:"imagine the pot",
+        step2:"imagine pouring water into it",
+        step3:"boil it with in your mind",
+        step4:"drink imaginaryly"
     }
     ,
     {
@@ -96,10 +96,10 @@ const brews = [
         water: "2 mililiters",
         weight: "1 terabite",
         strength: "strong and ready to kick some butt",
-        step1:"boil the coffee",
-        step2:"take a walk outside",
-        step3:"put down the fire",
-        step4:"fraud the insurance company"
+        step1:"whip it",
+        step2:"whip it good",
+        step3:"shake it up",
+        step4:"its not to late..."
     }
     ,
     {
