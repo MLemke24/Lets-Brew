@@ -25,46 +25,46 @@ const Home = () => {
 			  <input className='toggle' id='menu' type='checkbox'>
                 </input>
 			  <label className='style' for='menu'>
-			  	<img className="wheelicon" src={mug}></img>
+			  	<img className="wheelicon" alt="mug" src={mug}></img>
 			  </label>
                
 			  <a class='tab' href='#'>
-              <img className="wheelselect"  src={aeropress}></img>
+              <img className="wheelselect" alt="aeropress"  src={aeropress}></img>
               <p className="icontext">Aeropress</p>
 			  </a>
               
 			  <a class='tab' href='#'>
-              <img className="wheelselect"  src={bialetti}></img>
+              <img className="wheelselect" alt="bialetti"  src={bialetti}></img>
 			  	<p className="icontext">Bialetti</p>
 			  </a>
               
 			  <a class='tab' href='#'>
-              <img className="wheelselect"  src={chemex}></img>
+              <img className="wheelselect" alt="chemex" src={chemex}></img>
 			  	<p className="icontext">Chemex</p>
 			  </a>
 
               <a class='tab' href='#'>
-              <img className="wheelselect"  src={frenchpress}></img>
+              <img className="wheelselect" alt="french" src={frenchpress}></img>
 			  	<p className="icontext">French Press</p>
 			  </a>
               
 			  <a class='tab' href='#'>
-              <img className="wheelselect"  src={hairo}></img>
+              <img className="wheelselect" alt="hairo"  src={hairo}></img>
 			  	<p className="icontext">Hairo Vaccum</p>
 			  </a>
 
 			  <a class='tab' href='#'>
-              <img className="wheelselect"  src={kettle}></img>
+              <img className="wheelselect" alt="kettle" src={kettle}></img>
 			  	<p className="icontext">Kettle</p>
 			  </a>
 
 			  <a class='tab' href='#'>
-              <img className="wheelselect"  src={neldrip}></img>
+              <img className="wheelselect" alt="drip" src={neldrip}></img>
 			  	<p className="icontext">Nel-Drip</p>
 			  </a>
 
               <a class='tab' href='#'>
-              <img className="wheelselect"  src={v60}></img>
+              <img className="wheelselect" alt="v60"  src={v60}></img>
 			  	<p className="icontext">V-60</p>
 			  </a>
               
