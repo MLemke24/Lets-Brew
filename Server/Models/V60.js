@@ -5,6 +5,9 @@ const V60Schema = new Schema(
         id: {
             type: Number,
         },
+        name: {
+            type: String
+        },
         cupSize: {
             type: Number,
         },
