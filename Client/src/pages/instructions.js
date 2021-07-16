@@ -8,7 +8,7 @@ import { useMutation, useQuery } from '@apollo/client'
 const Instructions = () =>{
     return (
         <div>
-            <Brew />
+            <Brew data={data.data}/>
             <h2>timer</h2>
             <div>Timer icon</div>
             <button>start</button>
