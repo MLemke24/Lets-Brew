@@ -1,15 +1,14 @@
+
 const { AuthenticationError } = require('apollo-server-express')
-const { CHEMEX } = require('../Models')
+const { Chemex, AeroPress, BeeHouse, FrenchPress, MokaPot, Siphon, V60, Wave } = require('../Models/index');
 //import an auth function from utils folder 
 
 const resolvers = {
   Query: {
-    chemex: async(parent, args) => {
-      const findBrew = await CHEMEX.findOne(args)
-
-      return findBrew
-    },
+   aeropress: async () => {
+     return AeroPress.find()
+   }
   }
-}
+};
 
 module.exports = resolvers;
