@@ -7,10 +7,6 @@ import Data from '../Catalog/tempdb'
 
 const Instructions = () => {
     const {brewId} = useParams();
-
-    //use {brewId}  to render the information for each brew
-
-
     return (
         <div>
             <h1> Brewing : {brewId} </h1>
@@ -20,7 +16,7 @@ const Instructions = () => {
                 <h4>{Data.filter(brew => brew.name === brewId).map(filterBrew=> filterBrew.strength)}</h4>
             </div>
             <div>
-                <h2>Volume</h2>
+                <h2>Volumes:</h2>
                 <ul>
                     <li>Water :<span> {Data.filter(brew => brew.name === brewId).map(filterBrew=> filterBrew.water)}</span></li>
                     <li>Grind :<span> {Data.filter(brew => brew.name === brewId).map(filterBrew=> filterBrew.grind)}</span></li>
@@ -28,24 +24,25 @@ const Instructions = () => {
                 </ul>
             </div>
             <div>
-                <h2>Steps</h2>
+                <h2>Instructions:</h2>
                 <ul>
                     <li>
-                        <h3>Step One</h3>
-                        <p>description of step 1 for {brewId}</p>
+                        <h4>Step One</h4>
+                        <p>{Data.filter(brew => brew.name === brewId).map(filterBrew=> filterBrew.step1)}</p>
                     </li>
                     <li>
-                        <h3>Step Two</h3>
-                        <p>description of step 2 for {brewId}</p>
+                        <h4>Step Two</h4>
+                        <p>{Data.filter(brew => brew.name === brewId).map(filterBrew=> filterBrew.step2)}</p>
                     </li>
                     <li>
-                        <h3>Step Three</h3>
-                        <p>description of step 3 for {brewId}</p>
+                        <h4>Step Three</h4>
+                        <p>{Data.filter(brew => brew.name === brewId).map(filterBrew=> filterBrew.step3)}</p>
                     </li>
                     <li>
-                        <h3>Step Four</h3>
-                        <p>description of step 4 for {brewId}</p>
+                        <h4>Step Four</h4>
+                        <p>{Data.filter(brew => brew.name === brewId).map(filterBrew=> filterBrew.step4)}</p>
                     </li>
+                
                 </ul>
             </div>
         </div>
