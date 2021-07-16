@@ -1,6 +1,6 @@
 import React from "react";
 import 'materialize-css/dist/css/materialize.min.css'
-import Brews from "../components/Brews";
+import Brews from "../components/Catalog";
 const Home = () => {
   
 
