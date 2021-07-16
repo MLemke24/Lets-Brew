@@ -1,11 +1,12 @@
+//source :https://www.codegrepper.com/code-examples/javascript/react+filter+array+of+objects+by+name
+
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import Timer from '../Timer'
 import Data from '../Catalog/tempdb'
+
 const Instructions = () => {
     const {brewId} = useParams();
-    //now that we have captured the param, we can use it to render their correpsondent items
-    
     return (
         <div>
             <h1> Brewing : {brewId} </h1>
