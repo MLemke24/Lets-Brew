@@ -1,7 +1,7 @@
 import React, { useState } from 'react' 
 
 const cupButton = ({ data }) => {
-  const [num, setNum] = useState(1)
+  // const [num, setNum] = useState(1)
 
   const handleNum = () => {
     setNum(data.id)

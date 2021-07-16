@@ -14,6 +14,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "./components/header/";
 import Home from "./pages/Home";
 import Brews from "./components/Brews"
+import Instructions from "./components/Instructions";
+
 
 const httpLink = createHttpLink({
   uri: "/graphql"
@@ -42,8 +44,17 @@ function App() {
           <Header />
           <div className="container">
             <Switch>
+
             <Route exact path="/" component={Home} />
-            <Route exact path="/brews" component={Brews} />
+           
+
+              <Route exact path="/" component={Home} />
+              <Route exact path="/instructions/:brewId" component={Instructions}/>
+              <Route exact path="/brews"/>
+              <Route exact path="/cups"/>
+              <Route exact path="/login" />
+              <Route exact path="/signup"/>
+
             </Switch>
           </div>
         </div>
