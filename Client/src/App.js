@@ -43,9 +43,9 @@ function App() {
           <div className="container">
             <Switch>
               <Route exact path="/" component={Home} />
+              <Route exact path="/instructions/:brewId" component={Instructions}/>
               <Route exact path="/brews"/>
               <Route exact path="/cups"/>
-              <Route exact path="/instructions/:brewId" component={Instructions}/>
               <Route exact path="/login" />
               <Route exact path="/signup"/>
             </Switch>

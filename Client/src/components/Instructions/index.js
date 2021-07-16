@@ -1,29 +1,19 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import Timer from '../Timer'
-
+import Data from '../Catalog/tempdb'
 const Instructions = () => {
+    const {brewId} = useParams();
+    //now that we have captured the param, we can use it to render their correpsondent items
     
-
-    let {method} = useParams();
     return (
-        
         <div>
-            <h1> Brewing : {method} </h1>
+            <h1> Brewing : {brewId} </h1>
             <Timer/>
             <div>
-                <h2>Volume</h2>
+                <h2>Strenght : </h2>
+                <h4>{Data.filter(brew => brew.name === brewId).map(filterBrew=> filterBrew.strength)}</h4>
             </div>
-            <div>
-                <h2>Steps</h2>
-                <ul>
-                    <li>Step One</li>
-                    <li>Step Two</li>
-                    <li>Step Three</li>
-                    <li>Step Four</li>
-                </ul>
-            </div>
-            
         </div>
     )
 }

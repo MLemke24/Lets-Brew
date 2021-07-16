@@ -1,5 +1,5 @@
 import React, {useState } from 'react';
-// source: https://www.geeksforgeeks.org/create-a-stop-watch-using-reactjs/
+// source https://www.geeksforgeeks.org/create-a-stop-watch-using-reactjs/
 const Timer = (props) => {
     return (
         <div className="timer">

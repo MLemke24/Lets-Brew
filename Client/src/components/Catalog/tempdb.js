@@ -4,19 +4,19 @@ const brews = [
         id: 1,
         cups: 2,
         name: "french press",
-        url: "/french-press",
+        strength: "saitama strong"
     },
     {
         id: 2,
         cups: 4,
         name: "italian press",
-        url: "/italian-press",
+        strength: "like a punch trough time"
     },
     {
         id: 3,
         cups: 1,
         name: "german press",
-        url: "/german-press",
+        strength: "strong as your coding game"
     }
 ]
 
