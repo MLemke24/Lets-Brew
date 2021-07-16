@@ -1,13 +1,15 @@
 import React from 'react';
-import { useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom';
 import Timer from '../Timer'
 
 const Instructions = () => {
     
-    const { method } = useParams()
+
+    let {method} = useParams();
     return (
+        
         <div>
-            <h1> {method} </h1>
+            <h1> Brewing : {method} </h1>
             <Timer/>
             <div>
                 <h2>Volume</h2>

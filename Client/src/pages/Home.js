@@ -12,13 +12,13 @@ const Home = () => {
         </div>
 
         <div class="dial-wrapper">
-      <div class="dial-items">
-        <span class="item-1">French Press</span>
-        <span class="item-2">Chemex</span>
-        <span class="item-3">Aeropress</span>
-        <span class="item-4">Bialetti</span>
-        <span class="item-5">Hairo Vaccum</span>
-        <div class="dial-arrow"></div>
+      <div className="dial-items">
+        <span className="item-1">French Press</span>
+        <span className="item-2">Chemex</span>
+        <span className="item-3">Aeropress</span>
+        <span className="item-4">Bialetti</span>
+        <span className="item-5">Hairo Vaccum</span>
+        <div className="dial-arrow"></div>
       </div>
           <div>
             <Brews/>

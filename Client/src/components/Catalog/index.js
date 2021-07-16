@@ -1,31 +1,21 @@
 import React from 'react';
-// import { useQuery } from '@apollo/client';
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
-import Instructions from '../Instructions'
+import { Link  } from 'react-router-dom'
 import brews from './tempdb'
-// import BrewCard from '../Cards'
-// import { QUERY_BREW } from "../../utils/queries"
+
+
 const Brews = () => {
-    // const { loading, data} = useQuery(QUERY_BREW);
-    // const brews = data?.//whatever the name of the query is
-    // function filterBrew(){
-    //     //
-    // }
+    
+    
     return (
-        <Router>
             <div>
                 <ul>{brews.map(brew => {
                     return (
-                        <div className='Icon'>
-                            <Link to={brew.url}>{brew.name}</Link>
-                        </div>
+                        <li className='Icon'>
+                            <Link to={`/instructions/:${brew.id}`}><div>{brew.name}</div></Link>
+                        </li>
                     )})}
                 </ul>
             </div>
-            <Route path='/:method'>
-                <Instructions />
-            </Route>
-        </Router>
     )
 }
 export default Brews;
