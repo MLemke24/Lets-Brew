@@ -1,4 +1,5 @@
 import React from "react";
+
 import "materialize-css/dist/css/materialize.min.css";
 import mug from "../images/mug.svg"
 import aeropress from "../images/icons/AeroPress/SVG/AeroPress.svg"
@@ -10,14 +11,20 @@ import kettle from "../images/icons/Kettle/SVG/Kettle.svg"
 import neldrip from "../images/icons/Nel-Drip/SVG/Nel Drip.svg"
 import v60 from "../images/icons/V60/SVG/V60.svg"
 
+import Brews from "../components/Catalog";
+
+  
+
 
 const Home = () => {
   return (
     <main className="home">
+
       <div>
         <h1>GET STARTED</h1>
         <h3>CHOOSE YOUR METHOD</h3>
       </div>
+
 
       
       <div class="container">
