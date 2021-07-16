@@ -7,6 +7,10 @@ import Data from '../Catalog/tempdb'
 
 const Instructions = () => {
     const {brewId} = useParams();
+
+    //use {brewId}  to render the information for each brew
+
+
     return (
         <div>
             <h1> Brewing : {brewId} </h1>
@@ -18,9 +22,9 @@ const Instructions = () => {
             <div>
                 <h2>Volume</h2>
                 <ul>
-                    <li>Water <span>{Data.filter(brew => brew.name === brewId).map(filterBrew=> filterBrew.water)}</span></li>
-                    <li>Grind <span>{Data.filter(brew => brew.name === brewId).map(filterBrew=> filterBrew.grind)}</span></li>
-                    <li>Coffee <span>{Data.filter(brew => brew.name === brewId).map(filterBrew=> filterBrew.weight)}</span></li>
+                    <li>Water :<span> {Data.filter(brew => brew.name === brewId).map(filterBrew=> filterBrew.water)}</span></li>
+                    <li>Grind :<span> {Data.filter(brew => brew.name === brewId).map(filterBrew=> filterBrew.grind)}</span></li>
+                    <li>Coffee :<span> {Data.filter(brew => brew.name === brewId).map(filterBrew=> filterBrew.weight)}</span></li>
                 </ul>
             </div>
             <div>
