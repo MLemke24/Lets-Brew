@@ -9,9 +9,9 @@ import {
 
 import { setContext } from "@apollo/client/link/context";
 
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Switch } from "react-router-dom";
 
-import Header from "./components";
+import Header from "./components/header";
 import Home from "./pages/Home";
 
 const httpLink = createHttpLink({
