@@ -3,7 +3,7 @@ const { gql } = require('apollo-server-express');
 
 const typeDefs = gql `
   type AeroPress {
-    _id: ID
+    id: ID
     name: String
     cupSize: Int
     grindSize: String

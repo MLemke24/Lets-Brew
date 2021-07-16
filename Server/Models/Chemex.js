@@ -20,5 +20,5 @@ const ChemexSchema = new Schema(
     }
 )
 
-const CHEMEX = mongoose.model('Chemex', ChemexSchema, 'Chemex');
+const CHEMEX = mongoose.model('Chemex', ChemexSchema);
 module.exports = CHEMEX;

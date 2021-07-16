@@ -213,7 +213,7 @@ const data = [
             'cupSize': '3',
             'grindSize': 'coarse',
             'coffeeAmount': '90',
-            'water': '1050'
+            'water': '1050' 
         },
         {
             'id': '4',

@@ -1,6 +1,6 @@
 
 const { AuthenticationError } = require('apollo-server-express')
-const { Chemex, AeroPress, BeeHouse, FrenchPress, MokaPot, Siphon, V60, Wave } = require('../Models/index');
+const { Chemex, AeroPress, BeeHouse, FrenchPress, MokaPot, Siphon, V60, Wave } = require('../Models');
 //import an auth function from utils folder 
 
 const resolvers = {

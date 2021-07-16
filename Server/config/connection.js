@@ -1,7 +1,7 @@
 
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/Lets-Brew', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/lets-brew', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
