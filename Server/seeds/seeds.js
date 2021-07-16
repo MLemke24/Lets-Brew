@@ -32,6 +32,7 @@ const data = [
     documents: [
         {
             'id': '1',
+            'name': 'chemex',
             'cupSize': '1',
             'grindSize': 'medium',
             'coffeeAmount': '25',
@@ -39,6 +40,7 @@ const data = [
         },
         {
             'id': '2',
+            'name': 'chemex',
             'cupSize': '2',
             'grindSize': 'medium',
             'coffeeAmount': '50',
@@ -46,6 +48,7 @@ const data = [
         },
         {
             'id': '3',
+            'name': 'chemex',
             'cupSize': '3',
             'grindSize': 'medium',
             'coffeeAmount': '75',
@@ -53,6 +56,7 @@ const data = [
         },
         {
             'id': '4',
+            'name': 'chemex',
             'cupSize': '4',
             'grindSize': 'medium',
             'coffeeAmount': '100',
@@ -60,6 +64,7 @@ const data = [
         },
         {
             'id': '5',
+            'name': 'chemex',
             'cupSize': '5',
             'grindSize': 'medium',
             'coffeeAmount': '125',
@@ -67,6 +72,7 @@ const data = [
         },
         {
             'id': '6',
+            'name': 'chemex',
             'cupSize': '6',
             'grindSize': 'medium',
             'coffeeAmount': '150',
@@ -79,6 +85,7 @@ const data = [
     documents: [
         {
         'id': '1',
+        'name': 'aeropress',
         'cupSize': '1',
         'grindSize': 'fine',
         'coffeeAmount': '15',
@@ -86,6 +93,7 @@ const data = [
         },
         {
             'id': '2',
+            'name': 'aeropress',
             'cupSize': '2',
             'grindSize': 'fine',
             'coffeeAmount': '30',
@@ -93,6 +101,7 @@ const data = [
         },
         {
             'id': '3',
+            'name': 'aeropress',
             'cupSize': '3',
             'grindSize': 'fine',
             'coffeeAmount': '45',
@@ -100,6 +109,7 @@ const data = [
         },
         {
             'id': '4',
+            'name': 'aeropress',
             'cupSize': '4',
             'grindSize': 'fine',
             'coffeeAmount': '60',
@@ -107,6 +117,7 @@ const data = [
         },
         {
             'id': '5',
+            'name': 'aeropress',
             'cupSize': '5',
             'grindSize': 'fine',
             'coffeeAmount': '75',
@@ -114,6 +125,7 @@ const data = [
         },
         {
             'id': '6',
+            'name': 'aeropress',
             'cupSize': '6',
             'grindSize': 'fine',
             'coffeeAmount': '90',
@@ -127,6 +139,7 @@ const data = [
     documents: [
         {
         'id': '1',
+        'name': 'V60',
         'cupSize': '1',
         'grindSize': 'medium',
         'coffeeAmount': '13',
@@ -134,6 +147,7 @@ const data = [
         },
         {
             'id': '2',
+            'name': 'V60',
             'cupSize': '2',
             'grindSize': 'medium',
             'coffeeAmount': '26',
@@ -141,6 +155,7 @@ const data = [
         },
         {
             'id': '3',
+            'name': 'V60',
             'cupSize': '3',
             'grindSize': 'medium',
             'coffeeAmount': '39',
@@ -148,6 +163,7 @@ const data = [
         },
         {
             'id': '4',
+            'name': 'V60',
             'cupSize': '4',
             'grindSize': 'medium',
             'coffeeAmount': '52',
@@ -155,6 +171,7 @@ const data = [
         },
         {
             'id': '5',
+            'name': 'V60',
             'cupSize': '5',
             'grindSize': 'medium',
             'coffeeAmount': '65',
@@ -162,6 +179,7 @@ const data = [
         },
         {
             'id': '6',
+            'name': 'V60',
             'cupSize': '6',
             'grindSize': 'medium',
             'coffeeAmount': '78',
@@ -175,6 +193,7 @@ const data = [
     documents: [
         {
         'id': '1',
+        'name': 'frenchpress',
         'cupSize': '1',
         'grindSize': 'coarse',
         'coffeeAmount': '30',
@@ -182,6 +201,7 @@ const data = [
         },
         {
             'id': '2',
+            'name': 'frenchpress',
             'cupSize': '2',
             'grindSize': 'coarse',
             'coffeeAmount': '60',
@@ -189,6 +209,7 @@ const data = [
         },
         {
             'id': '3',
+            'name': 'frenchpress',
             'cupSize': '3',
             'grindSize': 'coarse',
             'coffeeAmount': '90',
@@ -196,6 +217,7 @@ const data = [
         },
         {
             'id': '4',
+            'name': 'frenchpress',
             'cupSize': '4',
             'grindSize': 'coarse',
             'coffeeAmount': '120',
@@ -203,6 +225,7 @@ const data = [
         },
         {
             'id': '5',
+            'name': 'frenchpress',
             'cupSize': '5',
             'grindSize': 'coarse',
             'coffeeAmount': '150',
@@ -210,6 +233,7 @@ const data = [
         },
         {
             'id': '6',
+            'name': 'frenchpress',
             'cupSize': '6',
             'grindSize': 'coarse',
             'coffeeAmount': '180',
@@ -222,6 +246,7 @@ const data = [
     documents: [
         {
         'id': '1',
+        'name': 'siphon',
         'cupSize': '1',
         'grindSize': 'fine',
         'coffeeAmount': '20',
@@ -229,6 +254,7 @@ const data = [
         },
         {
             'id': '2',
+            'name': 'siphon',
             'cupSize': '2',
             'grindSize': 'fine',
             'coffeeAmount': '40',
@@ -236,6 +262,7 @@ const data = [
         },
         {
             'id': '3',
+            'name': 'siphon',
             'cupSize': '3',
             'grindSize': 'fine',
             'coffeeAmount': '60',
@@ -243,6 +270,7 @@ const data = [
         },
         {
             'id': '4',
+            'name': 'siphon',
             'cupSize': '4',
             'grindSize': 'fine',
             'coffeeAmount': '90',
@@ -250,6 +278,7 @@ const data = [
         },
         {
             'id': '5',
+            'name': 'siphon',
             'cupSize': '5',
             'grindSize': 'fine',
             'coffeeAmount': '120',
@@ -257,6 +286,7 @@ const data = [
         },
         {
             'id': '6',
+            'name': 'siphon',
             'cupSize': '6',
             'grindSize': 'fine',
             'coffeeAmount': '150',
@@ -270,6 +300,7 @@ const data = [
     documents: [
         {
         'id': '1',
+        'name': 'mokapot',
         'cupSize': '1',
         'grindSize': 'fine',
         'coffeeAmount': '18',
@@ -277,6 +308,7 @@ const data = [
         },
         {
             'id': '2',
+            'name': 'mokapot',
             'cupSize': '2',
             'grindSize': 'fine',
             'coffeeAmount': '36',
@@ -284,6 +316,7 @@ const data = [
         },
         {
             'id': '3',
+            'name': 'mokapot',
             'cupSize': '3',
             'grindSize': 'fine',
             'coffeeAmount': '54',
@@ -291,6 +324,7 @@ const data = [
         },
         {
             'id': '4',
+            'name': 'mokapot',
             'cupSize': '4',
             'grindSize': 'fine',
             'coffeeAmount': '72',
@@ -298,6 +332,7 @@ const data = [
         },
         {
             'id': '5',
+            'name': 'mokapot',
             'cupSize': '5',
             'grindSize': 'fine',
             'coffeeAmount': '90',
@@ -305,6 +340,7 @@ const data = [
         },
         {
             'id': '6',
+            'name': 'mokapot',
             'cupSize': '6',
             'grindSize': 'fine',
             'coffeeAmount': '108',
@@ -318,6 +354,7 @@ const data = [
     documents: [
         {
         'id': '1',
+        'name': 'wave',
         'cupSize': '1',
         'grindSize': 'medium',
         'coffeeAmount': '15',
@@ -325,6 +362,7 @@ const data = [
         },
         {
             'id': '2',
+            'name': 'wave',
             'cupSize': '2',
             'grindSize': 'medium',
             'coffeeAmount': '30',
@@ -332,6 +370,7 @@ const data = [
         },
         {
             'id': '3',
+            'name': 'wave',
             'cupSize': '3',
             'grindSize': 'medium',
             'coffeeAmount': '45',
@@ -339,6 +378,7 @@ const data = [
         },
         {
             'id': '4',
+            'name': 'wave',
             'cupSize': '4',
             'grindSize': 'medium',
             'coffeeAmount': '60',
@@ -346,6 +386,7 @@ const data = [
         },
         {
             'id': '5',
+            'name': 'wave',
             'cupSize': '5',
             'grindSize': 'medium',
             'coffeeAmount': '75',
@@ -353,6 +394,7 @@ const data = [
         },
         {
             'id': '6',
+            'name': 'wave',
             'cupSize': '6',
             'grindSize': 'medium',
             'coffeeAmount': '90',
@@ -366,6 +408,7 @@ const data = [
     documents: [
         {
         'id': '1',
+        'name': 'beehouse',
         'cupSize': '1',
         'grindSize': 'medium',
         'coffeeAmount': '15',
@@ -373,6 +416,7 @@ const data = [
         },
         {
             'id': '2',
+            'name': 'beehouse',
             'cupSize': '2',
             'grindSize': 'medium',
             'coffeeAmount': '30',
@@ -380,6 +424,7 @@ const data = [
         },
         {
             'id': '3',
+            'name': 'beehouse',
             'cupSize': '3',
             'grindSize': 'medium',
             'coffeeAmount': '45',
@@ -387,6 +432,7 @@ const data = [
         },
         {
             'id': '4',
+            'name': 'beehouse',
             'cupSize': '4',
             'grindSize': 'medium',
             'coffeeAmount': '60',
@@ -394,6 +440,7 @@ const data = [
         },
         {
             'id': '5',
+            'name': 'beehouse',
             'cupSize': '5',
             'grindSize': 'medium',
             'coffeeAmount': '75',
@@ -401,6 +448,7 @@ const data = [
         },
         {
             'id': '6',
+            'name': 'beehouse',
             'cupSize': '6',
             'grindSize': 'medium',
             'coffeeAmount': '90',

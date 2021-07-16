@@ -1,80 +1,89 @@
 // import graphQL to write our typeDefs 
-const { gql } = require('apollo-server-express')
+const { gql } = require('apollo-server-express');
 
 const typeDefs = gql `
-  type CHEMEX {
-    _id: ID
-    cupSize: Int
-    grindSize: String
-    coffeeAmount: Int
-    water: Int
-  }
-
   type AeroPress {
     _id: ID
+    name: String
     cupSize: Int
     grindSize: String
     coffeeAmount: Int
     water: Int
+    instructions: String
   }
 
   type BeeHouse {
     _id: ID
+    name: String
     cupSize: Int
     grindSize: String
     coffeeAmount: Int
     water: Int
+    instructions: String
+  }
+
+  type Chemex {
+    _id: ID
+    name: String
+    cupSize: Int
+    grindSize: String
+    coffeeAmount: Int
+    water: Int
+    instructions: String
   }
 
   type FrenchPress {
     _id: ID
+    name: String
     cupSize: Int
     grindSize: String
     coffeeAmount: Int
     water: Int
+    instructions: String
   }
 
   type MokaPot {
     _id: ID
+    name: String
     cupSize: Int
     grindSize: String
     coffeeAmount: Int
     water: Int
+    instructions: String
   }
 
   type Siphon {
     _id: ID
+    name: String
     cupSize: Int
     grindSize: String
     coffeeAmount: Int
     water: Int
+    instructions: String
   }
 
   type V60 {
     _id: ID
+    name: String
     cupSize: Int
     grindSize: String
     coffeeAmount: Int
     water: Int
+    instructions: String
   }
 
   type Wave {
     _id: ID
+    name: String
     cupSize: Int
     grindSize: String
     coffeeAmount: Int
     water: Int
+    instructions: String
   }
 
   type Query {
-    chemex(_id: ID!) CHEMEX
-    aeropress(_id: ID!) AeroPress
-    beehouse(_id: ID!) BeeHouse
-    frenchpress(_id: ID!) FrenchPress
-    mokapot(_id: ID!) MokaPot
-    siphon(_id: ID!) Siphon
-    v60(_id: ID!) V60
-    wave(_id: ID!) Wave
+    aeropress: [AeroPress]
   }
 `;
 
