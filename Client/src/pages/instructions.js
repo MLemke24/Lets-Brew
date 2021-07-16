@@ -1,5 +1,5 @@
 import React from 'react'
-import Brew from '../components/Brew'
+import Brew from '../components/Brews/Brew'
 import { useMutation, useQuery } from '@apollo/client'
 //import queries here for data fetching 
 
