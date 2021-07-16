@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import 'materialize-css/dist/css/materialize.min.css'
+import { Link } from "react-router-dom";
 // import logo from "../images/icons/Logo/SVG/Logo.svg"
 
 const Header = () => {
@@ -12,11 +12,11 @@ const Header = () => {
             <h1>
               <b>Lets </b>
               <span className="dot">
-                <img
+                {/* <img
                   className="beans"
-                  src=""
+                  // src={logo}
                   alt=""
-                />
+                /> */}
               </span>
               <b className="titlemargin"> Brew</b>
             </h1>
