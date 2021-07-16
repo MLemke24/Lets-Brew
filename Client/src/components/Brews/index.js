@@ -1,35 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Link, Route, useParams } from 'react-router-dom'
-//require css
-
-const brews = [
-    ///provisional use database instead//fetch from  db
-    {
-        id: 1,
-        name: "french press",
-        url: "/french-press",
-    },
-    {
-        id: 2,
-        name: "italian press",
-        url: "/italian-press",
-    },
-    {
-        id: 3,
-        name: "german press",
-        url: "/german-press",
-    }
-]
-const Instructions = () => {
-    const { method } = useParams()
-    return (
-        <div>
-            <h1> {method} </h1>
-            <p>timer</p>
-        </div>
-    )
-}
+// import { useQuery } from '@apollo/client';
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
+import Instructions from '../Instructions'
+import brews from './tempdb'
+// import { QUERY_BREW } from "../../utils/queries"
 const Brews = () => {
+    // const { loading, data} = useQuery(QUERY_BREW);
+    // const brews = data?.//whatever the name of the query is
     return (
         <Router>
             <div>
@@ -47,5 +24,4 @@ const Brews = () => {
         </Router>
     )
 }
-
 export default Brews;
