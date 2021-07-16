@@ -1,15 +1,14 @@
 import React from 'react';
+import index from '../../../Server/Models/index';
 
 const BrewPage = () => {
   return (
-    query.map(data => {
       <div>
-        <p>{data.cupSize}</p>
-        <p>{data.grindSize}</p>
-        <p>{data.coffeeAmount}</p>
-        <p>{data.water}</p>
+        <p>{index.cupSize}</p>
+        <p>{index.grindSize}</p>
+        <p>{index.coffeeAmount}</p>
+        <p>{index.water}</p>
       </div>
-    })
   )
 }
 
