@@ -15,7 +15,7 @@ const Header = () => {
             <a href="/" onClick={()=> Auth.logout()}>Logout</a>
           </li>
           <li>
-            <Link to="/signup">Sign-Up</Link>
+            <Link to="/signup">Log-Out</Link>
           </li>
         </ul>
       </>
