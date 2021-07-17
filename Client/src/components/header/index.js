@@ -14,8 +14,11 @@ const Header = () => {
           <li>
             <a href="/" onClick={()=> Auth.logout()}>Logout</a>
           </li>
+        </ul>
+
+        <ul id="nav-mobile" className="right">
           <li>
-            <Link to="/signup">Log-Out</Link>
+            <Link to="/notes">Notes</Link>
           </li>
         </ul>
       </>
