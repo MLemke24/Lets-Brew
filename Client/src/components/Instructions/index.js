@@ -5,6 +5,9 @@ import { useParams } from 'react-router-dom';
 import Timer from '../Timer'
 import Data from '../../db/tempdb'
 
+// make a button for notes? so you can share them???
+/// make a button to add it to favorites????
+
 const Instructions = () => {
     const { brewId } = useParams();
 
@@ -46,6 +49,7 @@ const Instructions = () => {
                         </li>
                     </ul>
                 </div>
+                
             </>
 
             )
