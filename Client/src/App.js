@@ -16,7 +16,7 @@ import Home from "./pages/Home";
 import LoginForm from "./pages/Login";
 import SignUpForm from "./pages/Signup";
 import Instructions from "./components/Instructions";
-import Reviews from "./pages/Review";
+import Notes from "./pages/Notes";
 
 
 const httpLink = createHttpLink({
@@ -54,7 +54,7 @@ function App() {
               <Route exact path="/login"component={LoginForm} />
               <Route exact path="/signup"component={SignUpForm}/>
               <Route exact path="/shop"/>
-              <Route exact path="/social" component={Reviews}/>
+              <Route exact path="/notes" component={Notes}/>
 
             </Switch>
           </div>
