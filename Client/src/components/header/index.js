@@ -9,7 +9,7 @@ const Header = () => {
       <div className="nav-wrapper">
         <Link to="/">
           <a href="/" className="brand-logo center">
-            <h1>
+            <h1 className="apptitle">
               <b>Lets </b>
               <span className="dot">
                 <img
