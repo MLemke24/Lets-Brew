@@ -322,7 +322,7 @@ a {
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  padding-top: 60px;
+  padding-top: 80px;
 }
 
 .timer-start {
@@ -355,4 +355,29 @@ a {
 
 .btn-grp {
   margin-top: 10px;
+}
+
+.instruction-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  text-transform: uppercase;
+ 
+}
+
+.measurements {
+  float: right;
+  margin-top: 6px;
+  font-size: 26px;
+}
+
+.ingredients {
+  font-size: 26px;
+  line-height: 50px;
+}
+
+.btmborder {
+  border-bottom-style: solid;
+  border-bottom-color: rgb(255, 255, 255);
+  border-bottom-width: 3px;
 }
