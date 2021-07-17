@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link  } from 'react-router-dom'
-import brews from './tempdb'
+import brews from '../..db/tempdb'
 
 const Brews = () => {
     return (

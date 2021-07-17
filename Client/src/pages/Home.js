@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from 'react-router-dom'
 import "materialize-css/dist/css/materialize.min.css";
 import mug from "../images/mug.svg"
-import brews from "../components/Catalog/tempdb";
+import brews from "../db/tempdb";
 
 const Home = () => {
   return (

@@ -3,7 +3,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import Timer from '../Timer'
-import Data from '../Catalog/tempdb'
+import Data from '../../db/tempdb'
 
 const Instructions = () => {
     const { brewId } = useParams();
