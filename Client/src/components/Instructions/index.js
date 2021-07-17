@@ -7,6 +7,7 @@ import Data from '../Catalog/tempdb'
 
 const Instructions = () => {
     const {brewId} = useParams();
+    
     return (
         <div>
             <h1> Brewing : {brewId} </h1>

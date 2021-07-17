@@ -13,7 +13,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Header from "./components/header/";
 import Home from "./pages/Home";
-import Brews from "./components/Brews"
 import Instructions from "./components/Instructions";
 
 
