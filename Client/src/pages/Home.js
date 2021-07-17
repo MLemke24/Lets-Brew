@@ -22,7 +22,7 @@ const Home = () => {
 				   return (
 					   <>
 					    <Link to= {`/instructions/${brew.name}`} class='tab' href='#'>
-						<img className="wheelselect" alt="aeropress"  src={brew.image}></img>
+						<img className="wheelselect" alt={brew.name}  src={brew.image}></img>
 						<p className="icontext">{brew.name}</p>
 						</Link>
 					   </>
