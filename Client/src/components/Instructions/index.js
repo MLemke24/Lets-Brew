@@ -24,7 +24,7 @@ const Instructions = () => {
                   <h2>Strength : </h2>
                   <h4>{filterBrew.strength}</h4>
                 </div>
-                <h2>Volumes:</h2>
+                <h2>Volume:</h2>
                 <ul>
                   <li>
                     <div className="btmborder">
@@ -55,23 +55,23 @@ const Instructions = () => {
                   </li>
                 </ul>
               </div>
-              <div>
-                <h2>Steps:</h2>
+              <div className="steps-content">
+                <h2>STEPS</h2>
                 <ul>
-                  <li>
-                    <h4>Step One</h4>
+                  <li className="step-line-height">
+                    <h4>Step One:</h4>
                     <p>{filterBrew.step1}</p>
                   </li>
-                  <li>
-                    <h4>Step Two</h4>
+                  <li className="step-line-height pad">
+                    <h4>Step Two:</h4>
                     <p>{filterBrew.step2}</p>
                   </li>
-                  <li>
-                    <h4>Step Three</h4>
+                  <li className="step-line-height pad">
+                    <h4>Step Three:</h4>
                     <p>{filterBrew.step3}</p>
                   </li>
-                  <li>
-                    <h4>Step Four</h4>
+                  <li className="step-line-height pad">
+                    <h4>Step Four:</h4>
                     <p>{filterBrew.step4}</p>
                   </li>
                 </ul>

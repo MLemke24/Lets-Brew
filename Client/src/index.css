@@ -351,6 +351,12 @@ a {
   font-weight: bold;
   width: 100px;
   border: 1.3px solid #fffffff6 !important;
+  transition: all .4s ease;
+}
+
+.btn:hover {
+  background-color: rgb(231, 231, 250) !important;
+  color: rgb(0, 0, 0) !important;
 }
 
 .btn-grp {
@@ -362,6 +368,7 @@ a {
   align-items: flex-start;
   justify-content: space-evenly;
   text-transform: uppercase;
+  padding-bottom: 80px;
  
 }
 
@@ -381,4 +388,19 @@ a {
   border-bottom-style: solid;
   border-bottom-color: rgb(255, 255, 255);
   border-bottom-width: 3px;
+}
+
+.steps-content {
+  text-align: center;
+  text-transform: none;
+  /*background-color: rgba(255, 255, 0, 0.062);*/
+}
+
+.step-line-height {
+  line-height: 0px;
+
+}
+
+.pad {
+  padding-top: 15px;
 }
