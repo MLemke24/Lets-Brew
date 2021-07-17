@@ -31,7 +31,7 @@ const Instructions = () => {
                       <span className="ingredients">WATER </span>
                       <span className="measurements">
                         {" "}
-                        {filterBrew.water}&emsp;&emsp;
+                        {filterBrew.water}
                       </span>
                     </div>
                   </li>
@@ -40,7 +40,7 @@ const Instructions = () => {
                       <span className="ingredients">GRIND </span>
                       <span className="measurements">
                         {" "}
-                        {filterBrew.grind}&emsp;&emsp;
+                        {filterBrew.grind}
                       </span>
                     </div>
                   </li>
@@ -49,7 +49,7 @@ const Instructions = () => {
                       <span className="ingredients">COFFEE </span>
                       <span className="measurements">
                         {" "}
-                        {filterBrew.weight}&emsp;&emsp;
+                        {filterBrew.weight}
                       </span>
                     </div>
                   </li>

@@ -360,7 +360,7 @@ a {
 .instruction-content {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: space-evenly;
   text-transform: uppercase;
  
 }
@@ -369,6 +369,7 @@ a {
   float: right;
   margin-top: 6px;
   font-size: 26px;
+  padding-left: 200px;
 }
 
 .ingredients {
