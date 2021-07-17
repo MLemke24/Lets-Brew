@@ -23,15 +23,15 @@ const Header = () => {
           </a>
         </Link>
         <ul id="nav-mobile" className="left">
-          <li>
+          <li className="nav-link">
             <a href="sass.html">Sign-In</a>
           </li>
-          <li>
+          <li className="nav-link">
             <a href="badges.html">Sign-Up</a>
           </li>
         </ul>
         <ul id="nav-mobile" className="right">
-          <li>
+          <li className="nav-link">
             <a href="sass.html">Get-Started</a>
           </li>
           <li>

@@ -10,10 +10,12 @@ const Instructions = () => {
     
     return (
         <div>
-            <h1> Brewing : {brewId} </h1>
+            <div className="instruction-title">
+            <h1> Brewing : <b>{brewId}</b> </h1>
             <Timer/>
+            </div>
             <div>
-                <h2>Strenght : </h2>
+                <h2>Strength : </h2>
                 <h4>{Data.filter(brew => brew.name === brewId).map(filterBrew=> filterBrew.strength)}</h4>
             </div>
             <div>
