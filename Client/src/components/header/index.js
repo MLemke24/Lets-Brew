@@ -24,18 +24,18 @@ const Header = () => {
         </Link>
         <ul id="nav-mobile" className="left">
           <li>
-            <Link to = "/login">Sign-In</Link>
+            <Link to = "/login" className="nav-link">Sign-In</Link>
           </li>
           <li>
-            <Link to = "/signup">Sign-Up</Link>
+            <Link to = "/signup" className="nav-link">Sign-Up</Link>
           </li>
         </ul>
         <ul id="nav-mobile" className="right">
           <li>
-            <a href="sass.html">Get-Started</a>
+            <a href="sass.html" className="nav-link">Get-Started</a>
           </li>
           <li>
-            <a href="badges.html">Shop</a>
+            <a href="badges.html" className="nav-link">Shop</a>
           </li>
         </ul>
       </div>

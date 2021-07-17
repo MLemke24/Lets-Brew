@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Monoton');
+@import url("https://fonts.googleapis.com/css?family=Monoton");
 
 * {
   margin: 0;
@@ -11,7 +11,10 @@ html {
   background-color: black;
   font-family: "Roboto", sans-serif;
 }
+
+/* ------------------------*/
 /* ------NAV START---------*/
+/* ------------------------*/
 
 .nav-wrapper {
   background-color: black;
@@ -21,6 +24,24 @@ html {
 .apptitle {
   font-family: "Monoton", Helvetica, sans-serif;
   letter-spacing: 5px;
+}
+
+.nav-link {
+  color:rgb(255, 255, 255);
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:.5s;
+  font-weight: bold;
+}
+
+
+
+.nav-link:hover {
+  color: #ebb694f6;
+  font-weight: bold;
 }
 
 .beans {
@@ -68,7 +89,9 @@ html {
   box-sizing: content-box;
 }
 
-/*---HOME START---*/
+/*----------------------*/
+/*------HOME START------*/
+/*----------------------*/
 
 .home {
   margin-top: 190px;
@@ -78,7 +101,7 @@ html {
 
 .intro {
   font-weight: bolder;
-  background: -webkit-linear-gradient(#eee,#ebb694f6 );
+  background: -webkit-linear-gradient(#eee, #ebb694f6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Monoton", Helvetica, sans-serif;
@@ -86,9 +109,9 @@ html {
 
 .intro2 {
   display: inline;
-	 font-size: 6.5vw;
-	 text-transform: uppercase;
-	 color: #f49e4c;
+  font-size: 6.5vw;
+  text-transform: uppercase;
+  color: #f49e4c;
 }
 
 .introcontainer {
@@ -126,12 +149,11 @@ a {
 
 .wheelselect {
   position: absolute;
-  
 }
 
 .wheelselect:hover {
   opacity: 0;
-  transition:opacity 2s;
+  transition: opacity 2s;
 }
 
 .icontext {
@@ -154,8 +176,6 @@ a {
   text-align: center;
   padding-left: 6px;
 }
-
-
 
 .toggle + .style {
   border: 10px solid #ebb694f6;
@@ -180,7 +200,6 @@ a {
   transition: all 0.8s;
 }
 
-
 .toggle + .style:hover {
   -webkit-box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.7);
   -moz-box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.7);
@@ -196,7 +215,6 @@ a {
 .menu input[type="checkbox"] + label:before {
   content: "";
   position: absolute;
-  
 }
 
 .toggle + .style:before,
@@ -251,7 +269,6 @@ a {
   top: -122px;
   left: 0px;
   transition-delay: 0s;
-  
 }
 
 .menu > .toggle:checked ~ .tab:nth-of-type(2) {
@@ -296,8 +313,72 @@ a {
   transition-delay: 0.875s;
 }
 
+/*----------------------------------*/
+/* -------INSTRUCTIONS START--------*/
+/*----------------------------------*/
 
+.instruction-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 80px;
+}
 
+.timer-start {
+  cursor: pointer;
+  width: 150px;
+  border: 5px solid #ebb694f6;
+  border-radius: 50%;
+  margin-top: 17px;
+  margin-left: 30px;
+}
 
+.timer {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 0px;
+  font-weight: bold;
+  font-size: 45px;
+}
 
+.btn {
+  background-color: #ebb694f6 !important;
+  margin: 5px;
+  color: black !important;
+  font-weight: bold;
+  width: 100px;
+  border: 1.3px solid #fffffff6 !important;
+}
+
+.btn-grp {
+  margin-top: 10px;
+}
+
+.instruction-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  text-transform: uppercase;
  
+}
+
+.measurements {
+  float: right;
+  margin-top: 6px;
+  font-size: 26px;
+  padding-left: 200px;
+}
+
+.ingredients {
+  font-size: 26px;
+  line-height: 50px;
+}
+
+.btmborder {
+  border-bottom-style: solid;
+  border-bottom-color: rgb(255, 255, 255);
+  border-bottom-width: 3px;
+}
