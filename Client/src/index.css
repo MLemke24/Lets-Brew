@@ -351,6 +351,12 @@ a {
   font-weight: bold;
   width: 100px;
   border: 1.3px solid #fffffff6 !important;
+  transition: all .4s ease;
+}
+
+.btn:hover {
+  background-color: rgb(231, 231, 250) !important;
+  color: rgb(0, 0, 0) !important;
 }
 
 .btn-grp {
@@ -381,4 +387,8 @@ a {
   border-bottom-style: solid;
   border-bottom-color: rgb(255, 255, 255);
   border-bottom-width: 3px;
+}
+
+.steps-content {
+  text-align: center;
 }

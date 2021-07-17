@@ -55,8 +55,8 @@ const Instructions = () => {
                   </li>
                 </ul>
               </div>
-              <div>
-                <h2>Steps:</h2>
+              <div className="steps-content">
+                <h2>STEPS</h2>
                 <ul>
                   <li>
                     <h4>Step One</h4>
