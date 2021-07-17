@@ -7,9 +7,9 @@ import brews from "../components/Catalog/tempdb";
 const Home = () => {
   return (
     <main className="home">
-      <div>
-        <h1>GET STARTED</h1>
-        <h3>CHOOSE YOUR METHOD</h3>
+      <div className="introcontainer">
+        <h1 className="intro intro2">GET STARTED</h1>
+        <h3 className="intro">CHOOSE YOUR METHOD</h3>
       </div>
       <div class="container">
 			<div className='menu'>

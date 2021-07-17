@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton');
+
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +16,11 @@ html {
 .nav-wrapper {
   background-color: black;
   font-size: 40px;
+}
+
+.apptitle {
+  font-family: "Monoton", Helvetica, sans-serif;
+  letter-spacing: 5px;
 }
 
 .beans {
@@ -67,6 +74,25 @@ html {
   margin-top: 190px;
   display: flex;
   justify-content: space-between;
+}
+
+.intro {
+  font-weight: bolder;
+  background: -webkit-linear-gradient(#eee,#ebb694f6 );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Monoton", Helvetica, sans-serif;
+}
+
+.intro2 {
+  display: inline;
+	 font-size: 6.5vw;
+	 text-transform: uppercase;
+	 color: #f49e4c;
+}
+
+.introcontainer {
+  padding-top: 52px;
 }
 
 a {
@@ -269,3 +295,9 @@ a {
   left: 230.333333px;
   transition-delay: 0.875s;
 }
+
+
+
+
+
+ 
