@@ -26,6 +26,24 @@ html {
   letter-spacing: 5px;
 }
 
+.nav-link {
+  color:rgb(255, 255, 255);
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:.5s;
+  font-weight: bold;
+}
+
+
+
+.nav-link:hover {
+  color: #ebb694f6;
+  font-weight: bold;
+}
+
 .beans {
   width: 200%;
 }
@@ -313,4 +331,28 @@ a {
   border: 5px solid #ebb694f6;
   border-radius: 50%;
   margin-top: 17px;
+  margin-left: 30px;
+}
+
+.timer {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 0px;
+  font-weight: bold;
+  font-size: 45px;
+}
+
+.btn {
+  background-color: #ebb694f6 !important;
+  margin: 5px;
+  color: black !important;
+  font-weight: bold;
+  width: 100px;
+  border: 1.3px solid #fffffff6 !important;
+}
+
+.btn-grp {
+  margin-top: 10px;
 }

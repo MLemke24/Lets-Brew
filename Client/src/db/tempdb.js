@@ -1,10 +1,12 @@
 const brews = [
-    ///provisional use database while we wait for QUERY_BREW is ready
+    ///Cups, Id, Grind , Water, Weight, and Strenght values are all provisional. We should be pulling those from the database.
+
+    //only values stored in the front end are Name, Image, and steps.
     {
         id: 1,
         cups: 2,
         name: "French Press",
-        image: require("../../images/icons/French Press/SVG/French Press.svg").default,
+        image: require("../images/icons/French Press/SVG/French Press.svg").default,
         grind: "coarse",
         water: "50 liters",
         weight: "1 megaton",
@@ -18,7 +20,7 @@ const brews = [
         id: 2,
         cups: 4,
         name: "Hairo",
-        image: require("../../images/icons/Hairo Vaccum/SVG/Hairo Vaccum .svg").default,
+        image: require("../images/icons/Hairo Vaccum/SVG/Hairo Vaccum .svg").default,
         grind: "fine",
         water: "1 liter",
         weight: "420 g",
@@ -32,7 +34,7 @@ const brews = [
         id: 3,
         cups: 1,
         name: "Aero Press",
-        image: require("../../images/icons/AeroPress/SVG/AeroPress.svg").default,
+        image: require("../images/icons/AeroPress/SVG/AeroPress.svg").default,
         grind: "lite",
         water: "2 mililiters",
         weight: "1 terabite",
@@ -46,67 +48,67 @@ const brews = [
         id: 4,
         cups: 1,
         name: "Bialetti",
-        image: require("../../images/icons/Bialetti/SVG/Bialetti.svg").default,
+        image: require("../images/icons/Bialetti/SVG/Bialetti.svg").default,
         grind: "lite",
         water: "2 mililiters",
         weight: "1 terabite",
         strength: "heavy metal coffee",
-        step1:"boil the coffee",
-        step2:"take a walk outside",
-        step3:"put down the fire",
-        step4:"fraud the insurance company"
+        step1:"pour some sugar on it",
+        step2:"remove the charder sugar from coffee ",
+        step3:"toss against the wall",
+        step4:"repeat until satisfied"
     }
     ,
     {
         id: 5,
         cups: 1,
         name: "Chemex",
-        image: require("../../images/icons/Chemex/SVG/Chemex.svg").default,
+        image: require("../images/icons/Chemex/SVG/Chemex.svg").default,
         grind: "lite",
         water: "2 mililiters",
         weight: "1 terabite",
         strength: "boldness is my second name",
-        step1:"boil the coffee",
-        step2:"take a walk outside",
-        step3:"put down the fire",
-        step4:"fraud the insurance company"
+        step1:"put water to boil",
+        step2:"drink water from the pot",
+        step3:"call 911",
+        step4:"survive"
     }
     ,
     {
         id: 6,
         cups: 1,
         name: "Neldrip",
-        image: require("../../images/icons/Nel-Drip/SVG/Nel Drip.svg").default,
+        image: require("../images/icons/Nel-Drip/SVG/Nel Drip.svg").default,
         grind: "lite",
         water: "2 mililiters",
         weight: "1 terabite",
         strength: "a very bold brew",
-        step1:"boil the coffee",
-        step2:"take a walk outside",
-        step3:"put down the fire",
-        step4:"fraud the insurance company"
+        step1:"imagine the pot",
+        step2:"imagine pouring water into it",
+        step3:"boil it with in your mind",
+        step4:"drink imaginaryly"
     }
     ,
     {
         id: 7,
         cups: 1,
         name: "V60",
-        image: require("../../images/icons/V60/SVG/V60.svg").default,
+        image: require("../images/icons/V60/SVG/V60.svg").default,
         grind: "lite",
         water: "2 mililiters",
         weight: "1 terabite",
         strength: "strong and ready to kick some butt",
-        step1:"boil the coffee",
-        step2:"take a walk outside",
-        step3:"put down the fire",
-        step4:"fraud the insurance company"
+        step1:"whip it",
+        step2:"whip it good",
+        step3:"shake it up",
+        step4:"its not to late..."
     }
     ,
     {
         id: 8,
         cups: 1,
         name: "Kettle",
-        image: require("../../images/icons/Kettle/SVG/Kettle.svg").default,
+        image: require("../images/icons/Kettle/SVG/Kettle.svg").default,
         grind: "lite",
         water: "2 mililiters",
         weight: "1 terabite",
