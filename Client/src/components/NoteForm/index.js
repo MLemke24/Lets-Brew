@@ -5,8 +5,10 @@ import React, { useState } from 'react';
 
 
 const ReviewForm = () => {
-    const [reviewText, setText] = useState('')
-    const [reviewTitle, setTitle] = useState('')
+
+    /// remember to set useState('') to  ('') once we have database setup
+    const [reviewText, setText] = useState()
+    const [reviewTitle, setTitle] = useState()
 
     // const addReview = useMutation(ADD_REVIEW, {
     //     update ( cache, {data: {addReview}}){
@@ -45,15 +47,19 @@ const ReviewForm = () => {
     return (
         <form onSubmit = {handleFormSubmit}>
             <input
+                id= "title"
                 placeholder = "Title your note"
                 value = {reviewTitle}
                 onChange = {handleFormChange}
-                ></input>
+                required
+                />
             <textarea
+                id= "text"
                 placeholder = "tell us about your favorite way of making coffee"
                 value = {reviewText}
                 onChange= {handleFormChange}
-                ></textarea>
+                required
+                />
             <button>Submit</button>
         </form>
     )
