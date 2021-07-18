@@ -18,6 +18,7 @@ export const QUERY_REVIEW = gql`
     review(_id: $id) {
       _id
       reviewText
+      reviewTitle
       createdAt
       username
     }
