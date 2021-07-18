@@ -28,7 +28,6 @@ const Notes = () => {
                                 title= {"excellent!"}
                                 createdAt= {"6:30 am"}
                                 />
-
                     </>
                 )
             })}
