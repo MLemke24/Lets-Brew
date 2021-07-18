@@ -48,14 +48,14 @@ const ReviewForm = () => {
         <form onSubmit = {handleFormSubmit}>
             <input
                 id= "title"
-                placeholder = "Title your note"
+                placeholder = "Title"
                 value = {reviewTitle}
                 onChange = {handleFormChange}
                 required
                 />
             <textarea
                 id= "text"
-                placeholder = "tell us about your favorite way of making coffee"
+                placeholder = "Tell us what you think"
                 value = {reviewText}
                 onChange= {handleFormChange}
                 required

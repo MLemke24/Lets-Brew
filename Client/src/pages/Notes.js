@@ -11,11 +11,9 @@ const Notes = () => {
             {Data.filter(brew=> brew.name=== brewId).map(filterBrew =>{
                 return (
                     <>
-                        <h1>commenting/reviewing : {brewId} </h1>
+                        <h1>Reviewing : {brewId} </h1>
+                        <h3>Was it {filterBrew.strength} ? Leave a comment!</h3>
                         <NoteForm/>
-                        <h3> see your past Notes!</h3>
-                        <p>displaying {brewId} information</p>
-                        <p>how was your brew? was it {filterBrew.strength}?</p>
                     </>
                 )
             })}
