@@ -16,6 +16,7 @@ import Home from "./pages/Home";
 import LoginForm from "./pages/Login";
 import SignUpForm from "./pages/Signup";
 import Instructions from "./components/Instructions";
+import Notes from "./pages/Notes";
 
 
 const httpLink = createHttpLink({
@@ -46,14 +47,13 @@ function App() {
           <div className="container">
             <Switch>
 
-            <Route exact path="/" component={Home} />
               <Route exact path="/" component={Home} />
               <Route exact path="/cups/:number"/>
               <Route exact path="/instructions/:brewId" component={Instructions}/>
               <Route exact path="/login"component={LoginForm} />
               <Route exact path="/signup"component={SignUpForm}/>
               <Route exact path="/shop"/>
-              <Route exact path="/social"/>
+              <Route exact path="/notes/:brewId" component={Notes}/>
 
             </Switch>
           </div>
