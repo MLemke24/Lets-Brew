@@ -12,13 +12,13 @@ const Header = () => {
       <>
         <ul id="nav-mobile" className="left">
           <li>
-            <a href="/" onClick={()=> Auth.logout()}>Logout</a>
+            <a href="/" className="nav-link" onClick={()=> Auth.logout()}>Logout</a>
           </li>
         </ul>
 
         <ul id="nav-mobile" className="right">
           <li>
-            <Link to="/notes">Notes</Link>
+            <Link to="/notes" className="nav-link">Notes</Link>
           </li>
         </ul>
       </>
@@ -34,22 +34,21 @@ const Header = () => {
   const Navigation = () => {
     return (
       <>
-        <ul id="nav-mobile" className="left">
+           <ul id="nav-mobile" className="left">
           <li>
-            <Link to="/login">Sign-In</Link>
+            <Link to = "/login" className="nav-link">Sign-In</Link>
           </li>
           <li>
-            <Link to="/signup">Sign-Up</Link>
+            <Link to = "/signup" className="nav-link">Sign-Up</Link>
           </li>
         </ul>
 
-
         <ul id="nav-mobile" className="right">
           <li>
-            <a href="sass.html">Get-Started</a>
+            <a href="sass.html" className="nav-link">Get-Started</a>
           </li>
           <li>
-            <a href="badges.html">Shop</a>
+            <a href="badges.html" className="nav-link">Shop</a>
           </li>
         </ul>
       </>
@@ -63,7 +62,7 @@ const Header = () => {
       <div className="nav-wrapper">
         <Link to="/">
           <a href="/" className="brand-logo center">
-            <h1>
+            <h1 className="apptitle">
               <b>Lets </b>
               <span className="dot">
                 <img
@@ -76,9 +75,7 @@ const Header = () => {
             </h1>
           </a>
         </Link>
-        <>
-          {LoggedInNav()}
-        </>
+        <LoggedInNav/>
       </div>
     </nav>
   );
