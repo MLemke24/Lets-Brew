@@ -4,6 +4,10 @@ const ChemexSchema = new Schema(
     {
         id: {
             type: Number,
+            required: true
+        },
+        name: {
+            type: String
         },
         cupSize: {
             type: Number,
@@ -20,5 +24,5 @@ const ChemexSchema = new Schema(
     }
 )
 
-const CHEMEX = mongoose.model('Chemex', ChemexSchema, 'Chemex');
+const CHEMEX = mongoose.model('Chemex', ChemexSchema);
 module.exports = CHEMEX;
