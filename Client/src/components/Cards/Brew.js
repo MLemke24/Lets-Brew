@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import cupButton from '../cupButton'
+import cupButton from '../cupButton/cupButton'
 
 const BrewSpecs = ({ data }) => {
     const [cupSize, setCupSize] = useState('')
