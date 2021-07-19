@@ -4,6 +4,13 @@ const MokaPotSchema = new Schema(
     {
         id: {
             type: Number,
+            required: true
+        },
+        name: {
+            type: String
+        },
+        name: {
+            type: String
         },
         cupSize: {
             type: Number,
