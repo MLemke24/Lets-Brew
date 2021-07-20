@@ -6,6 +6,7 @@ const { signToken } = require('../utils/auth')
 
 const resolvers = {
   Query: {
+<<<<<<< HEAD
     users: async () => {
       return User.find()
         .select('-__v -password')
@@ -14,6 +15,8 @@ const resolvers = {
       return User.findOne({ username })
         .select('-__v -password')
     },
+=======
+>>>>>>> 01e3bed045341063e64a8832ec3182f64a280b5f
     aeropress: async (parent, { id }) => {
       const params = id ? { id } : {};
       return AeroPress.find(params);
