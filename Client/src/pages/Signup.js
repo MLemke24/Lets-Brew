@@ -1,24 +1,12 @@
 import React, { useState } from "react";
-import { useMutation } from '@apollo/client';
+import { useMutation } from '@apollo/react-hooks';
 import  {ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth'
 
 const SignUpForm = () => {
     const [formState, setFormState] = useState({ email: '', password: '' });
-    const [addUser] = useMutation(ADD_USER);
-  
-    const handleFormSubmit = async (event) => {
-      event.preventDefault();
-      const mutationResponse = await addUser({
-        variables: {
-          username: formState.username,
-          password: formState.password,
-        },
-      });
-      const token = mutationResponse.data.addUser.token;
-      Auth.login(token);
-    };
-  
+    const [addUser, {error}] = useMutation(ADD_USER);
+
     const handleChange = (event) => {
       const { name, value } = event.target;
       setFormState({
@@ -27,8 +15,24 @@ const SignUpForm = () => {
       });
     };
   
+    const handleFormSubmit = async (event) => {
+      event.preventDefault();
+
+      try {
+        const { data } = await addUser({
+          variables: { ...formState }
+        });
+  
+        Auth.login(data.addUser.token);
+      } catch (e) {
+        console.error(e);
+      }
+    };
+  
+
 
     return (
+      <>
         <form onSubmit={handleFormSubmit}>
             <div>
                 <h1>Sign Up</h1>
@@ -36,20 +40,24 @@ const SignUpForm = () => {
             <div class="form-group">
                 <label for="username">Username</label>
                 <input
-
+                    className="form-input"
                     id = "username"
+                    name="username"
+                    type="username"
                     placeholder="Enter your username" 
-                    required
+                    value={formState.username}
                     onChange={handleChange}
                     />
             </div>
             <div class="form-group">
                 <label>Password:</label>
                 <input
-
+                    className="form-input"
                     id="password"
-                    placeholder="Enter your password"
-                    required 
+                    name="password"
+                    type="password"
+                    placeholder="**********"
+                    value={formState.password}
                     onChange={handleChange}
                     />
             </div>
@@ -57,7 +65,9 @@ const SignUpForm = () => {
                 <input class="btn" type="submit" value="Sign Up" />
             </div>
 
-</form>
+        </form>
+        {error && <div>Signup failed</div>}
+      </>
     )
 }
 

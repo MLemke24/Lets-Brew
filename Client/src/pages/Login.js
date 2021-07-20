@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import {useMutation} from '@apollo/client';
-import  {LOGIN } from '../utils/mutations'
+import {useMutation} from '@apollo/react-hooks';
+import  {LOGIN } from '../utils/mutations';
+
 import Auth from '../utils/auth'
 
 const LoginForm = () => {

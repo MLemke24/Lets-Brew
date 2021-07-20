@@ -7,14 +7,14 @@ const brews = [
         cups: 2,
         name: "French Press",
         image: require("../images/icons/French Press/SVG/French Press.svg").default,
-        grind: "coarse",
+        grind: "coarse", 
         water: "50 liters",
         weight: "1 megaton",
         strength: "saitama strong",
-        step1:"pour water on it",
-        step2:"pour more water on it until saturate",
-        step3:"tap the thingy",
-        step4:"drink responsibly"
+        step1:"Pour water and evenly saturate coffee",
+        step2:"Stir  the grounds to ensure coffee is fully immersed ",
+        step3:"Allow coffee to steep for 3 minutes",
+        step4:"Gently press the filter down and serve"
     },
     {
         id: 2,
@@ -25,10 +25,10 @@ const brews = [
         water: "1 liter",
         weight: "420 g",
         strength: "like a punch trough time",
-        step1:"pour 20g of water on it",
-        step2:"pour the rest of the water",
-        step3:"toss the whole thing into the trash",
-        step4:"cry until it stops hurting"
+        step1:"Pour water and evenly saturate coffee",
+        step2:"Wait for coffee to bloom ",
+        step3:"Pour remaining water around edges",
+        step4:"let water draing trough filter, discard filter, and serve"
     },
     {
         id: 3,
@@ -39,10 +39,10 @@ const brews = [
         water: "2 mililiters",
         weight: "1 terabite",
         strength: "steamy strong",
-        step1:"boil the coffee",
-        step2:"take a walk outside",
-        step3:"put down the fire",
-        step4:"fraud the insurance company"
+        step1:"Pour water and evenly saturate coffee, stir grounds to ensure saturation",
+        step2:"wait for coffe to bloom and pour remaining water over dark areas",
+        step3:"Place the plunger on brewer and pull up to create a pressure seal ",
+        step4:" after 3 minutes press down plunger, take off cap, filter, grounds and serve "
     },
     {
         id: 4,
@@ -52,11 +52,11 @@ const brews = [
         grind: "lite",
         water: "2 mililiters",
         weight: "1 terabite",
-        strength: "heavy metal coffee",
-        step1:"pour some sugar on it",
-        step2:"remove the charder sugar from coffee ",
-        step3:"toss against the wall",
-        step4:"repeat until satisfied"
+        strength: "Heavy metal coffee",
+        step1:"Fill lower chamber with boiling water below valve",
+        step2:"Insert funnel, fill it with ground coffee, and screw upper part to base",
+        step3:"Put brewer on stove and boil",
+        step4:"Once top of pot is full, remove from stove, and serve."
     }
     ,
     {
@@ -68,8 +68,8 @@ const brews = [
         water: "2 mililiters",
         weight: "1 terabite",
         strength: "boldness is my second name",
-        step1:"put water to boil",
-        step2:"drink water from the pot",
+        step1:"Pour water until grounds are saturated",
+        step2:"stir  the grounds to ensure coffee is fully immersed ",
         step3:"call 911",
         step4:"survive"
     }
@@ -77,16 +77,16 @@ const brews = [
     {
         id: 6,
         cups: 1,
-        name: "Neldrip",
+        name: "Siphon",
         image: require("../images/icons/Nel-Drip/SVG/Nel Drip.svg").default,
         grind: "lite",
         water: "2 mililiters",
         weight: "1 terabite",
         strength: "a very bold brew",
-        step1:"imagine the pot",
-        step2:"imagine pouring water into it",
-        step3:"boil it with in your mind",
-        step4:"drink imaginaryly"
+        step1:"Allow coffee to brew for one minute",
+        step2:"turn off burner and put away ",
+        step3:"let coffee drip down to the bottom chamber",
+        step4:"remove the top piece and serve"
     }
     ,
     {

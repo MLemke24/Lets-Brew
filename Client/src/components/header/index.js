@@ -6,13 +6,17 @@ import logo from "../../images/icons/Logo/SVG/Logo.svg"
 import Auth from "../../utils/auth"
 
 const Header = () => {
+  const logout = event => {
+    event.preventDefault();
+    Auth.logout();
+  };
 
   const LoggedInNav = () => {
     if (Auth.loggedIn()) {
       <>
         <ul id="nav-mobile" className="left">
           <li>
-            <a href="/" className="nav-link" onClick={()=> Auth.logout()}>Logout</a>
+            <a href="/" className="nav-link" onClick={logout}>Logout</a>
           </li>
         </ul>
 
