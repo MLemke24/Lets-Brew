@@ -5,14 +5,14 @@ const { Chemex, AeroPress, BeeHouse, FrenchPress, MokaPot, Siphon, V60, Wave } =
 
 const resolvers = {
   Query: {
-   aeropress: async (parent, { id }) => {
-     const params = id ? { id } : {};
-     return AeroPress.find(params);
-   },
+    aeropress: async (parent, { id }) => {
+      const params = id ? { id } : {};
+      return AeroPress.find(params);
+    },
 
     beehouse: async (parent, { id }) => {
-    const params = id ? { id } : {};
-    return BeeHouse.find(params);
+      const params = id ? { id } : {};
+      return BeeHouse.find(params);
     },
 
     chemex: async (parent, { id }) => {
@@ -32,7 +32,7 @@ const resolvers = {
 
     siphon: async (parent, { id }) => {
       const params = id ? { id } : {};
-      return siphon.find(params);
+      return Siphon.find(params);
     },
 
     v60: async (parent, { id }) => {
