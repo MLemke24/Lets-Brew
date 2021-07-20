@@ -2,6 +2,24 @@
 import { gql } from '@apollo/client';
 
 //in our query we're telling the backend what we want it to send us. it needs and id to find our data
+
+  export const QUERY_ME = gql `
+  {
+    me {
+      _id
+      username
+    }
+}
+  `
+  export const QUERY_USER = gql `
+  query user($username: String!) {
+    user(username: $username) {
+      _id
+      username
+    }
+  }
+  `
+
 export const QUERY_BREW = gql`
   query chemex($id: ID!) {
     chemex(_id: ID!) {
