@@ -14,6 +14,12 @@ const userSchema = new Schema(
       required: true,
       minlength: 5
     },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+      match: [/.+@.+\..+/, 'Must use a valid email address'],
+    }
   }
 );
 
