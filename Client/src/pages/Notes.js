@@ -8,7 +8,7 @@ import Data from '../db/tempdb'
 
 const Notes = () => {
     const {brewId} = useParams()
-   
+    
     return (<div>
         
             {Data.filter(brew=> brew.name=== brewId).map(filterBrew =>{
