@@ -4,6 +4,10 @@ const WaveSchema = new Schema(
     {
         id: {
             type: Number,
+            required: true
+        },
+        name: {
+            type: String
         },
         cupSize: {
             type: Number,
