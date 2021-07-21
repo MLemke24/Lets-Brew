@@ -3,12 +3,14 @@ import React, { useState, useCallback } from "react";
 
 import mug from "../../images/icons/Mug/1x/Mug.png";
 import { hideInstructions } from "../../utils/wheel";
-
 import plus from "../../images/icons/plus.png"
 import minus from "../../images/icons/minus.png"
-export default function App() {
 
 
+
+
+
+export default function App(props) {
 
   // const [num, setNum] = useState(1)
   const [cups, setCups] = useState(0);
@@ -47,3 +49,5 @@ export default function App() {
     </div>
   );
 }
+
+
