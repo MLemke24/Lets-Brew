@@ -99,16 +99,40 @@ export const QUERY_CHEMEX = gql`
 `;
 
 export const QUERY_POST = gql`
-  query post($id: ID!) {
+  query post($id: ID) {
     post(_id: $id) {
       _id
       postText
       postTitle
       createdAt
       username
-      reactions
+      reactions {
+        _id
+        createdAt
+        username
+        reactionBody
+      }
     }
   }
+`;
+
+export const QUERY_POSTS = gql `
+query posts($username: String){
+    posts(username: $username){
+        _id
+        postTitle
+        postText
+        createdAt
+        username
+        reactionCount
+        reactions {
+            _id
+            createdAt
+            username
+            reactionBody
+        }
+    }
+}
 `;
 
 
@@ -120,16 +144,37 @@ export const QUERY_USER = gql`
       email
       post
     }
+    posts {
+      _id
+      postTitle
+      postText
+      createdAt
+      reactionCount
+    }
   }
 `;
 
 export const QUERY_ME = gql`
-  {
-    me {
+ {
+   me {
+    _id
+    username
+    email
+    posts {
       _id
-      username
+      postTitle
+      postText
+      createdAt
+      reactionCount
+      reactions {
+        _id
+        createdAt
+        reactionBody
+        username
+      }
     }
   }
+}
 `;
 
 export const QUERY_ME_BASIC = gql`
@@ -137,6 +182,7 @@ export const QUERY_ME_BASIC = gql`
     me {
       _id
       username
+      email
     }
   }
 `;

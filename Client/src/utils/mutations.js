@@ -9,6 +9,7 @@ export const LOGIN = gql`
       token
       user {
         _id
+        username
       }
     }
   }
@@ -28,26 +29,31 @@ export const ADD_USER = gql`
       token
       user {
         _id
+        username
       }
     }
   }
 `;
 
 export const ADD_POST = gql`
-  mutation addPost($postText: String, $postTitle: String) {
-    addPost(postText: $postText, postTitle: $postTitle) {
+  mutation addPost($postTitle: String, $postText: String) {
+    addPost(postTitle: $postTitle, postText: $postText) {
       _id
       postTitle
       postText
       createdAt
       username
+      reactionCount
+      reactions {
+        _id
+      }
     }
   }
 `;
 
 export const ADD_REACTION = gql `
-  mutation addReaction( $reactionBody: String!){
-    addReaction( reactionBody: $reactionBody){
+  mutation addReaction($postId: ID!, $reactionBody: String!){
+    addReaction(postId: $postId, reactionBody: $reactionBody){
       _id
       reactionBody
       createdAt
