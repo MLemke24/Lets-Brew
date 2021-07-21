@@ -3,7 +3,7 @@ import React, { useState, useCallback } from "react";
 
 import mug from "../../images/icons/Mug/1x/Mug.png";
 import { hideInstructions } from "../../utils/wheel";
-export default function App() {
+export default function App(props) {
   // const [num, setNum] = useState(1)
   const [cups, setCups] = useState(0);
 
@@ -13,7 +13,7 @@ export default function App() {
   }, [cups])
 
   const OnDecrementClick = useCallback((e) => {
-    setCups(count - 1);
+    setCups(cups - 1);
   }, [cups])
 
 
@@ -28,7 +28,7 @@ export default function App() {
       <div className="ButtonDiv">
         <div onClick={OnIncrementClick} className="Button">Increment</div>
         <div onClick={OnDecrementClick} className="Button">Decrement</div>
-        <button onClick={() => (props.onCupEnter(cup))}>Enter</button>
+        <button>Enter</button>
 
       </div>
     </div>
