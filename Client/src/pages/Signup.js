@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { useMutation } from '@apollo/react-hooks';
-import  {ADD_USER } from '../utils/mutations';
+import { useMutation } from '@apollo/client';
+import  { ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth'
 
 const SignUpForm = () => {
     const [formState, setFormState] = useState({ email: '', username: '', password: '' });
     const [addUser, {error}] = useMutation(ADD_USER);
-
+   
     const handleChange = (event) => {
       const { name, value } = event.target;
       setFormState({
@@ -17,7 +17,7 @@ const SignUpForm = () => {
   
     const handleFormSubmit = async (event) => {
       event.preventDefault();
-
+        
       const DataResponse = await addUser({
         variables: {
           email: formState.email,
@@ -26,21 +26,9 @@ const SignUpForm = () => {
         }
       })
 
-      const token =  DataResponse.data.user.token
-
-      Auth.login(token);
-
-      
-      // try {
-      //   const { data } = await addUser({
-        
-      //     variables: { ...formState }
-      //   });
-      //   console.log(data)
-      //   Auth.login(data.addUser.token);
-      // } catch (e) {
-      //   console.error(e);
-      // }
+      console.log(DataResponse)
+      const token =  DataResponse.data.addUser.token
+      Auth.login(token);      
     };
   
 
@@ -57,7 +45,7 @@ const SignUpForm = () => {
                     className="form-input"
                     id = "username"
                     name="username"
-                    type="username"
+                    
                     placeholder="Enter your username" 
                     value={formState.username}
                     onChange={handleChange}
@@ -69,7 +57,6 @@ const SignUpForm = () => {
                     className="form-input"
                     id = "email"
                     name="email"
-                    type="email"
                     placeholder="Enter your email" 
                     value={formState.email}
                     onChange={handleChange}
@@ -81,7 +68,6 @@ const SignUpForm = () => {
                     className="form-input"
                     id="password"
                     name="password"
-                    type="password"
                     placeholder="**********"
                     value={formState.password}
                     onChange={handleChange}

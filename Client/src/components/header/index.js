@@ -13,7 +13,8 @@ const Header = () => {
 
   const LoggedInNav = () => {
     if (Auth.loggedIn()) {
-      <>
+
+      return (<>
         <ul id="nav-mobile" className="left">
           <li>
             <a href="/" className="nav-link" onClick={logout}>Logout</a>
@@ -25,7 +26,7 @@ const Header = () => {
             <Link to="/notes" className="nav-link">Notes</Link>
           </li>
         </ul>
-      </>
+      </>)
     } else {
       return (
         <>
