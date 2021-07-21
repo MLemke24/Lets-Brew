@@ -4,13 +4,11 @@ const brews = [
     //only values stored in the front end are Name, Image, and steps.
     {
         id: 1,
-        cups: 2,
         name: "French Press",
         image: require("../images/icons/French Press/SVG/French Press.svg").default,
         grind: "coarse",
-        water: "50 liters",
-        weight: "1 megaton",
-        strength: "saitama strong",
+        water: 350,
+        coffeeAmount: 30,
         step1:"pour water on it",
         step2:"pour more water on it until saturate",
         step3:"tap the thingy",
