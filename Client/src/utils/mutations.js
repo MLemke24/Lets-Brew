@@ -4,8 +4,8 @@ import { gql } from '@apollo/client'
 // these are placeholder mutations sourced from module.22
 //////////////////////
 export const LOGIN = gql`
-  mutation login($username: String!, $password: String!) {
-    login(username: $username, password: $password) {
+  mutation login($email: String!, $password: String!) {
+    login(email: $email, password: $password) {
       token
       user {
         _id
@@ -17,11 +17,13 @@ export const LOGIN = gql`
 export const ADD_USER = gql`
   mutation addUser(
     $username: String!,
-    $password: String!
+    $password: String!,
+    $email: String!
   ) {
     addUser(
       username: $username,
-      password: $password
+      password: $password,
+      email: $email
     ) {
       token
       user {

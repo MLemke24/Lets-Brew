@@ -20,8 +20,8 @@ import Notes from "./pages/Notes";
 
 
 const httpLink = createHttpLink({
-  link: "/graphql",
-  credentials: 'include'
+  uri: "/graphql",
+  
 });
 
 const authLink = setContext((_, { headers }) => {
