@@ -11,6 +11,12 @@ const postSchema = new Schema(
       minlength: 1,
       maxlength: 280
     },
+    postTitle: {
+      type: String,
+      required: 'Post must have a title!',
+      minlength: 1,
+      maxLength: 100
+    },
     createdAt: {
       type: Date,
       default: Date.now,

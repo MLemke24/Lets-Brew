@@ -39,7 +39,7 @@ const SignUpForm = () => {
             <div>
                 <h1>Sign Up</h1>
             </div>
-            <div class="form-group">
+            <div className="form-group">
                 <label for="username">Username</label>
                 <input
                     className="form-input"
@@ -51,7 +51,7 @@ const SignUpForm = () => {
                     onChange={handleChange}
                     />
             </div>
-            <div class="form-group">
+            <div className="form-group">
                 <label for="email">email</label>
                 <input
                     className="form-input"
@@ -62,7 +62,7 @@ const SignUpForm = () => {
                     onChange={handleChange}
                     />
             </div>
-            <div class="form-group">
+            <div className="form-group">
                 <label>Password:</label>
                 <input
                     className="form-input"
@@ -74,7 +74,7 @@ const SignUpForm = () => {
                     />
             </div>
             <div>
-                <input class="btn" type="submit" value="Sign Up" />
+                <input className="btn" type="submit" value="Sign Up" />
             </div>
 
         </form>

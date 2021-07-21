@@ -15,7 +15,7 @@ const ThoughtForm = () => {
         const { posts } = cache.readQuery({ query: QUERY_POST });
         cache.writeQuery({
           query: QUERY_POST,
-          data: { posts: [addPost, ...posts] }
+          data: { posts: [...posts, addPost] }
         });
       } catch (e) {
         console.error(e);

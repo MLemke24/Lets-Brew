@@ -11,7 +11,7 @@ const Home = () => {
         <h1 className="intro intro2">GET STARTED</h1>
         <h3 className="intro">CHOOSE YOUR METHOD</h3>
       </div>
-      <div class="container">
+      <div className="container">
 			<div className='menu'>
 			  <input className='toggle' id='menu' type='checkbox'>
                 </input>
