@@ -99,7 +99,7 @@ export const QUERY_CHEMEX = gql`
 `;
 
 export const QUERY_POST = gql`
-  query post($id: ID) {
+  query post($id: ID!) {
     post(_id: $id) {
       _id
       postText
