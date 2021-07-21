@@ -2,8 +2,8 @@ import React from 'react'
 import {useParams} from 'react-router-dom'
 
 
-import ReplyForm from '../components/ReplyForm'
-import ReplyList from '../components/ReplyList'
+import ReactionForm from '../components/ReactionForm'
+import ReactionList from '../components/ReactionList'
 
 import Auth from '../utils/auth'
 import { useQuery } from '@apollo/react-hooks';
@@ -38,9 +38,9 @@ const SinglePost = props => {
                 </div>
             </div>
 
-            {post.reactionCount > 0 && <ReplyList reactions={post.reactions} />}
+            {post.reactionCount > 0 && <ReactionList reactions={post.reactions} />}
 
-            {Auth.loggedIn() && <ReplyForm postId={post._id} />}
+            {Auth.loggedIn() && <ReactionForm postId={post._id} />}
         </div>
 
 

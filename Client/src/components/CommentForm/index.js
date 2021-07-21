@@ -43,7 +43,7 @@ const ThoughtForm = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    try {
+    
       const mutationResponse = await addPost({
         variables: {
            postTitle: formState.postTitle, 
@@ -53,11 +53,6 @@ const ThoughtForm = () => {
       console.log(mutationResponse)
 
       // clear form value
-      // setText('');
-      
-    } catch (e) {
-      console.error(e);
-    }
     
   };
 
