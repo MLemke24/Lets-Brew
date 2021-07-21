@@ -409,26 +409,69 @@ a {
   text-align: center;
 }
 
-.cup-sel{
-  background-color: #ebb694f6 !important;
-  margin: 5px;
-  color: black !important;
-  font-weight: bold;
-  width: 60px;
-  height: 60px;
-  border: 1.3px solid #fffffff6 !important;
-  transition: all .4s ease;
+.buttonDiv {
+  display: flex;
+  justify-content: space-between;
 }
 
-.cup-sel:hover {
-  background-color: rgb(231, 231, 250) !important;
-  color: rgb(0, 0, 0) !important;
+.row {
+  display: flex;
+  align-items: center;
 }
 
-.btntext {
-  color: black;
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+.plus {
+  cursor: pointer;
+ margin-left: 19px;
+ transition: box-shadow .3s;
+border-radius: 50%;
+background-image: url('../src/images/icons/plus.png');
+
+}
+
+.plus:hover {
+ 
+  box-shadow: inset 0 0 20px rgb(255, 255, 255);
+  box-shadow: 0 0 20px rgb(255, 255, 255);
+  border-radius: 50%;
+  background-image: url('../src/images/icons/pluswhite.png')
+}
+
+.minus {
+  cursor: pointer;
+ margin-left: 19px;
+ transition: box-shadow .3s;
+border-radius: 50%;
+
+}
+
+.minus:hover {
+ 
+  box-shadow: inset 0 0 20px rgb(255, 255, 255);
+  box-shadow: 0 0 20px rgb(255, 255, 255);
+  border-radius: 70%;
+  background-image: url('../src/images/icons/minuswhite.png');
+  visibility: visible;
+  opacity: 1;
+  display: inline;
+}
+
+.cuplogo {
+  padding-left: 53px;
+}
+
+.cupbtn {
+ display: flex;
+ align-items: center;
+ padding-left: 73px;
+}
+
+.count {
   font-weight: bold;
-  font-size: 60px;
-  text-align: center;
-  vertical-align: center;
+  font-size: 68px;
+  margin-bottom: 10px;
 }
