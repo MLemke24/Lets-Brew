@@ -4,8 +4,9 @@ import React, { useState, useCallback } from "react";
 import mug from "../../images/icons/Mug/1x/Mug.png";
 import { hideInstructions } from "../../utils/wheel";
 
-
-export default function App() {
+import plus from "../../images/icons/plus.png"
+import minus from "../../images/icons/minus.png"
+export default function App(props) {
 
 
   // const [num, setNum] = useState(1)
