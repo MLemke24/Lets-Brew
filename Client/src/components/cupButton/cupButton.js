@@ -1,11 +1,12 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState, useCallback } from "react";
 //could use params here in the place of the data prop
-import mug from '../../images/icons/Mug/1x/Mug.png'
-import { onCupEnter } from '../Instructions';
 
-export default function cupButton(props) {
+import mug from "../../images/icons/Mug/1x/Mug.png";
+import { hideInstructions } from "../../utils/wheel";
+export default function App() {
   // const [num, setNum] = useState(1)
   const [cups, setCups] = useState(0);
+
 
   const OnIncrementClick = useCallback((e) => {
     setCups(cups + 1);
@@ -15,10 +16,12 @@ export default function cupButton(props) {
     setCups(count - 1);
   }, [cups])
 
+
   return (
     <div>
-      <img id='mug' src={mug} alt='mug' />
+      <img id="mug" src={mug} alt="mug" />
       <div className="DisplayDiv">
+        cupButton
         <p>Counter</p>
         {cups}
       </div>
@@ -26,7 +29,8 @@ export default function cupButton(props) {
         <div onClick={OnIncrementClick} className="Button">Increment</div>
         <div onClick={OnDecrementClick} className="Button">Decrement</div>
         <button onClick={() => (props.onCupEnter(cup))}>Enter</button>
+
       </div>
     </div>
-  )
+  );
 }
