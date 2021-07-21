@@ -44,4 +44,13 @@ export const ADD_POST = gql`
   }
 `;
 
-
+export const ADD_REACTION = gql `
+  mutation addReaction( $reactionBody: String!){
+    addReaction( reactionBody: $reactionBody){
+      _id
+      reactionBody
+      createdAt
+      username
+    }
+  }  
+`
