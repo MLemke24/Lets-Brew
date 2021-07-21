@@ -37,10 +37,6 @@ const Instructions = () => {
 
               <div className="instruction-content">
                 <div>
-                  <div>
-                    <h2>Strength : </h2>
-                    <h4>{filterBrew.strength}</h4>
-                  </div>
                   <h2>Volume:</h2>
                   <ul>
                     <li>
@@ -48,7 +44,7 @@ const Instructions = () => {
                         <span className="ingredients">WATER </span>
                         <span className="measurements">
                           {" "}
-                          {filterBrew.water}
+                          {filterBrew.water * cups}
                         </span>
                       </div>
                     </li>
@@ -66,7 +62,7 @@ const Instructions = () => {
                         <span className="ingredients">COFFEE </span>
                         <span className="measurements">
                           {" "}
-                          {filterBrew.weight}
+                          {filterBrew.weight * cups}
                         </span>
                       </div>
                     </li>
