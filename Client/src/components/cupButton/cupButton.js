@@ -5,19 +5,8 @@ import mug from "../../images/icons/Mug/1x/Mug.png";
 import { hideInstructions } from "../../utils/wheel";
 import plus from "../../images/icons/plus.png"
 import minus from "../../images/icons/minus.png"
-
-
-
-
-
-import plus from "../../images/icons/plus.png"
-import minus from "../../images/icons/minus.png"
 export default function App(props) {
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 93a545351724fc164a199447e3a1e504d8cc2492
   // const [num, setNum] = useState(1)
   const [cups, setCups] = useState(0);
 
