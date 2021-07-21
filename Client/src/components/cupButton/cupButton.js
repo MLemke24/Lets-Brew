@@ -8,7 +8,6 @@ import plus from "../../images/icons/plus.png"
 import minus from "../../images/icons/minus.png"
 export default function App() {
 
-export default function App(props) {
 
   // const [num, setNum] = useState(1)
   const [cups, setCups] = useState(0);
@@ -29,7 +28,7 @@ export default function App(props) {
       <div className="DisplayDiv">
 
         <h4>How many cups?</h4>
-        <div className="count">{count}</div>
+        <div className="count">{cups}</div>
       </div>
       <div className="ButtonDiv row">
         <div onClick={OnIncrementClick} className="">
@@ -47,4 +46,4 @@ export default function App(props) {
     </div>
   );
 }
-}
+
