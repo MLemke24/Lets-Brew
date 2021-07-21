@@ -12,11 +12,19 @@ export default function App(props) {
 
 
   const OnIncrementClick = useCallback((e) => {
+    if (cups < 6) {
     setCups(cups + 1);
+    } else if (cups === 6) {
+      alert('cannot brew more than 6 cups')
+    }
   }, [cups])
-
+  
   const OnDecrementClick = useCallback((e) => {
+    if (cups > 1) {
     setCups(cups - 1);
+    } else if (cups === 1){
+      alert('Please select valid cup size')
+    }
   }, [cups])
 
 
