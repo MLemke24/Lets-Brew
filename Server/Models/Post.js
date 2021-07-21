@@ -1,6 +1,7 @@
 const { Schema, model } = require('mongoose');
 const reactionSchema = require('./Reaction');
 const dateFormat = require('../utils/dateFormat');
+const mongoose = require('mongoose');
 
 const postSchema = new Schema(
   {
@@ -19,7 +20,11 @@ const postSchema = new Schema(
       type: String,
       required: true
     },
-    reactions: [reactionSchema]
+    reactions: [{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'reactionSchema',
+      required: true
+    }]
   },
   {
     toJSON: {
