@@ -2,7 +2,7 @@ import React, { useState, useCallback } from "react";
 //could use params here in the place of the data prop
 
 import mug from "../../images/icons/Mug/1x/Mug.png";
-import { hideInstructions } from "../../utils/wheel";
+// import { hideInstructions } from "../../utils/wheel";
 export default function App(props) {
   // const [num, setNum] = useState(1)
   const [cups, setCups] = useState(0);
