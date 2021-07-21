@@ -14,7 +14,7 @@ const BrewSpecs = () => {
   // const [water, setWater] = useState(1)
   const [brewData, setBrewData] = useState({cupSize: '', grindSize: '', coffeeAmount: '', water: ''})
 
-  const renderData = useEffect(() => {
+  const renderData = useEffect(({brew, setBrewData}) => {
     if(brew && brew.brew._id) {
       // setCupSize(brew.brew.cupSize)
       // setGrindSize(brew.brew.grindSize)
@@ -29,7 +29,7 @@ const BrewSpecs = () => {
       <p>{brewData.cupSize}</p>
       <p>{brewData.grindSize}</p>
       <p>{brewData.coffeeAmount}</p>
-      <p>{brewDat.water}</p>
+      <p>{brewData.water}</p>
       <cupButton onChange={renderData()} />
     </div>
   )

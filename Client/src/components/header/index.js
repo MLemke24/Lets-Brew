@@ -17,7 +17,7 @@ const Header = () => {
       return (<>
         <ul id="nav-mobile" className="left">
           <li>
-            <a href="/" className="nav-link" onClick={logout}>Logout</a>
+            <Link href="/" className="nav-link" onClick={logout}>Logout</Link>
           </li>
         </ul>
 

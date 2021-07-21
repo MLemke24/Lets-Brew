@@ -37,7 +37,7 @@ const LoginForm = () => {
             <div>
                 <h1>Login</h1>
             </div>
-            <div class="form-group">
+            <div className="form-group">
                 <label>Email: </label>
                 <input
                     className="form-input"
@@ -49,7 +49,7 @@ const LoginForm = () => {
                     
                 />
             </div>
-            <div class="form-group">
+            <div className="form-group">
                 <label>Password:</label>
                 <input
                     className="form-input"
@@ -67,7 +67,7 @@ const LoginForm = () => {
                 </div>
             ) : null}
             <div>
-                <input class="btn" type="submit" value="Login" />
+                <input className="btn" type="submit" value="Login" />
             </div>
         </form>
     )
