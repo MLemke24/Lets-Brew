@@ -1,10 +1,9 @@
 //source :https://www.codegrepper.com/code-examples/javascript/react+filter+array+of+objects+by+name
 
-import React from "react";
+import {React, useState} from "react";
 import { useParams } from "react-router-dom";
 import Timer from "../Timer";
 import Data from "../../db/tempdb";
-import { Link } from "react-router-dom";
 import CupButton from '../cupButton/cupButton'
 // import { AeroPress, BeeHouse, Chemex, FrenchPress, MokaPot, Siphon, V60, Wave } from '../Cards';
 // make a button for notes? so you can share them???
@@ -13,14 +12,11 @@ import CupButton from '../cupButton/cupButton'
 
 const Instructions = () => {
   const { brewId } = useParams();
-  // const [ cups, setCups ] = useState
-  const GoNotes = () => {
-      return ( <Link to={`/notes/${brewId}`}><button>Go Notes!</button></Link>)
-  }
+  const [ cups, setCups ] = useState
 
-  // const cups = function(num, ) {
-    
-  // }
+  const onCupEnter = (numOfCups) => {
+    setCups(numOfCups)
+  }
 
   return (
     <>
@@ -29,9 +25,8 @@ const Instructions = () => {
           <>
             <div className="instruction-title">
               <h1> Brewing : {brewId} </h1>
-              <CupButton/>
+              <CupButton onCupEnter={onCupEnter}/>
               <Timer />
-              <GoNotes/>
             </div>
 
             <div className="instruction-content">
