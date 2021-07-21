@@ -26,7 +26,7 @@ const resolvers = {
       const params = username ? { username } : {};
       return Post.find(params).sort({ createdAt: -1 });
     },
-    post: async (parent, { _id }) => {
+    posts: async (parent, { _id }) => {
       return Post.findOne({ _id });
     },
 
@@ -99,28 +99,28 @@ const resolvers = {
     
         await User.findByIdAndUpdate(
           { _id: context.user._id },
-          { $push: { posts: post._id } },
+          { $push: { post: post._id } },
           { new: true }
         );
     
         return post;
       }
       throw new AuthenticationError("You need to be logged in!");
+    },
+    addReaction: async (parent, { postId, reactionBody }) => {
+      if (context.user) {
+        const updatedPost = await Post.findOneAndUpdate(
+          { _id: postId },
+          { $push: { reactions: { reactionBody, username: context.user.username } } },
+          { new: true, runValidators: true }
+        );
+    
+        return updatedPost;
+      }
+    
+      throw new AuthenticationError('You need to be logged in!');
     }
   },
-  addReaction: async (parent, { postId, reactionBody }, context) => {
-    if (context.user) {
-      const updatedPost = await Post.findOneAndUpdate(
-        { _id: postId },
-        { $push: { reactions: { reactionBody, username: context.user.username } } },
-        { new: true, runValidators: true }
-      );
-  
-      return updatedPost;
-    }
-  
-    throw new AuthenticationError("You need to be logged in!");
-  }
 };
 
 module.exports = resolvers;
