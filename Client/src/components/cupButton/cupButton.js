@@ -1,40 +1,35 @@
 import React, { useState, useCallback } from "react";
 //could use params here in the place of the data prop
+
 import mug from "../../images/icons/Mug/1x/Mug.png";
 import { hideInstructions } from "../../utils/wheel";
 export default function App() {
   // const [num, setNum] = useState(1)
-  const [count, setCount] = useState(0);
+  const [cups, setCups] = useState(0);
 
-  const OnIncrementClick = useCallback(
-    (e) => {
-      setCount(count + 1);
-    },
-    [count]
-  );
 
-  const OnDecrementClick = useCallback(
-    (e) => {
-      setCount(count - 1);
-    },
-    [count]
-  );
+  const OnIncrementClick = useCallback((e) => {
+    setCups(cups + 1);
+  }, [cups])
+
+  const OnDecrementClick = useCallback((e) => {
+    setCups(count - 1);
+  }, [cups])
+
 
   return (
     <div>
       <img id="mug" src={mug} alt="mug" />
       <div className="DisplayDiv">
-        <h4>How many cups?</h4>
-        <div>{count}</div>
+        cupButton
+        <p>Counter</p>
+        {cups}
       </div>
       <div className="ButtonDiv">
-        <div onClick={OnIncrementClick} className="cup-sel">
-          <div className="btntext">+</div>
-        </div>
-        <div onClick={OnDecrementClick} className="cup-sel">
-          <div className="btntext">-</div>
-        </div>
-        <button onClick={hideInstructions}>Enter</button>
+        <div onClick={OnIncrementClick} className="Button">Increment</div>
+        <div onClick={OnDecrementClick} className="Button">Decrement</div>
+        <button onClick={() => (props.onCupEnter(cup))}>Enter</button>
+
       </div>
     </div>
   );
