@@ -36,11 +36,11 @@ const ReactionForm = ({ postId }) => {
         <textarea
           placeholder="leave a comment!"
           value={replyBody}
-          className="form-input col-12 col-md-9"
+          className=""
           onChange={handleChange}
         ></textarea>
 
-        <button className="btn col-12 col-md-3" type="submit">
+        <button className="" type="submit">
           Submit
         </button>
       </form>

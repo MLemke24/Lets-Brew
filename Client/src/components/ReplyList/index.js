@@ -5,9 +5,9 @@ const ReactionList = ({ reactions }) => {
   return (
     <div >
       <div >
-        <span >Reactions</span>
+        <span >Replys</span>
       </div>
-      <div className="card-body">
+      <div className="">
         {reactions &&
           reactions.map(reaction => (
             <p className="pill mb-3" key={reaction._id}>
