@@ -12,11 +12,12 @@ import CupButton from '../cupButton/cupButton'
 
 const Instructions = () => {
   const { brewId } = useParams();
-  const [ cups, setCups ] = useState
+  const [ cups, setCups ] = useState(1)
 
   const onCupEnter = (numOfCups) => {
     setCups(numOfCups)
   }
+  console.log(onCupEnter)
 
   return (
     <>
