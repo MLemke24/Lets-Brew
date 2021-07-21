@@ -46,7 +46,7 @@ export default function App(props) {
         
       </div>
       <div className="cupbtn">
-      <div onClick={hideInstructions} className="btn"> SUBMIT</div>
+      <button className='btn' onClick={(event) => { hideInstructions(); props.onCupEnter(cups);}}>Enter</button>
 
       </div>
     </div>
