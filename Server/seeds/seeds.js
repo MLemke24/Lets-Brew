@@ -44,7 +44,7 @@ const data = [
             'cupSize': '2',
             'grindSize': 'medium',
             'coffeeAmount': '50',
-            'water': '640'
+            'water': '680'
         },
         {
             'id': '3',
