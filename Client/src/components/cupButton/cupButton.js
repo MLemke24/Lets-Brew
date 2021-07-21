@@ -10,11 +10,6 @@ import plus from "../../images/icons/plus.png"
 import minus from "../../images/icons/minus.png"
 export default function App() {
 
-<<<<<<< HEAD
-=======
-
-export default function App(props) {
->>>>>>> d1e7ff91d6d1525da4e335fdc84982ac8c85e939
 
   // const [num, setNum] = useState(1)
   const [cups, setCups] = useState(0);
