@@ -25,7 +25,7 @@ const ReactionForm = ({ reactionId }) => {
         variables: { 
           reactionBody: formState.reactionBody,
           reactionId
-         
+        } 
       });
     console.log(formResponse)
 
