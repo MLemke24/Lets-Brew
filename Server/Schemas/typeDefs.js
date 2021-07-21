@@ -2,6 +2,31 @@
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql `
+
+  type User {
+    _id: ID
+    username: String
+    email: String
+    posts: [Posts]
+  }
+
+  type Post {
+    _id: ID
+    postTitle: String
+    postText: String
+    createdAt: String
+    username: String
+    reactionCount: Int
+    reactions: [Reaction]
+  }
+
+  type Reaction {
+    _id: ID
+    reactionBody: String
+    createdAt: String
+    username: String
+  }
+
   type AeroPress {
     id: ID
     name: String
@@ -91,6 +116,23 @@ const typeDefs = gql `
     siphon(id: Int): [Siphon]
     v60(id: Int): [V60]
     wave(id: Int): [Wave]
+    me: User
+    users: [User]
+    user(username: String!): User
+    post(username: String): [Post]
+    post(_id: ID!): Post
+  }
+  '
+  type Mutation {
+    login(email: String!, password: String!) : Auth
+    addUser(username: String!, email: String!, password: String!) : Auth
+    addPost(postText: String!, postTitle: String!): Post
+    addReaction(postId: ID!, reactionBody: String!): Post
+  }
+
+  type Auth {
+      token: ID!
+      user: User
   }
 `;
 

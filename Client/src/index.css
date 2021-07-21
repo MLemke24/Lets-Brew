@@ -404,3 +404,31 @@ a {
 .pad {
   padding-top: 15px;
 }
+
+.DisplayDiv {
+  text-align: center;
+}
+
+.cup-sel{
+  background-color: #ebb694f6 !important;
+  margin: 5px;
+  color: black !important;
+  font-weight: bold;
+  width: 60px;
+  height: 60px;
+  border: 1.3px solid #fffffff6 !important;
+  transition: all .4s ease;
+}
+
+.cup-sel:hover {
+  background-color: rgb(231, 231, 250) !important;
+  color: rgb(0, 0, 0) !important;
+}
+
+.btntext {
+  color: black;
+  font-weight: bold;
+  font-size: 60px;
+  text-align: center;
+  vertical-align: center;
+}
