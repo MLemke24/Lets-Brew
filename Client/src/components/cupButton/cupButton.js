@@ -1,30 +1,32 @@
 import React, { useState, useCallback } from 'react'
 //could use params here in the place of the data prop
 import mug from '../../images/icons/Mug/1x/Mug.png'
-export default function App ()  {
+import { onCupEnter } from '../Instructions';
+
+export default function cupButton(props) {
   // const [num, setNum] = useState(1)
-  const [count, setCount] = useState(0);
+  const [cups, setCups] = useState(0);
 
   const OnIncrementClick = useCallback((e) => {
-    setCount(count + 1);
-  }, [count])
+    setCups(cups + 1);
+  }, [cups])
 
   const OnDecrementClick = useCallback((e) => {
-    setCount(count - 1);
-  }, [count])
+    setCups(count - 1);
+  }, [cups])
 
   return (
     <div>
       <img id='mug' src={mug} alt='mug' />
       <div className="DisplayDiv">
-                <p>Counter</p>
-                {count}
-            </div>
-            <div className="ButtonDiv">
-                <div onClick={OnIncrementClick} className="Button">Increment</div>
-                <div onClick={OnDecrementClick} className="Button">Decrement</div>
-                <button>Enter</button>
-            </div>
+        <p>Counter</p>
+        {cups}
+      </div>
+      <div className="ButtonDiv">
+        <div onClick={OnIncrementClick} className="Button">Increment</div>
+        <div onClick={OnDecrementClick} className="Button">Decrement</div>
+        <button onClick={() => (props.onCupEnter(cup))}>Enter</button>
+      </div>
     </div>
   )
 }
