@@ -1,23 +1,27 @@
 import React, { useState } from "react";
-import {useMutation} from '@apollo/client';
-import  {LOGIN } from '../utils/mutations'
+import {useMutation} from '@apollo/react-hooks';
+import  {LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth'
 
 const LoginForm = () => {
-    const [formState, setFormState] = useState({ username: '', password: '' });
+    const [formState, setFormState] = useState({email: '', password: '' });
     const [login, { error }] = useMutation(LOGIN);
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
-        try {
-            const mutationResponse = await login({
-                variables: { username: formState.username, password: formState.password },
-            });
-            const token = mutationResponse.data.login.token;
-            Auth.login(token);
-        } catch (e) {
-            console.log(e);
-        }
+        
+        const DataResponse = await login({
+            variables: {
+              email: formState.email,
+              password: formState.password
+            }
+        })
+
+        console.log(DataResponse)
+        const token =  DataResponse.data.login.token
+         Auth.login(token);
+        
+ 
     };
 
     const handleChange = (event) => {
@@ -34,23 +38,27 @@ const LoginForm = () => {
                 <h1>Login</h1>
             </div>
             <div class="form-group">
-                <label>Username: </label>
+                <label>Email: </label>
                 <input
-
-                    id="username"
-                    placeholder="Enter your username"
+                    className="form-input"
+                    id = "email"
+                    name="email"
+                    placeholder="Enter your email"
+                    value={formState.email}
                     onChange={handleChange}
-                    required
+                    
                 />
             </div>
             <div class="form-group">
                 <label>Password:</label>
                 <input
-
+                    className="form-input"
                     id="password"
-                    placeholder="Enter your password"
+                    name="password"
+                    placeholder="***********"
+                    value={formState.password}
                     onChange={handleChange}
-                    required
+                    
                 />
             </div>
             {error ? (
