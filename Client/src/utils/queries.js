@@ -106,6 +106,7 @@ export const QUERY_POST = gql`
       postTitle
       createdAt
       username
+      reactions
     }
   }
 `;
@@ -113,8 +114,9 @@ export const QUERY_POST = gql`
 export const QUERY_USER = gql`
   query user($username: username!) {
     user(username: $username) {
-      _id
-
+      username
+      email
+      posts
     }
   }
 
