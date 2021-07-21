@@ -8,7 +8,6 @@ import { QUERY_POST } from '../utils/queries';
 
 const Social = () => {
     const {loading, data} = useQuery(QUERY_POST)
-
     const comments = data?.posts || [];
     const loggedIn  = Auth.loggedIn()
 

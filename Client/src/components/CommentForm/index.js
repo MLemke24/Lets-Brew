@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/react-hooks';
 import { ADD_POST } from '../../utils/mutations';
 import { QUERY_POST, QUERY_ME } from '../../utils/queries';
-
+//this expects a title
 const ThoughtForm = () => {
-  const [postText, setText] = useState('');
-
+  const [{postText, postTitle}, setText] = useState('');
+  
   const [addPost] = useMutation(ADD_POST, {
     update(cache, { data: { addPost } }) {
       try {
@@ -42,7 +42,7 @@ const ThoughtForm = () => {
 
     try {
       await addPost({
-        variables: { postText }
+        variables: { postText, postTitle }
       });
 
       // clear form value
@@ -59,6 +59,12 @@ const ThoughtForm = () => {
         className=""
         onSubmit={handleFormSubmit}
       >
+        <input
+          placeholder="enter a Title for your post"
+          value={postTitle}
+          className=""
+          onChange={handleChange}
+        ></input>
         <textarea
           placeholder="Here's a new post..."
           value={postText}
