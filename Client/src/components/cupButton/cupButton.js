@@ -3,7 +3,13 @@ import React, { useState, useCallback } from "react";
 
 import mug from "../../images/icons/Mug/1x/Mug.png";
 import { hideInstructions } from "../../utils/wheel";
+
+import plus from "../../images/icons/plus.png"
+import minus from "../../images/icons/minus.png"
+export default function App() {
+
 export default function App(props) {
+
   // const [num, setNum] = useState(1)
   const [cups, setCups] = useState(0);
 
@@ -18,17 +24,24 @@ export default function App(props) {
 
 
   return (
-    <div>
-      <img id="mug" src={mug} alt="mug" />
+    <div className="cupselection column">
+      <img className="cuplogo" id="mug" src={mug} alt="mug" />
       <div className="DisplayDiv">
-        cupButton
-        <p>Counter</p>
-        {cups}
+
+        <h4>How many cups?</h4>
+        <div className="count">{count}</div>
       </div>
-      <div className="ButtonDiv">
-        <div onClick={OnIncrementClick} className="Button">Increment</div>
-        <div onClick={OnDecrementClick} className="Button">Decrement</div>
-        <button>Enter</button>
+      <div className="ButtonDiv row">
+        <div onClick={OnIncrementClick} className="">
+        <img className="plus" src={plus} alt="plus"></img>
+        </div>
+        <div onClick={OnDecrementClick} className="">
+        <img className="minus" src={minus} alt="minus"></img>
+        </div>
+        
+      </div>
+      <div className="cupbtn">
+      <div onClick={hideInstructions} className="btn"> SUBMIT</div>
 
       </div>
     </div>
