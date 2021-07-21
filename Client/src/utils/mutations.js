@@ -31,13 +31,15 @@ export const ADD_USER = gql`
   }
 `;
 
-export const ADD_REVIEW = gql`
-  mutation addReview($reviewText: String!) {
-    addReview(reviewText: $reviewText) {
+export const ADD_POST = gql`
+  mutation addPost($postText: String!) {
+    addPost(postText: $postText) {
       _id
-      reviewText
+      postText
       createdAt
       username
     }
   }
 `;
+
+

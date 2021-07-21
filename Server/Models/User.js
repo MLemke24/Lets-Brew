@@ -19,6 +19,17 @@ const userSchema = new Schema(
       required: true,
       unique: true,
       match: [/.+@.+\..+/, 'Must use a valid email address'],
+    },
+    posts: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Post'
+      }
+    ],
+  },
+  {
+    toJSON: {
+      virtuals: true
     }
   }
 );
