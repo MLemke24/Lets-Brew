@@ -122,7 +122,7 @@ const typeDefs = gql `
     post(username: String): [Post]
     post(_id: ID!): Post
   }
-  '
+
   type Mutation {
     login(email: String!, password: String!) : Auth
     addUser(username: String!, email: String!, password: String!) : Auth

@@ -1,24 +1,24 @@
 
-const { AuthenticationError } = require('apollo-server-express')
-const { Chemex, AeroPress, BeeHouse, FrenchPress, MokaPot, Siphon, V60, Wave, User, Post, Reaction } = require('../Models');
-const { signToken } = require('../utils/auth')
+const { AuthenticationError } = require("apollo-server-express")
+const { Chemex, AeroPress, BeeHouse, FrenchPress, MokaPot, Siphon, V60, Wave, User, Post, Reaction } = require("../Models");
+const { signToken } = require("../utils/auth")
 //import an auth function from utils folder 
 
 const resolvers = {
   Query: {
     user: async (parent, { username }) => {
       return User.findOne({ username })
-        .select('-__v -password')
-        .populate('posts');
+        .select("-__v -password")
+        .populate("posts");
     },
     user: async (parent, { username }) => {s
       return User.findOne({ username })
-        .select('-__v -password')
+        .select("-__v -password")
     },
     me: async (parent, args) => {
       const userData = await User.findOne({})
-        .select('-__v -password')
-        .populate('posts');
+        .select("-__v -password")
+        .populate("posts");
   
       return userData;
     },
@@ -82,12 +82,12 @@ const resolvers = {
       const user = await User.findOne({ email });
 
       if(!user){
-          throw new AuthenticationError('Incorrect credentials');
+          throw new AuthenticationError("Incorrect credentials");
       }
       const correctPw = await user.isCorrectPassword(password);
 
       if(!correctPw) {
-          throw new AuthenticationError('Incorrect Credentials');
+          throw new AuthenticationError("Incorrect Credentials");
       }
       const token = signToken(user);
       
@@ -105,7 +105,7 @@ const resolvers = {
     
         return post;
       }
-      throw new AuthenticationError('You need to be logged in!');
+      throw new AuthenticationError("You need to be logged in!");
     }
   },
   addReaction: async (parent, { postId, reactionBody }, context) => {
@@ -119,7 +119,7 @@ const resolvers = {
       return updatedPost;
     }
   
-    throw new AuthenticationError('You need to be logged in!');
+    throw new AuthenticationError("You need to be logged in!");
   }
 };
 
