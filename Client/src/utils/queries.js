@@ -111,13 +111,32 @@ export const QUERY_POST = gql`
   }
 `;
 
+
 export const QUERY_USER = gql`
-  query user($username: username!) {
+  query user($username: String!) {
     user(username: $username) {
+      _id
       username
       email
-      posts
+      post
     }
   }
+`;
 
+export const QUERY_ME = gql`
+  {
+    me {
+      _id
+      username
+    }
+  }
+`;
+
+export const QUERY_ME_BASIC = gql`
+  {
+    me {
+      _id
+      username
+    }
+  }
 `;

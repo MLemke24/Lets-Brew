@@ -37,5 +37,5 @@ authMiddleware: function({ req }) {
     const payload = { username, email, _id};
 
     return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
-},
+}
 }

@@ -1,31 +1,33 @@
 import React, { useState, useCallback } from "react";
 //could use params here in the place of the data prop
+
 import mug from "../../images/icons/Mug/1x/Mug.png";
 import { hideInstructions } from "../../utils/wheel";
+
 import plus from "../../images/icons/plus.png"
 import minus from "../../images/icons/minus.png"
 export default function App() {
+
+export default function App(props) {
+
   // const [num, setNum] = useState(1)
-  const [count, setCount] = useState(0);
+  const [cups, setCups] = useState(0);
 
-  const OnIncrementClick = useCallback(
-    (e) => {
-      setCount(count + 1);
-    },
-    [count]
-  );
 
-  const OnDecrementClick = useCallback(
-    (e) => {
-      setCount(count - 1);
-    },
-    [count]
-  );
+  const OnIncrementClick = useCallback((e) => {
+    setCups(cups + 1);
+  }, [cups])
+
+  const OnDecrementClick = useCallback((e) => {
+    setCups(cups - 1);
+  }, [cups])
+
 
   return (
     <div className="cupselection column">
       <img className="cuplogo" id="mug" src={mug} alt="mug" />
       <div className="DisplayDiv">
+
         <h4>How many cups?</h4>
         <div className="count">{count}</div>
       </div>
@@ -40,6 +42,7 @@ export default function App() {
       </div>
       <div className="cupbtn">
       <div onClick={hideInstructions} className="btn"> SUBMIT</div>
+
       </div>
     </div>
   );
