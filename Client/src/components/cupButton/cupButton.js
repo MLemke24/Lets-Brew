@@ -1,11 +1,13 @@
 import React, { useState, useCallback } from "react";
 //could use params here in the place of the data prop
+
 import mug from "../../images/icons/Mug/1x/Mug.png";
 import { hideInstructions } from "../../utils/wheel";
 
 export default function App(props) {
   // const [num, setNum] = useState(1)
   const [cups, setCups] = useState(0);
+
 
   const OnIncrementClick = useCallback((e) => {
     setCups(cups + 1);
@@ -30,6 +32,7 @@ export default function App(props) {
         <button onClick={(event) => { hideInstructions(); props.onCupEnter(cups);}}>Enter</button>
         
       </div>
+
     </div>
   );
 }

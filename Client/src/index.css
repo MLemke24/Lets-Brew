@@ -404,3 +404,74 @@ a {
 .pad {
   padding-top: 15px;
 }
+
+.DisplayDiv {
+  text-align: center;
+}
+
+.buttonDiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+.plus {
+  cursor: pointer;
+ margin-left: 19px;
+ transition: box-shadow .3s;
+border-radius: 50%;
+background-image: url('../src/images/icons/plus.png');
+
+}
+
+.plus:hover {
+ 
+  box-shadow: inset 0 0 20px rgb(255, 255, 255);
+  box-shadow: 0 0 20px rgb(255, 255, 255);
+  border-radius: 50%;
+  background-image: url('../src/images/icons/pluswhite.png')
+}
+
+.minus {
+  cursor: pointer;
+ margin-left: 19px;
+ transition: box-shadow .3s;
+border-radius: 50%;
+
+}
+
+.minus:hover {
+ 
+  box-shadow: inset 0 0 20px rgb(255, 255, 255);
+  box-shadow: 0 0 20px rgb(255, 255, 255);
+  border-radius: 70%;
+  background-image: url('../src/images/icons/minuswhite.png');
+  visibility: visible;
+  opacity: 1;
+  display: inline;
+}
+
+.cuplogo {
+  padding-left: 53px;
+}
+
+.cupbtn {
+ display: flex;
+ align-items: center;
+ padding-left: 73px;
+}
+
+.count {
+  font-weight: bold;
+  font-size: 68px;
+  margin-bottom: 10px;
+}

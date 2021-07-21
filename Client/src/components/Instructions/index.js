@@ -5,10 +5,10 @@ import { useParams } from "react-router-dom";
 import Timer from "../Timer";
 import Data from "../../db/tempdb";
 import CupButton from '../cupButton/cupButton'
+
 // import { AeroPress, BeeHouse, Chemex, FrenchPress, MokaPot, Siphon, V60, Wave } from '../Cards';
 // make a button for notes? so you can share them???
 /// make a button to add it to favorites????
-
 
 const Instructions = () => {
   const { brewId } = useParams();
@@ -30,6 +30,7 @@ const Instructions = () => {
             </div>
 
             <div id="hideDiv" style={{ display: 'none' }}>
+
               <div className="instruction-title">
                 <Timer />
               </div>
@@ -37,6 +38,7 @@ const Instructions = () => {
 
               <div className="instruction-content">
                 <div>
+
                   <h2>Volume:</h2>
                   <ul>
                     <li>
@@ -45,6 +47,7 @@ const Instructions = () => {
                         <span className="measurements">
                           {" "}
                           {filterBrew.water * cups}
+
                         </span>
                       </div>
                     </li>
@@ -63,6 +66,7 @@ const Instructions = () => {
                         <span className="measurements">
                           {" "}
                           {filterBrew.weight * cups}
+
                         </span>
                       </div>
                     </li>
