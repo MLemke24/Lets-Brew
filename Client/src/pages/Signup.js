@@ -46,7 +46,7 @@ const SignUpForm = () => {
             <div class="form-group">
                 <label>Password:</label>
                 <input
-
+                    type="password"
                     id="password"
                     placeholder="Enter your password"
                     required 

@@ -1,0 +1,28 @@
+{
+  "name": "lets-brew",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "cd server && npm start",
+    "start:dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "heroku-postbuild": "cd client && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MLemke24/Lets-Brew.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MLemke24/Lets-Brew/issues"
+  },
+  "homepage": "https://github.com/MLemke24/Lets-Brew#readme",
+  "dependencies": {
+    "concurrently": "^6.2.0",
+    "if-env": "^1.0.4"
+  }
+}

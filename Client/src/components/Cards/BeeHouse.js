@@ -7,7 +7,7 @@ import cupButton from '../cupButton/cupButton'
 // use state to dynamically change the instruction values 
 // use the QUERY_BREW to pass our data into our state 
 const BrewSpecs = () => {
-  const [brew] = useQuery(QUERY_BEEHOUSE)
+  const {data: brew, loading} = useQuery(QUERY_BEEHOUSE)
   // const [cupSize, setCupSize] = useState('')
   // const [grindSize, setGrindSize] = useState(1)
   // const [coffeeAmount, setCoffeeAmount] = useState(1)

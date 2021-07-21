@@ -11,7 +11,7 @@ import { setContext } from "@apollo/client/link/context";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import Header from "./components/header/";
+import Header from "./components/header";
 import Home from "./pages/Home";
 import LoginForm from "./pages/Login";
 import SignUpForm from "./pages/Signup";

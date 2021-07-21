@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import Timer from "../Timer";
 import Data from "../../db/tempdb";
 import { Link } from "react-router-dom";
-// import { AeroPress, BeeHouse, Chemex, FrenchPress, MokaPot, Siphon, V60, Wave } from '../Cards';
+import { AeroPress, BeeHouse, Chemex, FrenchPress, MokaPot, Siphon, V60, Wave } from '../Cards';
 // make a button for notes? so you can share them???
 /// make a button to add it to favorites????
 
@@ -18,6 +18,7 @@ const Instructions = () => {
 
   return (
     <>
+    <AeroPress />
       {Data.filter((brew) => brew.name === brewId).map((filterBrew) => {
         return (
           <>

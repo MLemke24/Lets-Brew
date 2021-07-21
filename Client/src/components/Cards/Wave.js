@@ -7,29 +7,29 @@ import cupButton from '../cupButton/cupButton'
 // use state to dynamically change the instruction values 
 // use the QUERY_BREW to pass our data into our state 
 const BrewSpecs = () => {
-  const [brew] = useQuery(QUERY_WAVE)
+  const {data: {brew}, loading} = useQuery(QUERY_WAVE)
   // const [cupSize, setCupSize] = useState('')
   // const [grindSize, setGrindSize] = useState(1)
   // const [coffeeAmount, setCoffeeAmount] = useState(1)
   // const [water, setWater] = useState(1)
   const [brewData, setBrewData] = useState({cupSize: '', grindSize: '', coffeeAmount: '', water: ''})
 
-  const renderData = useEffect(() => {
-    if(brew && brew.brew._id) {
-      // setCupSize(brew.brew.cupSize)
-      // setGrindSize(brew.brew.grindSize)
-      // setCoffeeAmount(brew.brew.coffeeAmount)
-      // setWater(brew.brew.water)
-      setBrewData(brew.brew)
-    }
-  })
+  // const renderData = useEffect(() => {
+  //   if (brew && brew.brew._id) {
+  //     // setCupSize(brew.brew.cupSize)
+  //     // setGrindSize(brew.brew.grindSize)
+  //     // setCoffeeAmount(brew.brew.coffeeAmount)
+  //     // setWater(brew.brew.water)
+  //     setBrewData(brew.brew)
+  //   }
+  // })
 
   return (
     <div>
-      <p>{brewData.cupSize}</p>
-      <p>{brewData.grindSize}</p>
-      <p>{brewData.coffeeAmount}</p>
-      <p>{brewData.water}</p>
+      <p>{brew.cupSize}</p>
+      <p>{brew.grindSize}</p>
+      <p>{brew.coffeeAmount}</p>
+      <p>{brew.water}</p>
       <cupButton onChange={renderData()} />
     </div>
   )
