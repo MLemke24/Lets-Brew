@@ -2,11 +2,14 @@ import React, { useState, useCallback } from "react";
 //could use params here in the place of the data prop
 
 import mug from "../../images/icons/Mug/1x/Mug.png";
+
+
 import { hideInstructions } from "../../utils/wheel";
 
 import plus from "../../images/icons/plus.png"
 import minus from "../../images/icons/minus.png"
 export default function App() {
+
 
 export default function App(props) {
 
