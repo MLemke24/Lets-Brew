@@ -27,9 +27,11 @@ export default function App(props) {
       <div className="ButtonDiv">
         <div onClick={OnIncrementClick} className="Button">Increment</div>
         <div onClick={OnDecrementClick} className="Button">Decrement</div>
-        <button onClick={() =>(props.onCupEnter(cups))}>Enter</button>
+        <button onClick={hideInstructions} >Enter</button>
 
       </div>
     </div>
   );
 }
+
+// onClick={() =>(props.onCupEnter(cups))}
