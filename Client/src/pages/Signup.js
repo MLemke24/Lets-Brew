@@ -18,16 +18,29 @@ const SignUpForm = () => {
     const handleFormSubmit = async (event) => {
       event.preventDefault();
 
-      try {
-        const { data } = await addUser({
+      const DataResponse = await addUser({
+        variables: {
+          email: formState.email,
+          username: formState.username,
+          password: formState.password
+        }
+      })
+
+      const token =  DataResponse.data.user.token
+
+      Auth.login(token);
+
+      
+      // try {
+      //   const { data } = await addUser({
         
-          variables: { ...formState }
-        });
-        console.log(data)
-        Auth.login(data.addUser.token);
-      } catch (e) {
-        console.error(e);
-      }
+      //     variables: { ...formState }
+      //   });
+      //   console.log(data)
+      //   Auth.login(data.addUser.token);
+      // } catch (e) {
+      //   console.error(e);
+      // }
     };
   
 
