@@ -5,8 +5,7 @@ import { ADD_POST } from '../../utils/mutations';
 import { QUERY_POST, QUERY_ME } from '../../utils/queries';
 //this expects a title
 const ThoughtForm = () => {
-  const [{postText, postTitle}, setText] = useState('');
-  
+  const [formState, setText] = useState({ postText: '', postTitle: ''});
   const [addPost] = useMutation(ADD_POST, {
     update(cache, { data: { addPost } }) {
       try {
@@ -31,25 +30,36 @@ const ThoughtForm = () => {
   });
 
   // update state based on form input changes
-  const handleChange = event => {
-      setText(event.target.value);
+  const handleChange = (event) => {
+      const { name, value} = event.target;
+
+      setText({
+        ...formState,
+        [name]:value});
+
       
   };
 
   // submit form
-  const handleFormSubmit = async event => {
+  const handleFormSubmit = async (event) => {
     event.preventDefault();
 
     try {
-      await addPost({
-        variables: { postText, postTitle }
+      const mutationResponse = await addPost({
+        variables: {
+           postTitle: formState.postTitle, 
+           postText: formState.postText 
+          }
       });
+      console.log(mutationResponse)
 
       // clear form value
-      setText('');
+      // setText('');
+      
     } catch (e) {
       console.error(e);
     }
+    
   };
 
   return (
@@ -61,14 +71,16 @@ const ThoughtForm = () => {
       >
         <input
           placeholder="enter a Title for your post"
-          value={postTitle}
+          value= {formState.postTitle}
           className=""
+          name= "title"
           onChange={handleChange}
         ></input>
         <textarea
           placeholder="Here's a new post..."
-          value={postText}
+          value= {formState.postText}
           className=""
+          name="text"
           onChange={handleChange}
         ></textarea>
         <button className="" type="submit">
