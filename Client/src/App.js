@@ -16,7 +16,7 @@ import Home from "./pages/Home";
 import LoginForm from "./pages/Login";
 import SignUpForm from "./pages/Signup";
 import Instructions from "./components/Instructions";
-import Notes from "./pages/Notes";
+import Notes from "./pages/Social";
 
 
 const httpLink = createHttpLink({
