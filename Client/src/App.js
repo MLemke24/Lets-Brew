@@ -16,8 +16,8 @@ import Home from "./pages/Home";
 import LoginForm from "./pages/Login";
 import SignUpForm from "./pages/Signup";
 import Instructions from "./components/Instructions";
-import Notes from "./pages/Social";
-
+import Social from "./pages/Social";
+import Comments  from "./pages/Comments"
 
 const httpLink = createHttpLink({
   uri: "/graphql"
@@ -54,8 +54,8 @@ function App() {
               <Route exact path="/login"component={LoginForm} />
               <Route exact path="/signup"component={SignUpForm}/>
               <Route exact path="/shop"/>
-              <Route exact path="/notes/:brewId" component={Notes}/>
-
+              <Route exact path="/social" component={Social}/>
+              <Route exact path="/comments/:id" component={Comments}/>
             </Switch>
           </div>
         </div>

@@ -23,7 +23,7 @@ const Header = () => {
 
         <ul id="nav-mobile" className="right">
           <li>
-            <Link to="/Social" className="nav-link">Social</Link>
+            <Link to="/social" className="nav-link">Social</Link>
           </li>
         </ul>
       </>)

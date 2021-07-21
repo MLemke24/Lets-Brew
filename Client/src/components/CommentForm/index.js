@@ -1,22 +1,21 @@
 import React, { useState } from 'react';
 
 import { useMutation } from '@apollo/react-hooks';
-import { ADD_THOUGHT } from '../../utils/mutations';
-import { QUERY_THOUGHTS, QUERY_ME } from '../../utils/queries';
+import { ADD_POST } from '../../utils/mutations';
+import { QUERY_POST, QUERY_ME } from '../../utils/queries';
 
 const ThoughtForm = () => {
-  const [thoughtText, setText] = useState('');
-  const [characterCount, setCharacterCount] = useState(0);
+  const [postText, setText] = useState('');
 
-  const [addThought, { error }] = useMutation(ADD_THOUGHT, {
-    update(cache, { data: { addThought } }) {
+  const [addPost] = useMutation(ADD_POST, {
+    update(cache, { data: { addPost } }) {
       try {
         // update thought array's cache
         // could potentially not exist yet, so wrap in a try/catch
-        const { thoughts } = cache.readQuery({ query: QUERY_THOUGHTS });
+        const { posts } = cache.readQuery({ query: QUERY_POST });
         cache.writeQuery({
-          query: QUERY_THOUGHTS,
-          data: { thoughts: [addThought, ...thoughts] }
+          query: QUERY_POST,
+          data: { posts: [addPost, ...posts] }
         });
       } catch (e) {
         console.error(e);
@@ -26,17 +25,15 @@ const ThoughtForm = () => {
       const { me } = cache.readQuery({ query: QUERY_ME });
       cache.writeQuery({
         query: QUERY_ME,
-        data: { me: { ...me, thoughts: [...me.thoughts, addThought] } }
+        data: { me: { ...me, posts: [...me.posts, addPost] } }
       });
     }
   });
 
   // update state based on form input changes
   const handleChange = event => {
-    if (event.target.value.length <= 280) {
       setText(event.target.value);
-      setCharacterCount(event.target.value.length);
-    }
+      
   };
 
   // submit form
@@ -44,13 +41,12 @@ const ThoughtForm = () => {
     event.preventDefault();
 
     try {
-      await addThought({
-        variables: { thoughtText }
+      await addPost({
+        variables: { postText }
       });
 
       // clear form value
       setText('');
-      setCharacterCount(0);
     } catch (e) {
       console.error(e);
     }
@@ -58,21 +54,18 @@ const ThoughtForm = () => {
 
   return (
     <div>
-      <p className={`m-0 ${characterCount === 280 || error ? 'text-error' : ''}`}>
-        Character Count: {characterCount}/280
-        {error && <span className="ml-2">Something went wrong...</span>}
-      </p>
+      
       <form
-        className="flex-row justify-center justify-space-between-md align-stretch"
+        className=""
         onSubmit={handleFormSubmit}
       >
         <textarea
-          placeholder="Here's a new thought..."
-          value={thoughtText}
-          className="form-input col-12 col-md-9"
+          placeholder="Here's a new post..."
+          value={postText}
+          className=""
           onChange={handleChange}
         ></textarea>
-        <button className="btn col-12 col-md-3" type="submit">
+        <button className="" type="submit">
           Submit
         </button>
       </form>

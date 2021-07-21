@@ -1,19 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ReactionList = ({ reactions }) => {
+const CommentList = ({ Comments }) => {
   return (
     <div >
       <div >
-        <span >Replys</span>
+        <span >Comments</span>
       </div>
       <div className="">
-        {reactions &&
-          reactions.map(reaction => (
-            <p className="pill mb-3" key={reaction._id}>
-              {reaction.reactionBody} //{' '}
-              <Link to={`/profile/${reaction.username}`} style={{ fontWeight: 700 }}>
-                {reaction.username} on {reaction.createdAt}
+        {Comments &&
+          Comments.map(comment => (
+            <p className="pill mb-3" key={comment._id}>
+              {comment.postText} || {' '}
+              <Link to={`/comment/${comment.username}`} style={{ fontWeight: 700 }}>
+                {comment.username} on {comment.createdAt}
               </Link>
             </p>
           ))}
@@ -22,4 +22,4 @@ const ReactionList = ({ reactions }) => {
   );
 };
 
-export default ReactionList;
+export default CommentList;
