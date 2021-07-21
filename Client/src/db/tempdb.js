@@ -10,8 +10,8 @@ const brews = [
         water: 350,
         weight: 30,
         step1:"pour water on it",
-        step2:"pour more water on it until saturate",
-        step3:"tap the thingy",
+        step2:"pour more water on it until it is saturated",
+        step3:"wait four minutes then press down on the plunger",
         step4:"drink responsibly"
     },
     {
@@ -23,7 +23,7 @@ const brews = [
         water: 300,
         weight: 20,
         strength: "like a punch trough time",
-        step1:"pour 20g of water on it",
+        step1:"pour 20g of water onto it",
         step2:"pour the rest of the water",
         step3:"toss the whole thing into the trash",
         step4:"cry until it stops hurting"
@@ -39,7 +39,7 @@ const brews = [
         strength: "steamy strong",
         step1:"boil the coffee",
         step2:"take a walk outside",
-        step3:"put down the fire",
+        step3:"put out the fire",
         step4:"fraud the insurance company"
     },
     {
@@ -99,7 +99,7 @@ const brews = [
         step1:"whip it",
         step2:"whip it good",
         step3:"shake it up",
-        step4:"its not to late..."
+        step4:"its not too late..."
     }
     ,
     {
@@ -114,7 +114,7 @@ const brews = [
         step1:"put water in the kettle",
         step2:"heat until steam comes out of top",
         step3:"pour water on plastic cup",
-        step4:"remember the alamo"
+        step4:"remember the alamo (drafthouse)"
     }
 ]
 

@@ -98,14 +98,26 @@ export const QUERY_CHEMEX = gql`
   }
 `;
 
-export const QUERY_REVIEW = gql`
-  query review($id: ID!) {
-    review(_id: $id) {
+export const QUERY_POST = gql`
+  query post($id: ID!) {
+    post(_id: $id) {
       _id
-      reviewText
-      reviewTitle
+      postText
+      postTitle
       createdAt
       username
+      reactions
     }
   }
+`;
+
+export const QUERY_USER = gql`
+  query user($username: username!) {
+    user(username: $username) {
+      username
+      email
+      posts
+    }
+  }
+
 `;
