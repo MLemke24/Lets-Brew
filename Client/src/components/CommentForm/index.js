@@ -34,8 +34,7 @@ const ThoughtForm = () => {
       console.log(mutationResponse)
 
       // clear form value
-      
-    
+  
     
   };
 
