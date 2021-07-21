@@ -70,6 +70,8 @@ const resolvers = {
       return Wave.find(params);
     }
   },
+
+  //Mutations
   Mutation: {
     addUser: async (parent, args) => {
       const user = await User.create(args);
@@ -88,6 +90,7 @@ const resolvers = {
           throw new AuthenticationError('Incorrect Credentials');
       }
       const token = signToken(user);
+      
       return {token, user};
     },
     addPost: async (parent, args, context) => {
@@ -117,7 +120,7 @@ const resolvers = {
     }
   
     throw new AuthenticationError('You need to be logged in!');
-  },
+  }
 };
 
 module.exports = resolvers;
