@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import Timer from "../Timer";
 import Data from "../../db/tempdb";
 import { Link } from "react-router-dom";
+import CupButton from '../cupButton/cupButton'
 // import { AeroPress, BeeHouse, Chemex, FrenchPress, MokaPot, Siphon, V60, Wave } from '../Cards';
 // make a button for notes? so you can share them???
 /// make a button to add it to favorites????
@@ -12,9 +13,14 @@ import { Link } from "react-router-dom";
 
 const Instructions = () => {
   const { brewId } = useParams();
+  // const [ cups, setCups ] = useState
   const GoNotes = () => {
       return ( <Link to={`/notes/${brewId}`}><button>Go Notes!</button></Link>)
   }
+
+  // const cups = function(num, ) {
+    
+  // }
 
   return (
     <>
@@ -23,6 +29,7 @@ const Instructions = () => {
           <>
             <div className="instruction-title">
               <h1> Brewing : {brewId} </h1>
+              <CupButton/>
               <Timer />
               <GoNotes/>
             </div>
