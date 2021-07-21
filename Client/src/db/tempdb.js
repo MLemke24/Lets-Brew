@@ -18,7 +18,7 @@ const brews = [
     {
         id: 2,
         cups: 4,
-        name: "Hairo",
+        name: "Hario",
         image: require("../images/icons/Hairo Vaccum/SVG/Hairo Vaccum .svg").default,
         grind: "fine",
         water: "1 liter",
