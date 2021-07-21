@@ -4,7 +4,6 @@ const brews = [
     //only values stored in the front end are Name, Image, and steps.
     {
         id: 1,
-        cups: 2,
         name: "French Press",
         image: require("../images/icons/French Press/SVG/French Press.svg").default,
         grind: "coarse", 
@@ -101,7 +100,7 @@ const brews = [
         step1:"whip it",
         step2:"whip it good",
         step3:"shake it up",
-        step4:"its not to late..."
+        step4:"its not too late..."
     }
     ,
     {
@@ -116,7 +115,7 @@ const brews = [
         step1:"put water in the kettle",
         step2:"heat until steam comes out of top",
         step3:"pour water on plastic cup",
-        step4:"remember the alamo"
+        step4:"remember the alamo (drafthouse)"
     }
 ]
 
