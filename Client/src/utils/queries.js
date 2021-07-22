@@ -136,6 +136,25 @@ query posts($username: String!){
 }
 `;
 
+export const QUERY_All_POSTS = gql `
+query allposts{
+    allposts{
+        _id
+        postTitle
+        postText
+        createdAt
+        username
+        reactionCount
+        reactions {
+            _id
+            createdAt
+            username
+            reactionBody
+        }
+    }
+}
+`;
+
 
 export const QUERY_USER = gql`
   query user($username: String!) {
