@@ -2,18 +2,20 @@
   "name": "lets-brew",
   "version": "1.0.0",
   "description": "",
-  "main": "server/server.js",
+  "main": "Server/server.js",
   "scripts": {
-    "start": "node server/server.js",
-    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
-    "install": "cd server && npm i && cd ../client && npm i",
-    "seed": "cd server && npm run seed",
-    "build": "cd client && npm run build"
+    "start": "node Server/server.js",
+    "build": "cd Client && npm run build",
+    "develop": "concurrently \"cd Server && npm run watch\" \"cd Client && npm start\"",
+    "install": "cd Server && npm i && cd ../Client && npm i"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.1.0"
+  },
+  "dependencies": {
+    "check-node-version": "^4.1.0"
   }
 }

@@ -1,7 +1,8 @@
 const express = require('express');
+const path = require('path')
 const mongoose = require('mongoose');
 const { ApolloServer } = require('apollo-server-express');
-const { typeDefs, resolvers } = require('./schemas')
+const { typeDefs, resolvers } = require('./Schemas')
 const { authMiddleware } = require('./utils/auth');
 const db = require('./config/connection');
 
@@ -18,6 +19,14 @@ server.applyMiddleware({ app });
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+
+if(process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, '../Client/build')));
+}
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, "../Client/build/index.html"));
+});
 
 db.once('open', () => {
     app.listen(PORT, () => {
