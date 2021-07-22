@@ -3,14 +3,14 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/react-hooks';
 import { ADD_REACTION } from '../../utils/mutations';
 
-const ReactionForm = ({ reactionId }) => {
+const ReactionForm = ({ postId }) => {
   const [formState, setFormState] = useState('');
-  const [addPost, { error }] = useMutation(ADD_REACTION);
+  const [addReaction, { error }] = useMutation(ADD_REACTION);
 
   // update state based on form input changes
   const handleChange = (event) => {
     const { name, value} = event.target;
-
+    
     setFormState({
       ...formState,
       [name]: value,
@@ -18,14 +18,14 @@ const ReactionForm = ({ reactionId }) => {
   };
 
   // submit form
-  const handleFormSubmit = async event => {
+  const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    const formResponse = await addPost({
+    const formResponse = await addReaction({
         variables: { 
-          reactionBody: formState.reactionBody,
-          reactionId
-        } 
+          postId,
+          reactionBody: formState.reactionBody
+        }
       });
     console.log(formResponse)
 
@@ -40,7 +40,7 @@ const ReactionForm = ({ reactionId }) => {
         <textarea
           className="form-input"
           id= "reactionBody"
-          name=" reactionBody"
+          name="reactionBody"
           placeholder="leave a comment!"
           value={formState.reactionBody}
           onChange={handleChange}

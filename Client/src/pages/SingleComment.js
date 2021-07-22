@@ -36,7 +36,7 @@ const SingleComment = props => {
 
 
 
-            {Auth.loggedIn() && <ReactionForm reactionId={post._id} />}
+            {Auth.loggedIn() && <ReactionForm postId={post._id} />}
             <div>
                 <h4>{post.reactionCount} People reacted, join the conversation!</h4>
             </div>
