@@ -39,7 +39,7 @@ const brews = [
         step1:"Pour water and evenly saturate coffee, stir grounds to ensure saturation.",
         step2:"Wait for coffee to bloom and pour remaining water over dark areas.",
         step3:"Place the plunger on brewer and pull up to create a pressure seal.",
-        step4:"After 3 minutes press down plunger, take off cap, filter, grounds and serve."
+        step4:"After 3 minutes press down plunger, remove cap, filter grounds, and serve."
     },
     {
         id: 4,
@@ -53,7 +53,6 @@ const brews = [
         step2:"Insert the funnel and fill it with ground coffee.",
         step3:"Tight screw the upper part to the base, then put brewer on a stove at medium heat.",
         step4:"Wait 5-6 minutes for the water to boil."
-
     }
     ,
     {
@@ -111,6 +110,6 @@ const brews = [
         step3:"Pour 100G of water over coffee in a spiral motion, then wait for all water to pass through.",
         step4:"Repeat this process until finished."
     }
-]
+];
 
 export default brews;

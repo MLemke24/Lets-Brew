@@ -19,7 +19,7 @@ const ReactionForm = ({ postId }) => {
 
   // submit form
   const handleFormSubmit = async (event) => {
-    
+    event.stopPropagation();
 
     const formResponse = await addReaction({
         variables: { 
