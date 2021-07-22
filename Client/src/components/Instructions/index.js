@@ -51,7 +51,7 @@ const Instructions = () => {
                         <span className="measurements">
                           {" "}
                           {filterBrew.water * cups}
-
+                          &nbsp;G
                         </span>
                       </div>
                     </li>
@@ -70,7 +70,7 @@ const Instructions = () => {
                         <span className="measurements">
                           {" "}
                           {filterBrew.weight * cups}
-
+                          &nbsp;G
                         </span>
                       </div>
                     </li>

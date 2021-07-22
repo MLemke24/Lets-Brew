@@ -501,3 +501,55 @@ border-radius: 50%;
   border-style: solid !important;
   border-width: 0px 0px 2px 0px !important;
 }
+
+.post-title {
+  font-size: 30px;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+.post-text {
+  padding-top: 5px;
+  padding-bottom: 20px;
+  font-size: 23px;
+}
+
+.comment-card {
+  border-color: #ebb694f6 !important;
+  border-style: solid !important;
+  border-width: 2px 0px 2px 0px !important;
+  border-radius: 5%;
+  padding-left: 20px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+.post-react {
+  color:rgb(255, 255, 255);
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:.5s;
+  
+}
+
+.post-react:hover {
+  color: #ebb694f6;
+  
+}
+
+.single-comment {
+  padding-top: 100px;
+}
+
+.single-title {
+  font-weight: bold;
+}
+
+.single-title-description {
+  padding-bottom: 5px;
+  font-weight: bold;
+  font-size: 25px;
+}
