@@ -2,7 +2,7 @@
   "name": "lets-brew",
   "version": "1.0.0",
   "description": "",
-  "main": "server/server.js",
+  "main": "Server/server.js",
   "scripts": {
     "start": "node Server/server.js",
     "build": "cd Client && npm run build",
