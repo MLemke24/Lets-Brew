@@ -10,13 +10,9 @@ const CommentList = ({ Comments }) => {
       <div className="">
         {Comments &&
           Comments.map(comment => (
-            <p className="pill mb-3" key={comment._id}>
-              {comment.reactionBody} || 
-              <span>{' '}<p to={`/comment/${comment.username}`} style={{ fontWeight: 700 }}>
-                {comment.username} on {comment.createdAt}
-              </p></span>
-            </p>
-            
+            <div>
+              <p style={{ fontWeight: 700 }}>{comment.reactionBody}   || {comment.username} on {comment.createdAt}</p>
+            </div>
           ))}
       </div>
     </div>
