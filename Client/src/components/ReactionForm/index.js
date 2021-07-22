@@ -19,7 +19,7 @@ const ReactionForm = ({ postId }) => {
 
   // submit form
   const handleFormSubmit = async (event) => {
-    event.preventDefault();
+    
 
     const formResponse = await addReaction({
         variables: { 

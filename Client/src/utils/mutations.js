@@ -55,7 +55,6 @@ export const ADD_REACTION = gql `
   mutation addReaction($postId: ID!, $reactionBody: String!){
     addReaction(postId: $postId, reactionBody: $reactionBody){
       _id
-      reactionBody
       createdAt
       username
     }
