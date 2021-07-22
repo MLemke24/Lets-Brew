@@ -4,10 +4,10 @@ import CommentList from '../components/CommentList';
 
 import Auth from '../utils/auth'
 import { useQuery } from '@apollo/react-hooks';
-import { QUERY_POSTS } from '../utils/queries';
+import { QUERY_All_POSTS } from '../utils/queries';
 
 const Social = () => {
-    const {loading, data} = useQuery(QUERY_POSTS)
+    const {loading, data} = useQuery(QUERY_All_POSTS)
     const comments = data?.posts || [];
     const loggedIn  = Auth.loggedIn()
 
