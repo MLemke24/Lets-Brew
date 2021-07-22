@@ -19,11 +19,19 @@ const Header = () => {
           <li>
             <Link href="/" className="nav-link" onClick={logout}>Logout</Link>
           </li>
+          <li>
+            <Link to="/social" className="nav-link">Social</Link>
+          </li>
+          
         </ul>
 
         <ul id="nav-mobile" className="right">
+         
           <li>
-            <Link to="/social" className="nav-link">Social</Link>
+            <a href="sass.html" className="nav-link">Get-Started</a>
+          </li>
+          <li>
+            <a href="badges.html" className="nav-link">Shop</a>
           </li>
         </ul>
       </>)

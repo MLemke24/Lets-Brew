@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 
 import { useMutation } from '@apollo/react-hooks';
 import { ADD_POST } from '../../utils/mutations';
+
+
+
 //this expects a title
 const ThoughtForm = () => {
   const [formState, setFormState] = useState({ postText: '', postTitle: ''});
@@ -22,8 +25,6 @@ const ThoughtForm = () => {
 
   // submit form
   const handleFormSubmit = async (event) => {
-    event.preventDefault();
-
     
       const mutationResponse = await addPost({
         variables: {
@@ -34,6 +35,7 @@ const ThoughtForm = () => {
       console.log(mutationResponse)
 
       // clear form value
+      setFormState("")
     
   };
 
@@ -45,7 +47,7 @@ const ThoughtForm = () => {
         onSubmit={handleFormSubmit}
       >
         <input
-          placeholder="enter a Title for your post"
+          placeholder="Make a title for your post"
           value= {formState.postTitle}
           className="postTitle"
           id= "postTitle"
@@ -53,7 +55,7 @@ const ThoughtForm = () => {
           onChange={handleChange}
         ></input>
         <textarea
-          placeholder="Here's a new post..."
+          placeholder="Get typing!"
           value= {formState.postText}
           className="postText"
           id= "postText"

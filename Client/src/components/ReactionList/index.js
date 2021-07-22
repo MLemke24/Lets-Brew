@@ -5,7 +5,7 @@ const CommentList = ({ Comments }) => {
   return (
     <div >
       <div >
-        <span >Comments</span>
+        <span >Comments: </span>
       </div>
       <div className="">
         {Comments &&

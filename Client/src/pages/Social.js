@@ -27,7 +27,7 @@ const Social = () => {
         ) : (
           <CommentList 
             comments={comments} 
-            title="Some Feed for Thought(s)..." />
+            title="See how others love coffee too!..." />
         )}
       </div>
 
