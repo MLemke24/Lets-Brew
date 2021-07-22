@@ -21,17 +21,15 @@ const ThoughtForm = () => {
   // submit form
   const handleFormSubmit = async (event) => {
     
-      const mutationResponse = await addPost({
-        variables: {
-           postTitle: formState.postTitle, 
-           postText: formState.postText 
-          }
-      });
-      console.log(mutationResponse)
+    const mutationResponse = await addPost({
+      variables: {
+          postTitle: formState.postTitle, 
+          postText: formState.postText 
+        }
+    });
+    console.log(mutationResponse)
 
-      // clear form value
-      setFormState("")
-    
+    setFormState("")
   };
 
   return (

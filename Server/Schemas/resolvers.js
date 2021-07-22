@@ -1,8 +1,7 @@
 
 const { AuthenticationError } = require("apollo-server-express")
-const { Chemex, AeroPress, BeeHouse, FrenchPress, MokaPot, Siphon, V60, Wave, User, Post, Reaction } = require("../Models");
+const { User, Post, Reaction } = require("../Models");
 const { signToken } = require("../utils/auth")
-//import an auth function from utils folder 
 
 const resolvers = {
   Query: {
@@ -36,50 +35,9 @@ const resolvers = {
 
     post: async (parent, { _id }) => {
       return Post.findOne({ _id });
-    },
-
-    aeropress: async (parent, { id }) => {
-      const params = id ? { id } : {};
-      return AeroPress.find(params);
-    },
-
-    beehouse: async (parent, { id }) => {
-      const params = id ? { id } : {};
-      return BeeHouse.find(params);
-    },
-
-    chemex: async (parent, { id }) => {
-      const params = id ? { id } : {};
-      return Chemex.find(params);
-    },
-
-    frenchpress: async (parent, { id }) => {
-      const params = id ? { id } : {};
-      return FrenchPress.find(params);
-    },
-
-    mokapot: async (parent, { id }) => {
-      const params = id ? { id } : {};
-      return MokaPot.find(params);
-    },
-
-    siphon: async (parent, { id }) => {
-      const params = id ? { id } : {};
-      return Siphon.find(params);
-    },
-
-    v60: async (parent, { id }) => {
-      const params = id ? { id } : {};
-      return V60.find(params);
-    },
-
-    wave: async (parent, { id }) => {
-      const params = id ? { id } : {};
-      return Wave.find(params);
     }
   },
 
-  //Mutations
   Mutation: {
     addUser: async (parent, args) => {
       const user = await User.create(args);
