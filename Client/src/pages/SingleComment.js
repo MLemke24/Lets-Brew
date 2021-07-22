@@ -44,6 +44,6 @@ const SingleComment = props => {
         </div>
 
     )
-}
+};
 
 export default SingleComment
