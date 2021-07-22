@@ -47,7 +47,7 @@ const ThoughtForm = () => {
         onSubmit={handleFormSubmit}
       >
         <input
-          placeholder="enter a Title for your post"
+          placeholder="Make a title for your post"
           value= {formState.postTitle}
           className="postTitle"
           id= "postTitle"
@@ -55,7 +55,7 @@ const ThoughtForm = () => {
           onChange={handleChange}
         ></input>
         <textarea
-          placeholder="Here's a new post..."
+          placeholder="Get typing!"
           value= {formState.postText}
           className="postText"
           id= "postText"

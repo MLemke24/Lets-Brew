@@ -6,12 +6,13 @@ import Auth from '../utils/auth'
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_POST } from '../utils/queries';
 
-const SingleComment = () => {
+const SingleComment = props => {
     const { postId : id } = useParams();
-    console.log("is there anyone in there?")
+    console.log("is there anyone out there?")
+    console.log( {postId : id} )
     
     const { loading, data } = useQuery(QUERY_POST, {
-        variables: { postid : id }
+        variables: { postId : id }
     })
 
     const post = data?.post || {};
@@ -24,23 +25,20 @@ const SingleComment = () => {
 
         <div>
             <div>
-                <h2>Reply to this comment!</h2>
-                <p>
-                    <span style={{ fontWeight: 700 }} className="text-light">
-                        {post.username}
-                    </span>{' '}
-                    posted on {post.createdAt}
-                </p>
+                <h4> user {post.username} posted on {post.createdAt}</h4>
                 <div>
                     <p>{post.postText}</p>
                 </div>
             </div>
 
-            {post.reactionCount > 0 && <ReactionList Comments={post.reactions} />}
+
 
             {Auth.loggedIn() && <ReactionForm reactionId={post._id} />}
+            <div>
+                <h4>{post.reactionCount} People reacted, join the conversation!</h4>
+            </div>
+            <ReactionList Comments={post.reactions} />
         </div>
-
 
     )
 }

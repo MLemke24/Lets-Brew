@@ -17,7 +17,7 @@ import LoginForm from "./pages/Login";
 import SignUpForm from "./pages/Signup";
 import Instructions from "./components/Instructions";
 import Social from "./pages/Social";
-import SingleComment  from "./pages/Comments"
+import SingleComment  from "./pages/SingleComment"
 
 const httpLink = createHttpLink({
   uri: "/graphql"
