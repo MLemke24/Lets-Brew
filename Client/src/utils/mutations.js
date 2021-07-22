@@ -36,8 +36,8 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_POST = gql`
-  mutation addPost($postText: String!, $postTitle: String!) {
-    addPost(postText: $postText, postTitle: $postTitle) {
+  mutation addPost($postText: String!, $postTitle: String!, $username: String!) {
+    addPost(postText: $postText, postTitle: $postTitle, username: $username) {
       _id
       postTitle
       postText
@@ -55,7 +55,6 @@ export const ADD_REACTION = gql `
   mutation addReaction($postId: ID!, $reactionBody: String!){
     addReaction(postId: $postId, reactionBody: $reactionBody){
       _id
-      reactionBody
       createdAt
       username
     }
