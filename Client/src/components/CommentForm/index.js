@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 
 import { useMutation } from '@apollo/react-hooks';
 import { ADD_POST } from '../../utils/mutations';
+
+
+
 //this expects a title
 const ThoughtForm = () => {
   const [formState, setFormState] = useState({ postText: '', postTitle: ''});
@@ -22,7 +25,7 @@ const ThoughtForm = () => {
 
   // submit form
   const handleFormSubmit = async (event) => {
-    event.preventDefault();
+    
 
     
       const mutationResponse = await addPost({
@@ -34,6 +37,7 @@ const ThoughtForm = () => {
       console.log(mutationResponse)
 
       // clear form value
+      setFormState("")
     
   };
 
