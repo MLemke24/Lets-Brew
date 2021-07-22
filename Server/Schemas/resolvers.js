@@ -12,7 +12,7 @@ const resolvers = {
         .populate("posts");
     },
     
-    user: async (parent, { username }) => {s
+    user: async (parent, { username }) => {
       return User.findOne({ username })
         .select("-__v -password")
     },
@@ -103,7 +103,7 @@ const resolvers = {
     },
     addPost: async (parent, args, context) => {
       if (context.user) {
-        const post = await Post.create({ ...args, username: context.user.username });
+        const post = await Post.create({ ...args });
     
         await User.findByIdAndUpdate(
           { _id: context.user._id },
@@ -115,7 +115,7 @@ const resolvers = {
       }
       throw new AuthenticationError("You need to be logged in!");
     },
-    addReaction: async (parent, { postId, reactionBody }) => {
+    addReaction: async (parent, { postId, reactionBody }, context) => {
       if (context.user) {
         const updatedPost = await Post.findOneAndUpdate(
           { _id: postId },
