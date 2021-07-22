@@ -14,7 +14,7 @@ const Social = () => {
 
  return ( 
     <main>
-        <h3>Welcome to the Coffee Forum</h3>
+        <h3 className="social-title">Welcome to the Coffee Forum</h3>
     <div>
       {loggedIn && (
         <div>
