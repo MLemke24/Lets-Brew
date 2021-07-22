@@ -28,10 +28,10 @@ const Header = () => {
         <ul id="nav-mobile" className="right">
          
           <li>
-            <a href="sass.html" className="nav-link">Get-Started</a>
+            <a href="/" className="nav-link">Get-Started</a>
           </li>
           <li>
-            <a href="badges.html" className="nav-link">Shop</a>
+            <a href="/" className="nav-link">Shop</a>
           </li>
         </ul>
       </>)
