@@ -5,11 +5,6 @@ import mug from "../../images/icons/Mug/1x/Mug.png";
 import { hideInstructions } from "../../utils/wheel";
 import plus from "../../images/icons/plus.png"
 import minus from "../../images/icons/minus.png"
-
-
-
-
-
 export default function App(props) {
 
   // const [num, setNum] = useState(1)
@@ -17,11 +12,19 @@ export default function App(props) {
 
 
   const OnIncrementClick = useCallback((e) => {
+    if (cups < 6) {
     setCups(cups + 1);
+    } else if (cups === 6) {
+      alert('cannot brew more than 6 cups')
+    }
   }, [cups])
-
+  
   const OnDecrementClick = useCallback((e) => {
+    if (cups > 1) {
     setCups(cups - 1);
+    } else if (cups === 1){
+      alert('Please select valid cup size')
+    }
   }, [cups])
 
 
@@ -43,11 +46,10 @@ export default function App(props) {
         
       </div>
       <div className="cupbtn">
-      <div onClick={hideInstructions} className="btn"> SUBMIT</div>
+      <button className='btn' onClick={(event) => { hideInstructions(); props.onCupEnter(cups);}}>Enter</button>
 
       </div>
     </div>
   );
 }
-
 
