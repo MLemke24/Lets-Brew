@@ -539,3 +539,17 @@ border-radius: 50%;
   color: #ebb694f6;
   
 }
+
+.single-comment {
+  padding-top: 100px;
+}
+
+.single-title {
+  font-weight: bold;
+}
+
+.single-title-deescription {
+  padding-bottom: 5px;
+  font-weight: bold;
+  font-size: 25px;
+}

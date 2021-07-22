@@ -26,11 +26,11 @@ const SingleComment = props => {
 
     return (
 
-        <div>
+        <div className="single-comment">
             <div>
-                <h4> user {post.username} posted on {post.createdAt}</h4>
+                <h4 className="single-title"> user {post.username} posted on {post.createdAt}</h4>
                 <div>
-                    <p>{post.postText}</p>
+                    <p className="single-title-deescription">{post.postText}</p>
                 </div>
             </div>
 
