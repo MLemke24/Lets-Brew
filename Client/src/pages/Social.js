@@ -4,10 +4,10 @@ import CommentList from '../components/CommentList';
 
 import Auth from '../utils/auth'
 import { useQuery } from '@apollo/react-hooks';
-import { QUERY_POST } from '../utils/queries';
+import { QUERY_POSTS } from '../utils/queries';
 
 const Social = () => {
-    const {loading, data} = useQuery(QUERY_POST)
+    const {loading, data} = useQuery(QUERY_POSTS)
     const comments = data?.posts || [];
     const loggedIn  = Auth.loggedIn()
 
@@ -15,17 +15,19 @@ const Social = () => {
  return ( 
     <main>
         <h3>Welcome to the Coffee Forum</h3>
-    <div className="flex-row justify-space-between">
+    <div>
       {loggedIn && (
-        <div className="col-12 mb-3">
+        <div>
           <CommentForm />
         </div>
       )}
-      <div className={`col-12 mb-3 ${loggedIn && 'col-lg-8'}`}>
+      <div>
         {loading ? (
-          <div>Loading...</div>
+          <div>Loading comments ...</div>
         ) : (
-          <CommentList comments={comments} title="Some Feed for Thought(s)..." />
+          <CommentList 
+            comments={comments} 
+            title="Some Feed for Thought(s)..." />
         )}
       </div>
 
