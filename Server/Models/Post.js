@@ -26,11 +26,7 @@ const postSchema = new Schema(
       type: String,
       required: true
     },
-    reactions: [{
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'reactionSchema',
-      required: true
-    }]
+    reactions: [reactionSchema]
   },
   {
     toJSON: {
