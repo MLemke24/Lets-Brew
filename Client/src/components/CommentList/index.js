@@ -9,18 +9,14 @@ const CommentList = ({ comments, title }) => {
   return (
     <div>
       <h3>{title}</h3>
-      {comments &&
-        comments.map(comment => (
-
-
-          
+      {comments && comments.map(comment => (
           <div key={comment._id} className="">
             <p className="card-header">
               
               {comment.username} commented on {comment.createdAt}
             </p>
             <div className="card-body">
-              <Link to={`/comment/${comment._id}`}>
+              <Link to={`/comments/${comment._id}`}>
                 <p>{comment.postTitle}</p>
                 <p>{comment.postText}</p>
                 <p className="mb-0">

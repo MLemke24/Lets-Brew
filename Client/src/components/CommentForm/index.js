@@ -26,8 +26,6 @@ const ThoughtForm = () => {
   // submit form
   const handleFormSubmit = async (event) => {
     
-
-    
       const mutationResponse = await addPost({
         variables: {
            postTitle: formState.postTitle, 
