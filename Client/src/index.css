@@ -538,4 +538,21 @@ border-radius: 50%;
 .post-react:hover {
   color: #ebb694f6;
   
+
+}
+
+.single-comment {
+  padding-top: 100px;
+}
+
+.single-title {
+  font-weight: bold;
+}
+
+.single-title-description {
+  padding-bottom: 5px;
+  font-weight: bold;
+  font-size: 25px;
+
+
 }

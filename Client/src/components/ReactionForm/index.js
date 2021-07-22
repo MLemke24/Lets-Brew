@@ -38,7 +38,7 @@ const ReactionForm = ({ postId }) => {
         onSubmit={handleFormSubmit}
       >
         <textarea
-          className="form-input"
+          className="form-input postText"
           id= "reactionBody"
           name="reactionBody"
           placeholder="leave a comment!"
@@ -46,7 +46,7 @@ const ReactionForm = ({ postId }) => {
           onChange={handleChange}
         ></textarea>
 
-        <button className="" type="submit">
+        <button className="btn" type="submit">
           Submit
         </button>
       </form>
