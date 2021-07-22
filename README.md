@@ -16,7 +16,7 @@
 ![letsBrewHome](https://user-images.githubusercontent.com/68794066/126558838-490b80d6-1e8e-44c1-b61c-47b4048dce7c.PNG)
  
   ## Usage
-  Applicatioon is live at ________
+  Application is live at ________
   
   ## Contribution
   If you would like to conrtibute to this project please reach out!
