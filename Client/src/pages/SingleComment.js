@@ -3,7 +3,7 @@ import {useParams} from 'react-router-dom'
 import ReactionForm from '../components/ReactionForm'
 import ReactionList from '../components/ReactionList'
 import Auth from '../utils/auth'
-import { useQuery } from '@apollo/react-hooks';
+import { useQuery } from '@apollo/client';
 import { QUERY_POST } from '../utils/queries';
 
 const SingleComment = props => {

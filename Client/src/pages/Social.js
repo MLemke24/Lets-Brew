@@ -3,7 +3,7 @@ import CommentForm from '../components/CommentForm';
 import CommentList from '../components/CommentList';
 
 import Auth from '../utils/auth'
-import { useQuery } from '@apollo/react-hooks';
+import { useQuery } from '@apollo/client';
 import { QUERY_All_POSTS } from '../utils/queries';
 
 const Social = () => {
