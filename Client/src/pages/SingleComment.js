@@ -9,17 +9,17 @@ import { QUERY_POST } from '../utils/queries';
 const SingleComment = props => {
     const { postId } = useParams();
     console.log("is there anyone out there?")
-    console.log({postId});
+    console.log( {postId} )
     
     const { loading, data } = useQuery(QUERY_POST, {
         variables: { id: {postId}.postId }
-      });
-    console.log({data});
-    
+    })
+
+    console.log({data})
+
     const post = data ? data.post : {};
     console.log(post)
     
-
     if (loading) {
         return <div>Loading...</div>;
     }
@@ -36,7 +36,7 @@ const SingleComment = props => {
 
 
 
-            {Auth.loggedIn() && <ReactionForm reactionId={post._id} />}
+            {Auth.loggedIn() && <ReactionForm postId={post._id} />}
             <div>
                 <h4>{post.reactionCount} People reacted, join the conversation!</h4>
             </div>
