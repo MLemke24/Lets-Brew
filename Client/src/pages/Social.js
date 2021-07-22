@@ -8,7 +8,7 @@ import { QUERY_All_POSTS } from '../utils/queries';
 
 const Social = () => {
     const {loading, data} = useQuery(QUERY_All_POSTS)
-    const comments = data?.posts || [];
+    const comments = data?.allposts || [];
     const loggedIn  = Auth.loggedIn()
 
 
