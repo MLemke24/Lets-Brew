@@ -30,16 +30,17 @@ const SingleComment = props => {
             <div>
                 <h4 className="single-title">{post.username} posted on {post.createdAt}</h4>
                 <div>
+
                     <p className="single-title-description">{post.postTitle}</p>
                 </div>
                 <div>
                     <p className="single-title-description">{post.postText}</p>
+
                 </div>
             </div>
-
-
-
-            {Auth.loggedIn() && <ReactionForm postId={post._id} />}
+            <div>
+                {Auth.loggedIn() && <ReactionForm postId={post._id} />}
+            </div>
             <div>
                 <h4>{post.reactionCount} People reacted, join the conversation!</h4>
             </div>
