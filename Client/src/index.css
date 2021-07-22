@@ -475,3 +475,29 @@ border-radius: 50%;
   font-size: 68px;
   margin-bottom: 10px;
 }
+
+/*----------------------------------*/
+/* -------SOCIAL START--------------*/
+/*----------------------------------*/
+
+.social-title {
+  font-weight: bold;
+  padding-top: 80px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.postText {
+  padding-left: 10px;
+  padding-top: 5px;
+  height: 125px;
+  border-color: #ebb694f6;
+  border-style: solid;
+  border-width: 2px 2px;
+}
+
+.postTitle {
+  border-color: #ebb694f6 !important;
+  border-style: solid !important;
+  border-width: 0px 0px 2px 0px !important;
+}

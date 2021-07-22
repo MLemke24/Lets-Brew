@@ -57,7 +57,7 @@ const ThoughtForm = () => {
           name="postText"
           onChange={handleChange}
         ></textarea>
-        <button className="" type="submit">
+        <button className="btn" type="submit">
           Submit
         </button>
       </form>
