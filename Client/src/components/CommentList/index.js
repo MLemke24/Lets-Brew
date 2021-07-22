@@ -10,16 +10,16 @@ const CommentList = ({ comments, title }) => {
     <div>
       <h3>{title}</h3>
       {comments && comments.map(comment => (
-          <div key={comment._id} className="">
+          <div key={comment._id} className="comment-card">
             <p className="card-header">
               
               {comment.username} commented on {comment.createdAt}
             </p>
             <div className="card-body">
               <Link to={`/comments/${comment._id}`}>
-                <p>{comment.postTitle}</p>
-                <p>{comment.postText}</p>
-                <p className="mb-0">
+                <p className="post-title">{comment.postTitle}</p>
+                <p className="post-text">{comment.postText}</p>
+                <p className="post-react mb-0">
                   Reactions: {comment.reactionCount} || Click to{' '}
                   {comment.reactionCount ? 'see' : 'start'} the discussion!
                 </p>
