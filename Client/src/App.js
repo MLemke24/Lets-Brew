@@ -5,7 +5,7 @@ import {
   ApolloClient,
   InMemoryCache,
   createHttpLink
-} from "@apollo/react-hooks";
+} from "@apollo/client";
 
 import { setContext } from "@apollo/client/link/context";
 
