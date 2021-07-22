@@ -7,15 +7,18 @@ import { useQuery } from '@apollo/react-hooks';
 import { QUERY_POST } from '../utils/queries';
 
 const SingleComment = props => {
-    const { postId : id } = useParams();
+    const { postId } = useParams();
     console.log("is there anyone out there?")
-    console.log( {postId : id} )
+    console.log({postId});
     
     const { loading, data } = useQuery(QUERY_POST, {
-        variables: { postId : id }
-    })
-
-    const post = data?.post || {};
+        variables: { id: {postId}.postId }
+      });
+    console.log({data});
+    
+    const post = data ? data.post : {};
+    console.log(post)
+    
 
     if (loading) {
         return <div>Loading...</div>;
@@ -41,6 +44,6 @@ const SingleComment = props => {
         </div>
 
     )
-}
+};
 
 export default SingleComment
