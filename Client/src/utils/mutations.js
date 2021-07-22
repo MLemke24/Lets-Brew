@@ -9,6 +9,7 @@ export const LOGIN = gql`
       token
       user {
         _id
+        username
       }
     }
   }
@@ -28,20 +29,35 @@ export const ADD_USER = gql`
       token
       user {
         _id
+        username
       }
     }
   }
 `;
 
 export const ADD_POST = gql`
-  mutation addPost($postText: String!) {
-    addPost(postText: $postText) {
+  mutation addPost($postText: String!, $postTitle: String!) {
+    addPost(postText: $postText, postTitle: $postTitle) {
       _id
+      postTitle
       postText
       createdAt
       username
+      reactionCount
+      reactions {
+        _id
+      }
     }
   }
 `;
 
-
+export const ADD_REACTION = gql `
+  mutation addReaction($postId: ID!, $reactionBody: String!){
+    addReaction(postId: $postId, reactionBody: $reactionBody){
+      _id
+      reactionBody
+      createdAt
+      username
+    }
+  }  
+`
