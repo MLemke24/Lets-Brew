@@ -6,7 +6,7 @@ import { QUERY_POST, QUERY_ME } from '../../utils/queries';
 //this expects a title
 const ThoughtForm = () => {
   const [formState, setFormState] = useState({ postText: '', postTitle: ''});
-  const [addPost, { error }] = useMutation(ADD_POST, {
+  const [addPost] = useMutation(ADD_POST, {
     update(cache, { data: { addPost } }) {
       try {
         // update thought array's cache

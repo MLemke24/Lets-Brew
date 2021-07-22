@@ -106,6 +106,7 @@ export const QUERY_POST = gql`
       postTitle
       createdAt
       username
+      reactionCount
       reactions {
         _id
         createdAt
@@ -117,7 +118,7 @@ export const QUERY_POST = gql`
 `;
 
 export const QUERY_POSTS = gql `
-query posts($username: String){
+query posts($username: String!){
     posts(username: $username){
         _id
         postTitle
