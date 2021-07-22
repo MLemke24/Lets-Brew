@@ -11,11 +11,12 @@ const CommentList = ({ Comments }) => {
         {Comments &&
           Comments.map(comment => (
             <p className="pill mb-3" key={comment._id}>
-              {comment.postText} || {' '}
-              <Link to={`/comment/${comment.username}`} style={{ fontWeight: 700 }}>
+              {comment.reactionBody} || 
+              <span>{' '}<p to={`/comment/${comment.username}`} style={{ fontWeight: 700 }}>
                 {comment.username} on {comment.createdAt}
-              </Link>
+              </p></span>
             </p>
+            
           ))}
       </div>
     </div>
