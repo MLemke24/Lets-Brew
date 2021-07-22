@@ -8,24 +8,26 @@ import { QUERY_All_POSTS } from '../utils/queries';
 
 const Social = () => {
     const {loading, data} = useQuery(QUERY_All_POSTS)
-    const comments = data?.posts || [];
+    const comments = data?.allposts || [];
     const loggedIn  = Auth.loggedIn()
 
 
  return ( 
     <main>
         <h3>Welcome to the Coffee Forum</h3>
-    <div className="flex-row justify-space-between">
+    <div>
       {loggedIn && (
-        <div className="col-12 mb-3">
+        <div>
           <CommentForm />
         </div>
       )}
-      <div className={`col-12 mb-3 ${loggedIn && 'col-lg-8'}`}>
+      <div>
         {loading ? (
-          <div>Loading...</div>
+          <div>Loading comments ...</div>
         ) : (
-          <CommentList comments={comments} title="Some Feed for Thought(s)..." />
+          <CommentList 
+            comments={comments} 
+            title="Some Feed for Thought(s)..." />
         )}
       </div>
 
