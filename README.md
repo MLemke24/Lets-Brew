@@ -13,7 +13,7 @@
   * [Questions](#questions)
   
   
-![letsBrewHome](https://user-images.githubusercontent.com/68794066/126558838-490b80d6-1e8e-44c1-b61c-47b4048dce7c.PNG)
+![letsBrewHome](Client/src/images/ss.png)
  
   ## Usage
   Application is live at https://lets-brew-group12.herokuapp.com/

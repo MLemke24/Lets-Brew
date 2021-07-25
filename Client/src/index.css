@@ -102,6 +102,7 @@ html {
 .intro {
   font-weight: bolder;
   background: -webkit-linear-gradient(#eee, #ebb694f6);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Monoton", Helvetica, sans-serif;

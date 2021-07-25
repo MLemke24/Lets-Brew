@@ -26,7 +26,7 @@ const Instructions = () => {
         return (
           <>
             <div id="showDiv" className="instruction-title">
-              <h1> Brewing : {brewId} </h1>
+              <h1 className="nowbrewing"><b>Brewing : {brewId} </b> </h1>
 
 
               <CupButton onCupEnter={onCupEnter} />
@@ -43,7 +43,7 @@ const Instructions = () => {
               <div className="instruction-content">
                 <div>
 
-                  <h2>Volume:</h2>
+                  <h2 className="volume">Volume:</h2>
                   <ul>
                     <li>
                       <div className="btmborder">

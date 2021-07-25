@@ -33,7 +33,7 @@ export default function App(props) {
       <img className="cuplogo" id="mug" src={mug} alt="mug" />
       <div className="DisplayDiv">
 
-        <h4>How many cups?</h4>
+        <h4 className="howmany">How many cups?</h4>
         <div className="count">{cups}</div>
       </div>
       <div className="ButtonDiv row">
@@ -46,7 +46,7 @@ export default function App(props) {
         
       </div>
       <div className="cupbtn">
-      <button className='btn' onClick={(event) => { hideInstructions(); props.onCupEnter(cups);}}>Enter</button>
+      <button className='btn btnmq' onClick={(event) => { hideInstructions(); props.onCupEnter(cups);}}>Enter</button>
 
       </div>
     </div>

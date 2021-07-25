@@ -76,7 +76,7 @@ const Header = () => {
         <Link to="/">
           <a href="/" className="brand-logo center">
             <h1 className="apptitle">
-              <b>Lets </b>
+              <b className="letsmq">Lets </b>
               <span className="dot">
                 <img
                   className="beans"
