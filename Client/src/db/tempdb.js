@@ -11,8 +11,8 @@ const brews = [
         weight: 30,
         step1:"Pour 60G of water evenly to saturate the coffee.",
         step2:"Gently stir the grounds to ensure all coffee is immersed, then wait for coffee to bloom.",
-        step3:"Pour the remaining coffee in a spiral motion.",
-        step4:"Allow coffee to steep for 3 minutes. Then press the filter down and serve."
+        step3:"Pour the remaining water in a spiral motion, and mix well with a spoon for 5 seconds.",
+        step4:"Allow coffee to steep for 4 minutes. Then press the filter down and serve."
     },
     {
         id: 2,
@@ -23,8 +23,7 @@ const brews = [
         grind: "Fine",
         water: 300,
         weight: 20,
-        strength: "like a punch trough time",
-        step1:"Allow Coffee ot brew for one minute",
+        step1:"Allow Coffee to brew for one minute",
         step2:"Turn off the burner and remove from under Siphon.",
         step3:"Let the coffee drip down to the bottom of the chamber.",
         step4:"Remove the top piece and serve."
@@ -37,9 +36,8 @@ const brews = [
         grind: "Fine",
         water: 240,
         weight: 15,
-        strength: "steamy strong",
         step1:"Pour water and evenly saturate coffee, stir grounds to ensure saturation.",
-        step2:"Wait for coffe to bloom and pour remaining water over dark areas.",
+        step2:"Wait for coffee to bloom and pour remaining water over dark areas.",
         step3:"Place the plunger on brewer and pull up to create a pressure seal.",
         step4:"After 3 minutes press down plunger, take off cap, filter, grounds and serve."
     },
@@ -51,10 +49,9 @@ const brews = [
         grind: "Fine",
         water: 200,
         weight: 18,
-        strength: "",
         step1:"Fill lower container with boiling water just below the valve.",
         step2:"Insert the funnel and fill it with ground coffee.",
-        step3:"Tight screw teh upper part on the base, then put brewer on a stove at medium heat.",
+        step3:"Tight screw the upper part to the base, then put brewer on a stove at medium heat.",
         step4:"Wait 5-6 minutes for the water to boil."
 
     }
@@ -106,10 +103,9 @@ const brews = [
         cups: 1,
         name: "BeeHouse",
         image: require("../images/icons/Wave/SVG/Wave.svg").default,
-        grind: "lite",
-        water: "2 mililiters",
-        weight: "1 terabite",
-        strength: "strong as your coding game",
+        grind: "Medium",
+        water: 250,
+        weight: 15,
         step1:"Pour 50G of water over the coffee evenly",
         step2:"Stir grounds to ensure the coffee is fully immersed.",
         step3:"Pour 100G of water over coffee in a spiral motion, then wait for all water to pass through.",

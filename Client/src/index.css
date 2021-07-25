@@ -538,6 +538,7 @@ border-radius: 50%;
 .post-react:hover {
   color: #ebb694f6;
   
+
 }
 
 .single-comment {
@@ -552,4 +553,6 @@ border-radius: 50%;
   padding-bottom: 5px;
   font-weight: bold;
   font-size: 25px;
+
+
 }
